@@ -1,0 +1,32 @@
+[
+  {
+    "label": "warmup",
+    "thinking_enabled": false,
+    "prompt_tokens": 26,
+    "completion_tokens": 2,
+    "time_to_first_token_seconds": 0.8383,
+    "total_seconds": 0.8469,
+    "decode_tokens_per_second": null,
+    "output": "Paris"
+  },
+  {
+    "label": "short_prompt",
+    "thinking_enabled": false,
+    "prompt_tokens": 33,
+    "completion_tokens": 256,
+    "time_to_first_token_seconds": 0.5435,
+    "total_seconds": 3.0006,
+    "decode_tokens_per_second": 103.84,
+    "output": "### How an LRU Cache Works\n\n**LRU** stands for **Least Recently Used**. It is a cache eviction policy that discards the least recently used items first when the cache reaches its capacity.\n\n#### Core Mechanism\n1. **Capacity Limit**: The cache has a fixed maximum size.\n2. **Access Tracking**: Every time an item is accessed (read) or inserted, it is marked as \"most recently used.\"\n3. **Eviction**: When a new item needs to be inserted and the cache is full, the item that has not been accessed for the longest time (the \"least recently used\") is removed to make space.\n\n#### Data Structure Requirements\nTo achieve optimal performance, an LRU cache typically combines:\n- **A Hash Map (Dictionary)**: For O(1) average-time lookups of keys.\n- **A Doubly Linked List**: To maintain the order of usage. The head of the list represents the most recently used item, and the tail represents the least recently used item.\n\nWhen an item is accessed:\n1. It is removed from its current position in the linked list.\n2. It is moved to the head of the list.\n\nWhen an item is evicted:\n"
+  },
+  {
+    "label": "longer_prompt",
+    "thinking_enabled": false,
+    "prompt_tokens": 2209,
+    "completion_tokens": 256,
+    "time_to_first_token_seconds": 0.2844,
+    "total_seconds": 2.7642,
+    "decode_tokens_per_second": 102.88,
+    "output": "### Summary of Log Records\n\nThe provided log records consist of **120 identical entries**. Each entry indicates a successful HTTP request with the following characteristics:\n\n- **Log Level**: `INFO`\n- **Event**: `request completed`\n- **HTTP Status Code**: `200` (OK)\n- **Cache Status**: `hit` (The response was served from cache, not the origin server)\n- **Duration**: `12 ms` (Consistent response time across all requests)\n\n**Key Observations:**\n1. **High Cache Efficiency**: 100% of requests resulted in a cache hit, indicating effective caching strategies.\n2. **Consistent Performance**: All requests completed in exactly 12 ms, suggesting stable system performance with no latency spikes.\n3. **No Errors**: All requests returned status 200, indicating no client or server errors.\n4. **Uniformity**: The data is highly repetitive, which may suggest synthetic monitoring, a load test, or a very stable production environment with no variance.\n\n---\n\n### Three Useful Monitoring Metrics\n\nBased on these logs, here are three key metrics to monitor for system health and performance:\n\n#### 1. **Cache Hit Ratio"
+  }
+]

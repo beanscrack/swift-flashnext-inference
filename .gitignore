@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.log
+*.pid
+.venv/
+.env
+# model weights / raw run output live on the cluster, not here
+*.safetensors
+runs/
+nsys/

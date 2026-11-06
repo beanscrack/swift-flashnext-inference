@@ -1,0 +1,1525 @@
+{
+ "16384x2560": {
+  "1": {
+   "shape": "qkvz",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 43.68671894073486,
+   "torch_us": 55.739197731018066
+  },
+  "2": {
+   "shape": "qkvz",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 44.009599685668945,
+   "torch_us": 62.221760749816895
+  },
+  "3": {
+   "shape": "qkvz",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 44.0934419631958,
+   "torch_us": 62.311038970947266
+  },
+  "4": {
+   "shape": "qkvz",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 44.17471885681152,
+   "torch_us": 62.391037940979004
+  },
+  "5": {
+   "shape": "qkvz",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 44.37312126159668,
+   "torch_us": 62.46560096740723
+  },
+  "10": {
+   "shape": "qkvz",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 10,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 47.24639892578125,
+   "torch_us": 56.816959381103516
+  },
+  "15": {
+   "shape": "qkvz",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 15,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 53.880319595336914,
+   "torch_us": 56.66912078857422
+  }
+ },
+ "2560x6144": {
+  "1": {
+   "shape": "o_proj",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=2 ku=4 vw=4 sk=6144",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 128,
+    "outputs_per_block": 2,
+    "k_unroll": 4,
+    "vector_width": 4,
+    "static_k": 6144
+   },
+   "us": 17.889230297161983,
+   "torch_us": 23.862460484871498
+  },
+  "2": {
+   "shape": "o_proj",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=2 ku=4 vw=4 sk=6144",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 128,
+    "outputs_per_block": 2,
+    "k_unroll": 4,
+    "vector_width": 4,
+    "static_k": 6144
+   },
+   "us": 18.08830751822545,
+   "torch_us": 24.109537784869854
+  },
+  "3": {
+   "shape": "o_proj",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=2 ku=4 vw=4 sk=6144",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 128,
+    "outputs_per_block": 2,
+    "k_unroll": 4,
+    "vector_width": 4,
+    "static_k": 6144
+   },
+   "us": 18.67600014576545,
+   "torch_us": 24.089538134061375
+  },
+  "4": {
+   "shape": "o_proj",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=2 ku=4 vw=4 sk=6144",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 128,
+    "outputs_per_block": 2,
+    "k_unroll": 4,
+    "vector_width": 4,
+    "static_k": 6144
+   },
+   "us": 18.79999958551847,
+   "torch_us": 24.112307108365574
+  },
+  "5": {
+   "shape": "o_proj",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=2 ku=4 vw=4 sk=6144",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 128,
+    "outputs_per_block": 2,
+    "k_unroll": 4,
+    "vector_width": 4,
+    "static_k": 6144
+   },
+   "us": 18.828307206814106,
+   "torch_us": 24.211693268555862
+  },
+  "10": {
+   "shape": "o_proj",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=2 ku=2 vw=8 sk=6144",
+   "cfg": {
+    "num_rows": 10,
+    "block_size": 32,
+    "outputs_per_block": 2,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 6144
+   },
+   "us": 22.079078050760124,
+   "torch_us": 24.400000388805683
+  },
+  "15": {
+   "shape": "o_proj",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=64 sk=8 w=2 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 64,
+    "split_k": 8,
+    "num_warps": 2,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 22.90553771532499,
+   "torch_us": 24.350154858369095
+  }
+ },
+ "13312x2560": {
+  "1": {
+   "shape": "qsa_qkv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 35.82333276669184,
+   "torch_us": 45.94633479913076
+  },
+  "2": {
+   "shape": "qsa_qkv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 36.06566786766052,
+   "torch_us": 48.109998305638634
+  },
+  "3": {
+   "shape": "qsa_qkv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 36.276000241438545,
+   "torch_us": 48.39033385117849
+  },
+  "4": {
+   "shape": "qsa_qkv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 36.44666572411855,
+   "torch_us": 48.57799907525381
+  },
+  "5": {
+   "shape": "qsa_qkv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 36.67066742976507,
+   "torch_us": 48.53533208370209
+  },
+  "10": {
+   "shape": "qsa_qkv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 10,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 39.589665830135345,
+   "torch_us": 48.854331175486244
+  },
+  "15": {
+   "shape": "qsa_qkv",
+   "family": "triton_dot",
+   "name": "triton dot bn=64 bk=64 sk=3 w=8 st=3",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 64,
+    "block_k": 64,
+    "split_k": 3,
+    "num_warps": 8,
+    "num_stages": 3,
+    "pdl": false
+   },
+   "us": 46.15166783332825,
+   "torch_us": 49.167667826016746
+  }
+ },
+ "12800x2560": {
+  "1": {
+   "shape": "ple_kv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 34.98285643908442,
+   "torch_us": 44.577306630660075
+  },
+  "2": {
+   "shape": "ple_kv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 35.113468462107136,
+   "torch_us": 47.04456913227938
+  },
+  "3": {
+   "shape": "ple_kv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 35.37371450540971,
+   "torch_us": 47.11445010438257
+  },
+  "4": {
+   "shape": "ple_kv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 35.554613385881694,
+   "torch_us": 47.12097985403879
+  },
+  "5": {
+   "shape": "ple_kv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 35.9102049652411,
+   "torch_us": 47.128818473037406
+  },
+  "10": {
+   "shape": "ple_kv",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 10,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 38.511998799382425,
+   "torch_us": 47.14285597509267
+  },
+  "15": {
+   "shape": "ple_kv",
+   "family": "triton_dot",
+   "name": "triton dot bn=32 bk=64 sk=1 w=8 st=3",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 32,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 8,
+    "num_stages": 3,
+    "pdl": false
+   },
+   "us": 44.4669382912772,
+   "torch_us": 47.17812246205855
+  }
+ },
+ "10240x320": {
+  "1": {
+   "shape": "hc_up",
+   "family": "triton_fma",
+   "name": "triton fma bn=8 bk=128 sk=1 w=1",
+   "cfg": {
+    "kind": "fma",
+    "block_n": 8,
+    "block_k": 128,
+    "split_k": 1,
+    "num_warps": 1,
+    "num_stages": 0,
+    "pdl": false
+   },
+   "us": 5.730322772456754,
+   "torch_us": 6.4637420638915035
+  },
+  "2": {
+   "shape": "hc_up",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=64 sk=1 w=2 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 5.835871061971111,
+   "torch_us": 6.812645062323539
+  },
+  "3": {
+   "shape": "hc_up",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=64 sk=1 w=2 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 5.823225744308964,
+   "torch_us": 6.812386935757052
+  },
+  "4": {
+   "shape": "hc_up",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=64 sk=1 w=2 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 5.82890308672382,
+   "torch_us": 6.486193787667059
+  },
+  "5": {
+   "shape": "hc_up",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=64 sk=1 w=2 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 5.821419339026174,
+   "torch_us": 6.5009031564958635
+  },
+  "10": {
+   "shape": "hc_up",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=64 sk=1 w=2 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 5.811612932912765,
+   "torch_us": 6.5202578421561945
+  },
+  "15": {
+   "shape": "hc_up",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=64 sk=1 w=2 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 5.83148387170607,
+   "torch_us": 6.521806601555117
+  }
+ },
+ "336x10240": {
+  "1": {
+   "shape": "hc_down",
+   "family": "cute",
+   "name": "cute[tp4_plan_336x10240] bs=128 opb=1 ku=1 vw=8 sk=10240",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 128,
+    "outputs_per_block": 1,
+    "k_unroll": 1,
+    "vector_width": 8,
+    "static_k": 10240
+   },
+   "us": 5.14901694604906,
+   "torch_us": 8.583863913002661
+  },
+  "2": {
+   "shape": "hc_down",
+   "family": "cute",
+   "name": "cute[tp4_plan_336x10240] bs=128 opb=1 ku=1 vw=8 sk=10240",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 128,
+    "outputs_per_block": 1,
+    "k_unroll": 1,
+    "vector_width": 8,
+    "static_k": 10240
+   },
+   "us": 5.531932337809417,
+   "torch_us": 8.630779840178409
+  },
+  "3": {
+   "shape": "hc_down",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=4 ku=4 vw=8 sk=10240",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 128,
+    "outputs_per_block": 4,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 10240
+   },
+   "us": 5.779525486089415,
+   "torch_us": 8.649491657645015
+  },
+  "4": {
+   "shape": "hc_down",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=4 ku=4 vw=8 sk=10240",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 128,
+    "outputs_per_block": 4,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 10240
+   },
+   "us": 6.035254163257147,
+   "torch_us": 8.667390225297314
+  },
+  "5": {
+   "shape": "hc_down",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=4 ku=4 vw=8 sk=10240",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 128,
+    "outputs_per_block": 4,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 10240
+   },
+   "us": 6.283118563183283,
+   "torch_us": 8.729220446893724
+  },
+  "10": {
+   "shape": "hc_down",
+   "family": "triton_dot",
+   "name": "triton dot bn=64 bk=64 sk=20 w=4 st=5",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 64,
+    "block_k": 64,
+    "split_k": 20,
+    "num_warps": 4,
+    "num_stages": 5,
+    "pdl": false
+   },
+   "us": 7.621423672821562,
+   "torch_us": 8.84583036778337
+  },
+  "15": {
+   "shape": "hc_down",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=128 sk=6 w=2 st=6",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 128,
+    "split_k": 6,
+    "num_warps": 2,
+    "num_stages": 6,
+    "pdl": false
+   },
+   "us": 8.170033915568206,
+   "torch_us": 9.02779627654512
+  }
+ },
+ "320x10240": {
+  "1": {
+   "shape": "hc_final",
+   "family": "cute",
+   "name": "cute[tp4_plan_336x10240] bs=128 opb=1 ku=1 vw=8 sk=10240",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 128,
+    "outputs_per_block": 1,
+    "k_unroll": 1,
+    "vector_width": 8,
+    "static_k": 10240
+   },
+   "us": 5.053677385853183,
+   "torch_us": 8.381677250708304
+  },
+  "2": {
+   "shape": "hc_final",
+   "family": "cute",
+   "name": "cute[tp4_plan_336x10240] bs=128 opb=1 ku=1 vw=8 sk=10240",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 128,
+    "outputs_per_block": 1,
+    "k_unroll": 1,
+    "vector_width": 8,
+    "static_k": 10240
+   },
+   "us": 5.334451794624329,
+   "torch_us": 8.425290546109599
+  },
+  "3": {
+   "shape": "hc_final",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=2 ku=2 vw=4 sk=10240",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 128,
+    "outputs_per_block": 2,
+    "k_unroll": 2,
+    "vector_width": 4,
+    "static_k": 10240
+   },
+   "us": 5.613935570563039,
+   "torch_us": 8.44722601675218
+  },
+  "4": {
+   "shape": "hc_final",
+   "family": "cute",
+   "name": "cute[tp4_plan_336x10240] bs=128 opb=2 ku=1 vw=8 sk=10240",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 128,
+    "outputs_per_block": 2,
+    "k_unroll": 1,
+    "vector_width": 8,
+    "static_k": 10240
+   },
+   "us": 5.816258249744292,
+   "torch_us": 8.47303194384421
+  },
+  "5": {
+   "shape": "hc_final",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=4 ku=4 vw=8 sk=10240",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 128,
+    "outputs_per_block": 4,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 10240
+   },
+   "us": 6.157419373912196,
+   "torch_us": 8.519741796678112
+  },
+  "10": {
+   "shape": "hc_final",
+   "family": "triton_dot",
+   "name": "triton dot bn=32 bk=64 sk=12 w=2 st=6",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 32,
+    "block_k": 64,
+    "split_k": 12,
+    "num_warps": 2,
+    "num_stages": 6,
+    "pdl": false
+   },
+   "us": 7.253677614273563,
+   "torch_us": 8.661419153213501
+  },
+  "15": {
+   "shape": "hc_final",
+   "family": "triton_dot",
+   "name": "triton dot bn=32 bk=64 sk=12 w=2 st=6",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 32,
+    "block_k": 64,
+    "split_k": 12,
+    "num_warps": 2,
+    "num_stages": 6,
+    "pdl": false
+   },
+   "us": 8.003612679819907,
+   "torch_us": 8.808774332846365
+  }
+ },
+ "1280x2560": {
+  "1": {
+   "shape": "sh_gate_up",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 4.949935501621615,
+   "torch_us": 7.708645155352931
+  },
+  "2": {
+   "shape": "sh_gate_up",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 5.0570320698522755,
+   "torch_us": 8.229935361493018
+  },
+  "3": {
+   "shape": "sh_gate_up",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 5.107096606685269,
+   "torch_us": 8.251613186251733
+  },
+  "4": {
+   "shape": "sh_gate_up",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 5.643612915469754,
+   "torch_us": 8.305290052967687
+  },
+  "5": {
+   "shape": "sh_gate_up",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 5.633548382789858,
+   "torch_us": 8.331613194557928
+  },
+  "10": {
+   "shape": "sh_gate_up",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 10,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 6.55509675702741,
+   "torch_us": 8.51819399864443
+  },
+  "15": {
+   "shape": "sh_gate_up",
+   "family": "triton_dot",
+   "name": "triton dot bn=32 bk=64 sk=8 w=4 st=5",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 32,
+    "block_k": 64,
+    "split_k": 8,
+    "num_warps": 4,
+    "num_stages": 5,
+    "pdl": false
+   },
+   "us": 7.540387011343433,
+   "torch_us": 8.686451181288689
+  }
+ },
+ "2560x640": {
+  "1": {
+   "shape": "sh_down",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=4 vw=4 sk=640",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 4,
+    "vector_width": 4,
+    "static_k": 640
+   },
+   "us": 3.548617770032185,
+   "torch_us": 5.474601819263241
+  },
+  "2": {
+   "shape": "sh_down",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=4 ku=4 vw=4 sk=640",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 32,
+    "outputs_per_block": 4,
+    "k_unroll": 4,
+    "vector_width": 4,
+    "static_k": 640
+   },
+   "us": 3.7044553252739636,
+   "torch_us": 5.668422555535789
+  },
+  "3": {
+   "shape": "sh_down",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=2 ku=2 vw=4 sk=640",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 32,
+    "outputs_per_block": 2,
+    "k_unroll": 2,
+    "vector_width": 4,
+    "static_k": 640
+   },
+   "us": 3.797333414961652,
+   "torch_us": 5.6772682724929435
+  },
+  "4": {
+   "shape": "sh_down",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=2 ku=2 vw=4 sk=640",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 32,
+    "outputs_per_block": 2,
+    "k_unroll": 2,
+    "vector_width": 4,
+    "static_k": 640
+   },
+   "us": 3.893073254484471,
+   "torch_us": 5.708488022408834
+  },
+  "5": {
+   "shape": "sh_down",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=2 ku=2 vw=4 sk=640",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 32,
+    "outputs_per_block": 2,
+    "k_unroll": 2,
+    "vector_width": 4,
+    "static_k": 640
+   },
+   "us": 3.980487827363053,
+   "torch_us": 5.693658580624961
+  },
+  "10": {
+   "shape": "sh_down",
+   "family": "triton_dot",
+   "name": "triton dot bn=32 bk=64 sk=1 w=4 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 32,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 4,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 4.121756165977416,
+   "torch_us": 5.763121736728079
+  },
+  "15": {
+   "shape": "sh_down",
+   "family": "triton_dot",
+   "name": "triton dot bn=32 bk=64 sk=1 w=4 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 32,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 4,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 4.1389266649882,
+   "torch_us": 5.77248790399815
+  }
+ },
+ "512x2560": {
+  "1": {
+   "shape": "router",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 2.8698181177114512,
+   "torch_us": 4.255376465908893
+  },
+  "2": {
+   "shape": "router",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 3.043532371520996,
+   "torch_us": 6.048623230550196
+  },
+  "3": {
+   "shape": "router",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 3.118753239705965,
+   "torch_us": 6.049870283572705
+  },
+  "4": {
+   "shape": "router",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 3.236363654012804,
+   "torch_us": 6.08976630421428
+  },
+  "5": {
+   "shape": "router",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 3.3597922944403313,
+   "torch_us": 6.110129805354329
+  },
+  "10": {
+   "shape": "router",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=1 ku=2 vw=4 sk=None",
+   "cfg": {
+    "num_rows": 10,
+    "block_size": 128,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 4,
+    "static_k": null
+   },
+   "us": 4.740571433847601,
+   "torch_us": 6.209662208309421
+  },
+  "15": {
+   "shape": "router",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=128 sk=3 w=2 st=5",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 128,
+    "split_k": 3,
+    "num_warps": 2,
+    "num_stages": 5,
+    "pdl": false
+   },
+   "us": 5.110857161608609,
+   "torch_us": 6.318753415888006
+  }
+ },
+ "640x2560": {
+  "1": {
+   "shape": "indexer",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 3.2322600605042,
+   "torch_us": 4.692032569792213
+  },
+  "2": {
+   "shape": "indexer",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 3.3665040159613135,
+   "torch_us": 6.110699196171955
+  },
+  "3": {
+   "shape": "indexer",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 3.401886156904019,
+   "torch_us": 6.133853420009458
+  },
+  "4": {
+   "shape": "indexer",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 3.752845574200638,
+   "torch_us": 6.192910477397888
+  },
+  "5": {
+   "shape": "indexer",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 3.567869827999332,
+   "torch_us": 6.2176260521741415
+  },
+  "10": {
+   "shape": "indexer",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=1 ku=2 vw=4 sk=None",
+   "cfg": {
+    "num_rows": 10,
+    "block_size": 128,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 4,
+    "static_k": null
+   },
+   "us": 5.037788453140879,
+   "torch_us": 6.363317249267082
+  },
+  "15": {
+   "shape": "indexer",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=128 sk=3 w=2 st=5",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 128,
+    "split_k": 3,
+    "num_warps": 2,
+    "num_stages": 5,
+    "pdl": false
+   },
+   "us": 5.3715773714267145,
+   "torch_us": 6.539967486528846
+  }
+ },
+ "96x2560": {
+  "1": {
+   "shape": "gdn_ba",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 1.6904585245178967,
+   "torch_us": 3.4494048211632706
+  },
+  "2": {
+   "shape": "gdn_ba",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 1.8434341360883015,
+   "torch_us": 15.859122392607897
+  },
+  "3": {
+   "shape": "gdn_ba",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 1.876175548972153,
+   "torch_us": 15.86271262750393
+  },
+  "4": {
+   "shape": "gdn_ba",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 2.077697544563107,
+   "torch_us": 15.859200314777654
+  },
+  "5": {
+   "shape": "gdn_ba",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=1 ku=2 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 32,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 2.500058674230808,
+   "torch_us": 15.85896538525093
+  },
+  "10": {
+   "shape": "gdn_ba",
+   "family": "cute",
+   "name": "cute[sweep] bs=128 opb=1 ku=2 vw=4 sk=None",
+   "cfg": {
+    "num_rows": 10,
+    "block_size": 128,
+    "outputs_per_block": 1,
+    "k_unroll": 2,
+    "vector_width": 4,
+    "static_k": null
+   },
+   "us": 2.9430244027114494,
+   "torch_us": 5.297873078322992
+  },
+  "15": {
+   "shape": "gdn_ba",
+   "family": "triton_dot",
+   "name": "triton dot bn=16 bk=64 sk=10 w=2 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 16,
+    "block_k": 64,
+    "split_k": 10,
+    "num_warps": 2,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 3.595200108318794,
+   "torch_us": 4.500292568671994
+  }
+ },
+ "1x2560": {
+  "1": {
+   "shape": "sh_gate1",
+   "family": "cute",
+   "name": "cute[sweep] bs=64 opb=1 ku=4 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 64,
+    "outputs_per_block": 1,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 1.0916562750935555,
+   "torch_us": 3.0337499920278788
+  },
+  "2": {
+   "shape": "sh_gate1",
+   "family": "cute",
+   "name": "cute[sweep] bs=64 opb=1 ku=4 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 64,
+    "outputs_per_block": 1,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 1.2013750383630395,
+   "torch_us": 2.497562440112233
+  },
+  "3": {
+   "shape": "sh_gate1",
+   "family": "cute",
+   "name": "cute[sweep] bs=64 opb=1 ku=4 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 3,
+    "block_size": 64,
+    "outputs_per_block": 1,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 1.2770624598488212,
+   "torch_us": 2.4982811883091927
+  },
+  "4": {
+   "shape": "sh_gate1",
+   "family": "cute",
+   "name": "cute[sweep] bs=64 opb=1 ku=4 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 4,
+    "block_size": 64,
+    "outputs_per_block": 1,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 1.3660937547683716,
+   "torch_us": 2.665312495082617
+  },
+  "5": {
+   "shape": "sh_gate1",
+   "family": "cute",
+   "name": "cute[sweep] bs=64 opb=1 ku=4 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 5,
+    "block_size": 64,
+    "outputs_per_block": 1,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 1.4847187558189034,
+   "torch_us": 2.6331874541938305
+  },
+  "10": {
+   "shape": "sh_gate1",
+   "family": "cute",
+   "name": "cute[sweep] bs=64 opb=1 ku=4 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 10,
+    "block_size": 64,
+    "outputs_per_block": 1,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 1.9764062017202377,
+   "torch_us": 3.29431239515543
+  },
+  "15": {
+   "shape": "sh_gate1",
+   "family": "cute",
+   "name": "cute[sweep] bs=64 opb=1 ku=4 vw=8 sk=2560",
+   "cfg": {
+    "num_rows": 15,
+    "block_size": 64,
+    "outputs_per_block": 1,
+    "k_unroll": 4,
+    "vector_width": 8,
+    "static_k": 2560
+   },
+   "us": 2.46246880851686,
+   "torch_us": 2.652843715623021
+  }
+ },
+ "248320x2560": {
+  "1": {
+   "shape": "lm_head",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=2 ku=1 vw=4 sk=2560",
+   "cfg": {
+    "num_rows": 1,
+    "block_size": 32,
+    "outputs_per_block": 2,
+    "k_unroll": 1,
+    "vector_width": 4,
+    "static_k": 2560
+   },
+   "us": 744.8773384094238,
+   "torch_us": 867.8853511810303
+  },
+  "2": {
+   "shape": "lm_head",
+   "family": "cute",
+   "name": "cute[sweep] bs=32 opb=2 ku=1 vw=4 sk=2560",
+   "cfg": {
+    "num_rows": 2,
+    "block_size": 32,
+    "outputs_per_block": 2,
+    "k_unroll": 1,
+    "vector_width": 4,
+    "static_k": 2560
+   },
+   "us": 749.5419979095459,
+   "torch_us": 801.0160128275553
+  },
+  "3": {
+   "shape": "lm_head",
+   "family": "triton_fma",
+   "name": "triton fma bn=4 bk=256 sk=1 w=1",
+   "cfg": {
+    "kind": "fma",
+    "block_n": 4,
+    "block_k": 256,
+    "split_k": 1,
+    "num_warps": 1,
+    "num_stages": 0,
+    "pdl": false
+   },
+   "us": 776.0480244954427,
+   "torch_us": 813.5800361633301
+  },
+  "4": {
+   "shape": "lm_head",
+   "family": "triton_dot",
+   "name": "triton dot bn=32 bk=128 sk=1 w=2 st=6",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 32,
+    "block_k": 128,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 6,
+    "pdl": false
+   },
+   "us": 778.0796686808268,
+   "torch_us": 822.6810296376547
+  },
+  "5": {
+   "shape": "lm_head",
+   "family": "triton_dot",
+   "name": "triton dot bn=32 bk=128 sk=1 w=2 st=6",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 32,
+    "block_k": 128,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 6,
+    "pdl": false
+   },
+   "us": 779.8310120900472,
+   "torch_us": 857.4519952138265
+  },
+  "10": {
+   "shape": "lm_head",
+   "family": "triton_dot",
+   "name": "triton dot bn=32 bk=128 sk=1 w=2 st=6",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 32,
+    "block_k": 128,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 6,
+    "pdl": false
+   },
+   "us": 786.8976593017578,
+   "torch_us": 875.8130073547363
+  },
+  "15": {
+   "shape": "lm_head",
+   "family": "triton_dot",
+   "name": "triton dot bn=128 bk=64 sk=1 w=2 st=4",
+   "cfg": {
+    "kind": "dot",
+    "block_n": 128,
+    "block_k": 64,
+    "split_k": 1,
+    "num_warps": 2,
+    "num_stages": 4,
+    "pdl": false
+   },
+   "us": 793.6059633890787,
+   "torch_us": 891.7489846547445
+  }
+ }
+}

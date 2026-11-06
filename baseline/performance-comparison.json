@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-10-21T20:32:32.334979+00:00",
+  "change": "Replace enforced eager execution with FULL_DECODE_ONLY CUDA graphs and normal kernel warmup",
+  "unchanged": {
+    "backend": "marlin",
+    "cpu_ngram_offload": true,
+    "context_tokens": 32768,
+    "max_concurrent_sequences": 4,
+    "thinking_enabled": false
+  },
+  "comparisons": [
+    {
+      "label": "short_prompt",
+      "prompt_tokens": 33,
+      "completion_tokens": 256,
+      "eager_tps": 12.54,
+      "graphs_tps": 103.84,
+      "decode_speedup": 8.281,
+      "eager_total_seconds": 21.464,
+      "graphs_total_seconds": 3.0006,
+      "eager_first_token_seconds": 1.1223,
+      "graphs_first_token_seconds": 0.5435
+    },
+    {
+      "label": "longer_prompt",
+      "prompt_tokens": 2209,
+      "completion_tokens": 256,
+      "eager_tps": 12.48,
+      "graphs_tps": 102.88,
+      "decode_speedup": 8.244,
+      "eager_total_seconds": 21.7078,
+      "graphs_total_seconds": 2.7642,
+      "eager_first_token_seconds": 1.2795,
+      "graphs_first_token_seconds": 0.2844
+    }
+  ],
+  "limitations": "Short single-client samples. The residual offload cost was not isolated; both configurations keep embeddings in pinned host RAM."
+}

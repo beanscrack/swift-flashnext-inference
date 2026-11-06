@@ -1,0 +1,882 @@
+[
+{
+"lang": "zh-Hans",
+"domain": "technology",
+"text": "请详细解释一下 HTTPS 是如何保证网络通信安全的,包括证书验证、密钥交换和对称加密的整个过程,最好能用生活中的比喻帮助我理解。"
+},
+{
+"lang": "zh-Hans",
+"domain": "science",
+"text": "我一直好奇黑洞是怎么形成的。能不能从恒星的演化讲起,一步步说明引力坍缩、事件视界和霍金辐射这些概念?"
+},
+{
+"lang": "zh-Hans",
+"domain": "history",
+"text": "请写一篇关于明朝郑和下西洋的文章,说明航行的背景、船队规模和主要路线,以及为什么这项事业后来被中止了。"
+},
+{
+"lang": "zh-Hans",
+"domain": "cooking",
+"text": "我是厨房新手,想在家做一道正宗的红烧肉。麻烦给我一份详细的步骤指南,包括怎么选肉、焯水、炒糖色,以及火候该怎么控制。"
+},
+{
+"lang": "zh-Hans",
+"domain": "finance",
+"text": "刚工作两年,每个月能存下四千块,但对理财一窍不通。帮我分析一下货币基金、指数基金定投和银行定期存款各自的优缺点,再给一个资产配置的建议吧。"
+},
+{
+"lang": "zh-Hans",
+"domain": "health",
+"text": "最近长期熬夜加班,总觉得疲惫、注意力很难集中。请系统地讲讲睡眠不足会对身体造成哪些影响,并给我一套可以一步步执行的作息调整方案。"
+},
+{
+"lang": "zh-Hans",
+"domain": "creative writing",
+"text": "帮我写一个科幻短篇故事:两百年后的上海,一位修理老式机器人的老工匠,意外发现了一台还保留着人类记忆的机器人。"
+},
+{
+"lang": "zh-Hans",
+"domain": "business email",
+"text": "我要给合作了三年的供应商写一封邮件,告知他们由于预算调整,下个季度的订单量会减少三成。请写得礼貌真诚,同时为长期合作留有余地。"
+},
+{
+"lang": "zh-Hans",
+"domain": "philosophy",
+"text": "庄子“庄周梦蝶”的故事究竟想表达什么?请结合现代哲学中关于真实与幻觉的讨论,写一篇有深度的分析。"
+},
+{
+"lang": "zh-Hans",
+"domain": "everyday advice",
+"text": "我和合租室友在卫生分工和作息时间上经常闹矛盾,又不想把关系搞僵。请教我一套具体的沟通方法,并举几个可以直接拿来用的对话例子。"
+},
+{
+"lang": "zh-Hans",
+"domain": "software engineering",
+"text": "请用 Python 写一个命令行待办事项管理程序,支持添加、删除、标记完成,并能保存到本地的 JSON 文件,代码里的注释请用中文写清楚。"
+},
+{
+"lang": "zh-Hans",
+"domain": "software engineering",
+"text": "Docker 容器和传统虚拟机到底有什么区别?请从隔离原理、资源占用、启动速度和适用场景几个方面做一个详细的对比。"
+},
+{
+"lang": "zh-Hans",
+"domain": "science",
+"text": "天空为什么白天是蓝的,到了傍晚又变成红色?请从瑞利散射讲起,尽量讲得通俗易懂,最后再延伸聊聊火星的天空是什么颜色。"
+},
+{
+"lang": "zh-Hans",
+"domain": "technology",
+"text": "大语言模型到底是怎么训练出来的?我没有技术背景,请你从数据准备、预训练、微调到人类反馈强化学习,分阶段给我讲一遍。"
+},
+{
+"lang": "zh-Hans",
+"domain": "creative writing",
+"text": "以“一封来自十年后的自己的信”为题,写一篇不少于五百字的抒情散文,语气要温暖而克制。"
+},
+{
+"lang": "zh-Hans",
+"domain": "software engineering",
+"text": "我在做 Java 的 Spring Boot 项目,一直没搞明白依赖注入和控制反转到底是怎么回事。能结合一个订单服务的完整示例代码讲讲吗?代码注释用中文就好。"
+},
+{
+"lang": "zh-Hans",
+"domain": "business",
+"text": "我打算向领导提议公司试行每周一天远程办公,请帮我写一份完整的提案,内容包括背景、预期收益、潜在风险和评估指标。"
+},
+{
+"lang": "zh-Hans",
+"domain": "everyday advice",
+"text": "我准备考研,现在离考试还有六个月,基础比较薄弱,每天大概能学六个小时。请帮我制定一份详细的分阶段复习计划,并说明每个阶段的重点。"
+},
+{
+"lang": "zh-Hant",
+"domain": "technology",
+"text": "請用淺顯易懂的方式說明雲端運算中 IaaS、PaaS 和 SaaS 的差別,並各舉幾個實際的服務當作例子。"
+},
+{
+"lang": "zh-Hant",
+"domain": "cooking",
+"text": "想在家自己做台式滷肉飯和蔥油雞,可以請你分享完整的食譜和步驟嗎?另外也說明一下怎麼讓滷汁更香、肉質更軟嫩。"
+},
+{
+"lang": "zh-Hant",
+"domain": "finance",
+"text": "我今年三十五歲,想開始規劃退休金。請幫我比較勞退自提、定期定額買 ETF 和購買儲蓄險的優缺點,並說明該怎麼分配比例比較合理。"
+},
+{
+"lang": "zh-Hant",
+"domain": "health",
+"text": "我想養成運動習慣,但工作很忙,每天只有三十分鐘可以運動。請幫我設計一份為期八週、循序漸進的運動計畫,並說明每週的重點。"
+},
+{
+"lang": "zh-Hant",
+"domain": "history",
+"text": "請寫一篇文章介紹清朝統治台灣的兩百多年歷史,從施琅攻台一直到甲午戰爭後割讓,說明其中重要的事件與社會變遷。"
+},
+{
+"lang": "zh-Hant",
+"domain": "creative writing",
+"text": "請幫我寫一篇短篇小說,背景是下著雨的深夜,一間即將歇業的老茶館,老闆和一位神祕的客人之間展開了一段奇妙的對話。"
+},
+{
+"lang": "zh-Hant",
+"domain": "software engineering",
+"text": "請用 JavaScript 寫一個簡單的天氣查詢網頁,要包含呼叫 API、錯誤處理和畫面更新,程式碼裡的註解請用繁體中文。"
+},
+{
+"lang": "zh-Hant",
+"domain": "business email",
+"text": "我是新創公司的行銷經理,需要寫一封信給潛在客戶,介紹我們剛推出的企業資料分析平台,並邀請對方預約產品展示。請寫得專業,但不要太過制式。"
+},
+{
+"lang": "ja",
+"domain": "technology",
+"text": "Wi-Fiの仕組みについて、電波がどのようにデータを運び、WPA2やWPA3といった暗号化がどのように通信を守っているのかを、初心者にも分かるように詳しく説明してください。"
+},
+{
+"lang": "ja",
+"domain": "science",
+"text": "地球温暖化のメカニズムを、温室効果ガスの働きから海洋や氷床への影響まで、順を追って丁寧に解説してもらえますか。"
+},
+{
+"lang": "ja",
+"domain": "history",
+"text": "明治維新がなぜ短期間で成功したのか、幕末の社会情勢や薩長の動き、欧米列強の影響に触れながら、レポート風にまとめてください。"
+},
+{
+"lang": "ja",
+"domain": "cooking",
+"text": "家で本格的な味噌ラーメンを作ってみたいです。スープの取り方からチャーシュー、麺の茹で方まで、手順を詳しく教えてください。"
+},
+{
+"lang": "ja",
+"domain": "finance",
+"text": "新NISAで資産形成を始めたいのですが、つみたて投資枠と成長投資枠の違いや、30代の会社員におすすめの運用方針を具体的に教えてください。"
+},
+{
+"lang": "ja",
+"domain": "health",
+"text": "在宅勤務を始めてから肩こりと腰痛がひどくなりました。原因と、自宅でできるストレッチや姿勢の改善方法を、ステップごとに詳しく説明してください。"
+},
+{
+"lang": "ja",
+"domain": "creative writing",
+"text": "雨の降る京都を舞台に、古い喫茶店で偶然再会した元恋人同士の静かな会話を描いた短編小説を書いてください。"
+},
+{
+"lang": "ja",
+"domain": "business email",
+"text": "取引先に納期が遅れることをお詫びするメールを書いてください。原因の説明、再発防止策、新しい納品日の提案を含めて、丁寧なビジネス文でお願いします。"
+},
+{
+"lang": "ja",
+"domain": "software engineering",
+"text": "Pythonで、テキストファイル内の単語の出現頻度を数えて上位20件を棒グラフで表示するプログラムを書いてください。コメントは日本語でお願いします。"
+},
+{
+"lang": "ja",
+"domain": "philosophy",
+"text": "「幸福とは何か」について、アリストテレスやストア派、現代心理学の視点を比べながら、エッセイ形式でじっくり論じてください。"
+},
+{
+"lang": "ko",
+"domain": "technology",
+"text": "유튜브나 넷플릭스 같은 추천 시스템이 어떻게 작동하는지, 협업 필터링과 콘텐츠 기반 필터링의 차이까지 포함해서 자세히 설명해 주세요."
+},
+{
+"lang": "ko",
+"domain": "science",
+"text": "지진은 왜 일어나고 규모와 진도는 어떻게 다른지, 판 구조론부터 시작해서 쉽게 풀어서 설명해 주실 수 있나요?"
+},
+{
+"lang": "ko",
+"domain": "history",
+"text": "조선 시대 세종대왕의 업적을 한글 창제뿐만 아니라 과학, 음악, 국방 분야까지 폭넓게 정리해서 한 편의 글로 써 주세요."
+},
+{
+"lang": "ko",
+"domain": "cooking",
+"text": "집에서 김치찌개와 계란말이를 제대로 만들고 싶은데, 재료 손질부터 간 맞추는 법까지 단계별로 자세히 알려 주세요."
+},
+{
+"lang": "ko",
+"domain": "finance",
+"text": "사회초년생인데 월급 관리를 어떻게 시작해야 할지 막막해요. 비상금, 적금, 연금저축, ETF 투자를 어떤 순서와 비율로 시작하면 좋을지 구체적으로 설명해 주세요."
+},
+{
+"lang": "ko",
+"domain": "everyday advice",
+"text": "다음 주에 첫 면접이 있는데 너무 떨려서 잠도 안 와요. 면접 준비 방법과 긴장을 푸는 방법을 단계별로 자세히 알려 주세요."
+},
+{
+"lang": "ko",
+"domain": "software engineering",
+"text": "자바스크립트로 간단한 가계부 웹 앱을 만들고 싶어요. 지출 추가, 삭제, 월별 합계 기능이 들어간 전체 코드를 한국어 주석과 함께 작성해 주세요."
+},
+{
+"lang": "ko",
+"domain": "creative writing",
+"text": "외딴 산골 마을의 마지막 우체부가 마지막 편지를 배달하러 나서는 하루를 그린 감성적인 단편 소설을 써 주세요."
+},
+{
+"lang": "es",
+"domain": "cooking",
+"text": "Explícame paso a paso cómo preparar una paella valenciana auténtica para ocho personas, con los ingredientes, los tiempos de cocción y los errores más comunes que arruinan el arroz."
+},
+{
+"lang": "es",
+"domain": "science",
+"text": "¿Por qué el cielo es azul durante el día y rojizo al atardecer? Explícamelo con detalle, como si se lo contaras a un estudiante de secundaria, e incluye algún experimento casero para comprobarlo."
+},
+{
+"lang": "es",
+"domain": "business",
+"text": "Necesito redactar una propuesta comercial formal para convencer a una cadena de supermercados de que venda el aceite de oliva de mi pequeña cooperativa. ¿Me ayudas a escribirla completa, con una estructura clara y un tono profesional?"
+},
+{
+"lang": "es",
+"domain": "law",
+"text": "Vivo de alquiler en Madrid y mi casero quiere subirme la renta de golpe. ¿Podrías explicarme cuáles son mis derechos como inquilino y qué pasos debería seguir para reclamar?"
+},
+{
+"lang": "es",
+"domain": "software",
+"text": "Soy principiante en Python y quiero hacer un programa que gestione una lista de tareas desde la terminal. ¿Puedes escribirme el código completo y explicarme cada parte para que lo entienda bien?"
+},
+{
+"lang": "es",
+"domain": "creative",
+"text": "Escribe un cuento corto de ciencia ficción ambientado en una colonia de Marte donde, de un día para otro, todos los habitantes empiezan a tener el mismo sueño cada noche."
+},
+{
+"lang": "es",
+"domain": "history",
+"text": "Quiero entender mejor la Revolución mexicana. ¿Podrías contarme cuáles fueron sus causas, quiénes fueron figuras como Zapata y Villa, y cómo cambió el país después?"
+},
+{
+"lang": "es",
+"domain": "essay",
+"text": "Escribe un ensayo argumentativo sobre si las redes sociales han mejorado o empeorado la forma en que los jóvenes latinoamericanos se informan y participan en la política, con ejemplos y una conclusión matizada."
+},
+{
+"lang": "fr",
+"domain": "cooking",
+"text": "Donne-moi une recette détaillée de bœuf bourguignon, avec toutes les étapes, les temps de cuisson et quelques astuces pour obtenir une viande bien fondante."
+},
+{
+"lang": "fr",
+"domain": "history",
+"text": "Peux-tu m'expliquer comment la Révolution française a évolué entre 1789 et 1799, en détaillant les grandes étapes, les principaux acteurs et les raisons des changements de régime ?"
+},
+{
+"lang": "fr",
+"domain": "practical",
+"text": "Je viens de passer en télétravail à plein temps et j'ai beaucoup de mal à rester concentré. Quels conseils concrets me donnerais-tu pour organiser mes journées et aménager mon espace de travail ?"
+},
+{
+"lang": "fr",
+"domain": "science",
+"text": "Explique-moi en détail comment fonctionne une éolienne, depuis la capture du vent jusqu'à l'électricité qui arrive dans nos prises, et quelles sont ses principales limites."
+},
+{
+"lang": "fr",
+"domain": "law",
+"text": "Comment fonctionne l'élection présidentielle en France ? J'aimerais une explication complète, du dépôt des candidatures et des parrainages jusqu'au second tour et à la prise de fonctions."
+},
+{
+"lang": "fr",
+"domain": "software",
+"text": "Écris un script Bash complet qui sauvegarde automatiquement un dossier vers un serveur distant avec rsync, avec rotation des anciennes sauvegardes, puis explique-moi chaque partie du script."
+},
+{
+"lang": "fr",
+"domain": "creative",
+"text": "Écris une nouvelle dans laquelle un libraire parisien trouve, glissée dans un vieux livre d'occasion, une lettre qui va complètement bouleverser sa vie."
+},
+{
+"lang": "fr",
+"domain": "business",
+"text": "Aide-moi à rédiger un plan d'affaires pour ouvrir une petite boulangerie bio à Lyon, avec les sections principales et un contenu concret pour chacune : marché, finances, communication, équipe."
+},
+{
+"lang": "de",
+"domain": "travel",
+"text": "Ich plane eine zweiwöchige Zugreise durch Japan im Frühling. Kannst du mir eine ausführliche Route mit Stationen, Tipps zum Rail Pass und Hinweisen zur Etikette vorschlagen?"
+},
+{
+"lang": "de",
+"domain": "science",
+"text": "Erkläre mir bitte ausführlich, wie die Photosynthese funktioniert und warum sie für das Leben auf der Erde so wichtig ist – am besten so, dass es auch Oberstufenschüler verstehen."
+},
+{
+"lang": "de",
+"domain": "law",
+"text": "Was sind meine Rechte und Pflichten als Arbeitnehmer in Deutschland, wenn mir der Arbeitgeber kündigt? Bitte erkläre den Ablauf Schritt für Schritt, inklusive Fristen und Kündigungsschutzklage."
+},
+{
+"lang": "de",
+"domain": "software",
+"text": "Schreibe mir ein vollständiges Java-Programm, das ein einfaches Bankkonto-System mit Einzahlen, Abheben und Kontoauszug simuliert, und erkläre dabei, wie man es objektorientiert sauber strukturiert."
+},
+{
+"lang": "de",
+"domain": "history",
+"text": "Wie kam es 1989/90 zur Wiedervereinigung Deutschlands? Erzähle bitte ausführlich von den wichtigsten Ereignissen und den politischen Zusammenhängen."
+},
+{
+"lang": "de",
+"domain": "creative",
+"text": "Schreibe eine Kurzgeschichte über einen Uhrmacher in einer kleinen Stadt im Schwarzwald, der eines Tages eine Uhr repariert, die rückwärts läuft."
+},
+{
+"lang": "de",
+"domain": "cooking",
+"text": "Ich möchte zum ersten Mal selbst Sauerteigbrot backen. Kannst du mir die ganze Anleitung vom Anstellen des Sauerteigs bis zum fertigen Laib Schritt für Schritt erklären?"
+},
+{
+"lang": "de",
+"domain": "essay",
+"text": "Verfasse einen Essay über die Vor- und Nachteile der Vier-Tage-Woche für Unternehmen und Beschäftigte, mit konkreten Beispielen und einem abgewogenen Fazit."
+},
+{
+"lang": "pt",
+"domain": "practical",
+"text": "Estou me preparando para uma entrevista de emprego numa grande empresa de tecnologia. Pode me dar um guia completo de como me preparar, incluindo perguntas comuns e como respondê-las bem?"
+},
+{
+"lang": "pt",
+"domain": "travel",
+"text": "Vou passar cinco dias em Lisboa pela primeira vez. Monte um roteiro dia a dia com sugestões de passeios, comidas típicas e dicas de transporte."
+},
+{
+"lang": "pt",
+"domain": "history",
+"text": "Explique como foi o processo de independência do Brasil, desde a chegada da corte portuguesa em 1808 até o Grito do Ipiranga e as consequências para o novo país."
+},
+{
+"lang": "pt",
+"domain": "science",
+"text": "Como se formam os furacões e por que eles têm ficado mais intensos com as mudanças climáticas? Explique com detalhes, mas numa linguagem acessível."
+},
+{
+"lang": "pt",
+"domain": "software",
+"text": "Quero aprender a criar uma API REST simples com Node.js e Express. Pode escrever um exemplo completo de CRUD para uma lista de livros e explicar cada etapa do código?"
+},
+{
+"lang": "pt",
+"domain": "creative",
+"text": "Escreva um conto de mistério ambientado numa pequena cidade do interior de Minas Gerais, onde o sino da igreja começa a tocar sozinho toda meia-noite."
+},
+{
+"lang": "it",
+"domain": "cooking",
+"text": "Spiegami passo dopo passo come preparare la pasta fresca all'uovo in casa, dall'impasto alla stesura con il mattarello, e come condirla con un vero ragù alla bolognese."
+},
+{
+"lang": "it",
+"domain": "history",
+"text": "Raccontami la storia del Rinascimento a Firenze: il ruolo dei Medici, gli artisti principali e il motivo per cui proprio quella città divenne il centro culturale d'Europa."
+},
+{
+"lang": "it",
+"domain": "business",
+"text": "Sto per aprire un piccolo agriturismo in Toscana e mi serve un piano di marketing completo. Puoi aiutarmi a scriverlo, con canali, budget indicativo e azioni mese per mese?"
+},
+{
+"lang": "it",
+"domain": "law",
+"text": "Puoi spiegarmi come funziona la Costituzione italiana e la divisione dei poteri tra Parlamento, Governo e Presidente della Repubblica? Vorrei un testo chiaro per prepararmi a un concorso pubblico."
+},
+{
+"lang": "it",
+"domain": "software",
+"text": "Come posso usare Git in modo efficace in un team? Spiegami i comandi principali, il flusso di lavoro con i branch e come risolvere i conflitti di merge, con esempi pratici."
+},
+{
+"lang": "it",
+"domain": "creative",
+"text": "Scrivi un racconto breve su una ragazza che eredita da sua nonna siciliana un vecchio quaderno di ricette pieno di segreti inaspettati."
+},
+{
+"lang": "nl",
+"domain": "practical",
+"text": "Ik wil dit jaar mijn eerste halve marathon lopen, maar ik ben nog beginner. Kun je een gedetailleerd trainingsschema van twaalf weken geven en uitleggen waar ik op moet letten?"
+},
+{
+"lang": "nl",
+"domain": "history",
+"text": "Leg uitgebreid uit hoe de waterschappen in Nederland zijn ontstaan, waarom ze zo belangrijk zijn geweest in de geschiedenis en hoe ze tegenwoordig werken."
+},
+{
+"lang": "nl",
+"domain": "software",
+"text": "Ik leer programmeren en wil een klassiek galgjespel in Python maken. Kun je de volledige code schrijven en stap voor stap uitleggen hoe het werkt?"
+},
+{
+"lang": "nl",
+"domain": "science",
+"text": "Hoe ontstaan getijden, en waarom is het verschil tussen eb en vloed op sommige plekken veel groter dan op andere? Leg het uitgebreid en begrijpelijk uit."
+},
+{
+"lang": "pl",
+"domain": "cooking",
+"text": "Podaj mi szczegółowy przepis krok po kroku na domowe pierogi ruskie, razem z ciastem, farszem i wskazówkami, jak ich nie rozgotować."
+},
+{
+"lang": "pl",
+"domain": "history",
+"text": "Opowiedz obszernie o historii Solidarności i o tym, w jaki sposób ten ruch przyczynił się do upadku komunizmu w Polsce."
+},
+{
+"lang": "pl",
+"domain": "software",
+"text": "Napisz kompletny program w C++, który wczytuje liczby z pliku, sortuje je i oblicza średnią oraz medianę, a potem wyjaśnij, jak działa każda jego część."
+},
+{
+"lang": "pl",
+"domain": "law",
+"text": "Chcę założyć jednoosobową działalność gospodarczą w Polsce. Wyjaśnij krok po kroku, jakie formalności muszę załatwić, jakie są formy opodatkowania i na co powinienem uważać na początku."
+},
+{
+"lang": "ru",
+"domain": "history",
+"text": "Расскажи подробно, как строили Транссибирскую магистраль: кто выступил с идеей, с какими трудностями столкнулись строители и как дорога изменила экономику и жизнь Сибири."
+},
+{
+"lang": "ru",
+"domain": "science",
+"text": "Объясни простыми словами, почему небо днём голубое, а на закате становится красным и оранжевым. Хочется понять физику рассеяния света, но без сложных формул."
+},
+{
+"lang": "ru",
+"domain": "practical-advice",
+"text": "Мне 35 лет, я никогда не занимался спортом, но решил начать бегать. Составь пошаговый план тренировок на два месяца и расскажи, как не получить травму и не бросить через неделю."
+},
+{
+"lang": "ru",
+"domain": "software",
+"text": "Напиши на Python консольную игру «Виселица» со списком слов, подсчётом попыток и рисунком виселицы из ASCII-символов, а потом подробно объясни, как устроен код."
+},
+{
+"lang": "ru",
+"domain": "creative-writing",
+"text": "Напиши рассказ о библиотекаре из маленького городка, который в старой книге находит письмо, адресованное лично ему, хотя написано оно было сто лет назад."
+},
+{
+"lang": "ru",
+"domain": "business-writing",
+"text": "Мне нужно написать клиенту письмо о том, что поставка оборудования задерживается на две недели. Помоги составить вежливое, но честное письмо с объяснением причин и предложением компенсации."
+},
+{
+"lang": "ru",
+"domain": "essay",
+"text": "Напиши эссе на тему «Стоит ли заставлять школьников учить стихи наизусть?» с аргументами за и против, примерами и личным выводом в конце."
+},
+{
+"lang": "ru",
+"domain": "explanation",
+"text": "Объясни, что такое инфляция, почему растут цены и кто от этого выигрывает, а кто проигрывает. И расскажи, как обычному человеку защитить свои сбережения."
+},
+{
+"lang": "uk",
+"domain": "history",
+"text": "Розкажи докладно про часи правління Ярослава Мудрого: як була влаштована держава, які реформи він провів і чому його вважають однією з ключових постатей історії Київської Русі."
+},
+{
+"lang": "uk",
+"domain": "software",
+"text": "Допоможи написати гру «Змійка» для браузера на чистому JavaScript. Мені потрібен повний код HTML, CSS і JS та пояснення, як усе працює."
+},
+{
+"lang": "uk",
+"domain": "practical-advice",
+"text": "Я переїжджаю до іншого міста навчатися і ніколи раніше не жив сам. Дай детальні поради, як спланувати бюджет, налагодити побут і не відчувати самотності."
+},
+{
+"lang": "uk",
+"domain": "creative-writing",
+"text": "Напиши дитячу казку про маленького їжачка, який боїться темряви, але одного вечора мусить провести загубленого світлячка додому через увесь ліс."
+},
+{
+"lang": "uk",
+"domain": "science",
+"text": "Поясни, як працюють вулкани: чому вони вивергаються, чим відрізняються типи виверженнь і чи можуть науковці передбачити початок катастрофи?"
+},
+{
+"lang": "uk",
+"domain": "business-writing",
+"text": "Допоможи скласти бізнес-план невеликої кав'ярні в спальному районі: аналіз ринку, стартові витрати, маркетинг і основні ризики. Хочу побачити чітку структуру з поясненнями."
+},
+{
+"lang": "ar",
+"domain": "history",
+"text": "اكتب مقالًا مفصلًا عن بيت الحكمة في بغداد ودوره في ترجمة العلوم وتطويرها خلال العصر العباسي، مع ذكر أبرز العلماء الذين عملوا فيه."
+},
+{
+"lang": "ar",
+"domain": "science",
+"text": "كيف تتكوّن الثقوب السوداء؟ اشرح لي بأسلوب مبسّط مراحل تكوّنها وما الذي يحدث عند أفق الحدث، مع أمثلة تقرّب الفكرة لطالب في المرحلة الثانوية."
+},
+{
+"lang": "ar",
+"domain": "practical-advice",
+"text": "أريد أن أتعلم اللغة الإنجليزية بنفسي خلال ستة أشهر. اقترح عليّ خطة أسبوعية مفصلة تشمل القراءة والاستماع والمحادثة، وكيف أقيس تقدّمي بشكل واقعي."
+},
+{
+"lang": "ar",
+"domain": "software",
+"text": "اشرح لي خطوة بخطوة كيف أنشئ صفحة ويب شخصية باستخدام HTML وCSS وجافاسكربت، واكتب الشيفرة كاملة مع تعليق على كل جزء منها."
+},
+{
+"lang": "ar",
+"domain": "creative-writing",
+"text": "اكتب قصة قصيرة عن فتاة تعيش في قرية صحراوية، تكتشف ذات يوم بئرًا قديمة تهمس بحكايات الماضي لكل من يقترب منها ليلًا."
+},
+{
+"lang": "ar",
+"domain": "business-writing",
+"text": "ساعدني في كتابة خطة تسويقية لمتجر إلكتروني جديد يبيع منتجات العناية بالبشرة الطبيعية، مع تحديد الجمهور المستهدف وقنوات الترويج والميزانية المقترحة."
+},
+{
+"lang": "hi",
+"domain": "history",
+"text": "भारत के स्वतंत्रता आंदोलन में 1857 के विद्रोह की क्या भूमिका थी? कृपया उसके कारणों, प्रमुख घटनाओं और परिणामों को विस्तार से समझाइए।"
+},
+{
+"lang": "hi",
+"domain": "science",
+"text": "मानसून कैसे बनता है और भारत की खेती के लिए यह इतना ज़रूरी क्यों है? कृपया पूरी प्रक्रिया आसान भाषा में विस्तार से समझाइए।"
+},
+{
+"lang": "hi",
+"domain": "practical-advice",
+"text": "मैं अगले महीने एक नौकरी के इंटरव्यू की तैयारी कर रहा हूँ और बहुत घबराता हूँ। कृपया चरण-दर-चरण बताइए कि तैयारी कैसे करूँ, आम सवालों के जवाब कैसे दूँ और आत्मविश्वास कैसे बढ़ाऊँ।"
+},
+{
+"lang": "hi",
+"domain": "software",
+"text": "पायथन में एक पूरा प्रोग्राम लिखिए जो यूज़र से रोज़ के खर्चों की जानकारी लेकर मासिक बजट रिपोर्ट बनाए, और कोड के हर हिस्से को समझाइए।"
+},
+{
+"lang": "hi",
+"domain": "creative-writing",
+"text": "दादी और पोते की एक भावुक कहानी लिखिए, जिसमें गर्मियों की छुट्टियों में गाँव के पुराने आम के पेड़ के नीचे एक पुराना राज़ खुलता है।"
+},
+{
+"lang": "hi",
+"domain": "essay",
+"text": "\"सोशल मीडिया का युवाओं पर प्रभाव\" विषय पर एक विस्तृत निबंध लिखिए, जिसमें इसके लाभ, नुकसान और संभावित समाधान तीनों शामिल हों।"
+},
+{
+"lang": "tr",
+"domain": "history",
+"text": "Malazgirt Savaşı'nın arka planını, savaşın nasıl geliştiğini ve sonuçlarının Anadolu'nun tarihini nasıl değiştirdiğini ayrıntılı bir şekilde anlatır mısın?"
+},
+{
+"lang": "tr",
+"domain": "practical-advice",
+"text": "İlk kez ev almayı düşünüyorum ama kredi, tapu ve ekspertiz süreçlerinin hiçbirini bilmiyorum. Adım adım nasıl ilerlemem gerektiğini ve nelere dikkat etmem gerektiğini açıklar mısın?"
+},
+{
+"lang": "tr",
+"domain": "software",
+"text": "Python ve Flask kullanarak kullanıcı kaydı ile girişi olan basit bir web uygulaması yazmak istiyorum. Lütfen kodun tamamını ver ve her adımı açıkla."
+},
+{
+"lang": "tr",
+"domain": "science",
+"text": "Türkiye'de neden bu kadar sık deprem oluyor? Fay hatlarını, levha tektoniğini ve depreme hazırlıklı olmak için yapılabilecekleri herkesin anlayacağı bir dille anlat."
+},
+{
+"lang": "vi",
+"domain": "history",
+"text": "Hãy kể lại chi tiết diễn biến chiến thắng Bạch Đằng năm 938 của Ngô Quyền, bối cảnh trước đó và ý nghĩa của nó đối với lịch sử dân tộc Việt Nam."
+},
+{
+"lang": "vi",
+"domain": "practical-advice",
+"text": "Tôi là sinh viên năm cuối và muốn xin việc đầu tiên trong lĩnh vực marketing. Hãy hướng dẫn từng bước cách viết CV, thư xin việc và chuẩn bị cho buổi phỏng vấn."
+},
+{
+"lang": "vi",
+"domain": "creative-writing",
+"text": "Viết một truyện ngắn về người bán phở rong ở Hà Nội, mỗi đêm mưa đều gặp một vị khách bí ẩn chỉ gọi một bát phở không hành."
+},
+{
+"lang": "vi",
+"domain": "software",
+"text": "Hãy viết một chương trình Java hoàn chỉnh để quản lý danh sách sinh viên, gồm thêm, xóa, tìm kiếm và lưu vào tệp, rồi giải thích từng phần của mã nguồn."
+},
+{
+"lang": "id",
+"domain": "business-writing",
+"text": "Tolong buatkan panduan langkah demi langkah untuk memulai usaha makanan rumahan secara online, mulai dari riset menu, perizinan, penentuan harga, hingga strategi promosi di media sosial."
+},
+{
+"lang": "id",
+"domain": "history",
+"text": "Jelaskan secara rinci latar belakang, jalannya peristiwa, dan dampak Sumpah Pemuda 1928 bagi perjuangan kemerdekaan Indonesia."
+},
+{
+"lang": "id",
+"domain": "science",
+"text": "Jelaskan bagaimana terumbu karang terbentuk, mengapa ekosistemnya begitu beragam, dan apa saja ancaman terbesarnya saat ini. Gunakan bahasa yang mudah dipahami pelajar SMA."
+},
+{
+"lang": "id",
+"domain": "creative-writing",
+"text": "Buatkan cerpen tentang seorang anak nelayan di pulau kecil yang bermimpi menjadi astronot dan suatu malam menemukan benda aneh jatuh di pantai."
+},
+{
+"lang": "th",
+"domain": "practical-advice",
+"text": "ช่วยอธิบายขั้นตอนการเริ่มลงทุนในกองทุนรวมสำหรับมือใหม่แบบละเอียด ตั้งแต่การเปิดบัญชี การเลือกกองทุน ไปจนถึงการบริหารความเสี่ยงและการติดตามผล"
+},
+{
+"lang": "th",
+"domain": "history",
+"text": "เล่าประวัติศาสตร์อาณาจักรสุโขทัยอย่างละเอียด ตั้งแต่การก่อตั้ง ยุครุ่งเรืองในสมัยพ่อขุนรามคำแหง ไปจนถึงสาเหตุที่อำนาจเสื่อมลง"
+},
+{
+"lang": "th",
+"domain": "creative-writing",
+"text": "เขียนเรื่องสั้นเกี่ยวกับช่างทำร่มกระดาษในเชียงใหม่ ที่วันหนึ่งพบว่าร่มคันสุดท้ายที่เขาทำสามารถเรียกฝนได้จริง"
+},
+{
+"lang": "he",
+"domain": "science",
+"text": "הסבר לי בשפה פשוטה איך פועלים פאנלים סולאריים ולמה ישראל מתאימה במיוחד לאנרגיה סולארית, כולל היתרונות והחסרונות העיקריים של הטכנולוגיה."
+},
+{
+"lang": "he",
+"domain": "software",
+"text": "אני רוצה להקים תהליך CI/CD לפרויקט Node.js ב-GitHub Actions. תסביר צעד אחר צעד איך לבנות את הקובץ, להריץ בדיקות ולפרוס אוטומטית, ותראה דוגמה מלאה."
+},
+{
+"lang": "he",
+"domain": "business-writing",
+"text": "עזור לי לכתוב מכתב מקצועי למנהל שלי שבו אני מבקש העלאה בשכר, כולל נימוקים, הישגים מהשנה האחרונה ודרך מנומסת ובטוחה להציג את הבקשה."
+},
+{
+"lang": "en",
+"domain": "science-biology",
+"text": "Can you explain how photosynthesis actually works, from the moment a photon hits a leaf to the production of glucose? I'd like both the light-dependent reactions and the Calvin cycle covered in a way a first-year biology student could follow."
+},
+{
+"lang": "en",
+"domain": "history-economics",
+"text": "Write an essay on why the Industrial Revolution began in Britain rather than in France or China. Weigh the roles of coal, institutions, overseas trade, and changes in agriculture."
+},
+{
+"lang": "en",
+"domain": "earth-science",
+"text": "Walk me through how plate tectonics explains earthquakes, volcanoes, and mountain ranges. Please use real examples like the Himalayas and the Pacific Ring of Fire to make it concrete."
+},
+{
+"lang": "en",
+"domain": "philosophy",
+"text": "Give me a thorough introduction to Stoicism: where it came from in ancient Greece and Rome, its core ideas, and how people like Epictetus and Marcus Aurelius tried to live by it day to day."
+},
+{
+"lang": "en",
+"domain": "climate-science",
+"text": "Explain how the greenhouse effect works and why adding carbon dioxide to the atmosphere warms the planet. Include feedback loops such as water vapor and melting ice, and clear up a few common misconceptions."
+},
+{
+"lang": "en",
+"domain": "history",
+"text": "Describe the Silk Road as a web of routes rather than one single road. What was traded, what ideas and diseases traveled along it, and why did it eventually decline?"
+},
+{
+"lang": "en",
+"domain": "astronomy",
+"text": "How do astronomers measure the distances to stars and galaxies? Please go step by step up the cosmic distance ladder, from parallax to Cepheid variable stars to Type Ia supernovae."
+},
+{
+"lang": "en",
+"domain": "history-culture",
+"text": "Write an essay about how the printing press transformed European society in the fifteenth and sixteenth centuries, touching on religion, the spread of science, literacy, and politics."
+},
+{
+"lang": "en",
+"domain": "linguistics",
+"text": "Explain how languages change over time, using examples like the Great Vowel Shift in English and the way Latin gradually split into French, Spanish, Italian, and Romanian."
+},
+{
+"lang": "en",
+"domain": "neuroscience",
+"text": "I'm curious how human memory works. Could you explain the difference between working, short-term, and long-term memory, and what is actually happening in the brain when we form, store, and forget memories?"
+},
+{
+"lang": "en",
+"domain": "art-history",
+"text": "Compare Renaissance and Baroque painting in a detailed essay, discussing key artists, techniques such as linear perspective and chiaroscuro, and what each movement was trying to express."
+},
+{
+"lang": "en",
+"domain": "ecology-chemistry",
+"text": "Describe the nitrogen cycle in detail and explain why it matters for farming, including the role of bacteria and how fertilizer runoff ends up harming rivers and coastal waters."
+},
+{
+"lang": "en",
+"domain": "creative-scifi",
+"text": "Write a short science fiction story set on a generation ship, where the youngest member of the maintenance crew discovers a door in the hull that appears on no blueprint. Give it a real sense of mystery and a satisfying ending."
+},
+{
+"lang": "en",
+"domain": "creative-poetry",
+"text": "Write a long poem in blank verse about a small-town bakery at four in the morning, following the baker from the moment the ovens are lit until the first customer walks in out of the cold."
+},
+{
+"lang": "en",
+"domain": "creative-drama",
+"text": "Write a dialogue-driven scene in which two estranged sisters meet at their late grandmother's house to divide her belongings and end up discovering a box of unsent letters. Let the tension build slowly."
+},
+{
+"lang": "en",
+"domain": "creative-fairytale",
+"text": "Tell a fairy tale in the style of the Brothers Grimm about a clockmaker who trades a year of his life for a clock that can stop time. Make the ending bittersweet rather than cruel."
+},
+{
+"lang": "en",
+"domain": "creative-monologue",
+"text": "Write a funny but surprisingly tender first-person monologue from the point of view of a houseplant that has silently watched the same family live in the same apartment for thirty years."
+},
+{
+"lang": "en",
+"domain": "creative-noir",
+"text": "Write the opening chapter of a noir detective novel set in 1950s Lisbon, in which a tired private investigator is hired by a nervous widow to find a missing jazz trumpeter."
+},
+{
+"lang": "en",
+"domain": "creative-humor",
+"text": "Write a humorous short story about a medieval knight who is magically transported to the present day and accidentally gets hired as a customer service representative at a busy call center."
+},
+{
+"lang": "en",
+"domain": "creative-myth",
+"text": "Write an original myth explaining why the moon changes shape, told in a rich oral storytelling voice by an elder to a circle of children gathered around a fire at night."
+},
+{
+"lang": "en",
+"domain": "business-planning",
+"text": "Draft a detailed business plan for a small neighborhood coffee roastery, including market analysis, startup costs, pricing strategy, marketing channels, and a month-by-month growth plan for the first year."
+},
+{
+"lang": "en",
+"domain": "legal-contract",
+"text": "Draft a plain-English freelance contract between a graphic designer and a client, covering scope of work, payment terms, a limit on revisions, intellectual property ownership, and how either side can terminate the agreement."
+},
+{
+"lang": "en",
+"domain": "finance-accounting",
+"text": "Explain how to read a company's balance sheet, income statement, and cash flow statement, and show how an investor can use the three together to judge whether the business is financially healthy."
+},
+{
+"lang": "en",
+"domain": "business-pitch",
+"text": "Write a persuasive investor memo for a startup that makes reusable takeout containers for restaurants. Cover the problem, the solution, market size, the business model, early traction, and the funding ask."
+},
+{
+"lang": "en",
+"domain": "business-communication",
+"text": "Draft an all-hands email announcing a company restructuring that will merge two departments. Be transparent and empathetic, explain the reasoning, and lay out what employees can expect over the next ninety days."
+},
+{
+"lang": "en",
+"domain": "finance-personal",
+"text": "Explain the differences between a Roth IRA, a traditional IRA, and an employer 401(k), then walk a 28-year-old through a step-by-step way to decide how to split $1,500 of monthly savings among them."
+},
+{
+"lang": "en",
+"domain": "legal-nda",
+"text": "Write a mutual non-disclosure agreement template for a software consultancy that is sharing confidential product roadmaps with a prospective partner, and explain what each clause does in plain English."
+},
+{
+"lang": "en",
+"domain": "business-strategy",
+"text": "Create a detailed SWOT analysis and a set of strategic recommendations for a regional grocery chain that is losing customers both to online delivery services and to deep-discount supermarkets."
+},
+{
+"lang": "en",
+"domain": "java",
+"text": "Write a complete Java program that simulates a small bank with accounts, deposits, withdrawals, and transfers. Use custom exceptions for insufficient funds, and include a main method that demonstrates every feature with sample output."
+},
+{
+"lang": "en",
+"domain": "cpp",
+"text": "Write a complete C++17 program that implements a thread-safe bounded queue with a producer-consumer demo using std::thread, mutexes, and condition variables, with comments explaining the design choices."
+},
+{
+"lang": "en",
+"domain": "csharp",
+"text": "Create a full C# console application that reads a text file of server log lines, parses them with regular expressions, and prints a summary report of error counts per hour using LINQ."
+},
+{
+"lang": "en",
+"domain": "kotlin",
+"text": "Write a complete Kotlin program that models a library lending system using data classes, a sealed class for loan status, and extension functions, plus a main function that exercises all of it."
+},
+{
+"lang": "en",
+"domain": "ruby",
+"text": "Write a complete Ruby program for a simple text adventure game with rooms, items, and an inventory, using classes and modules, and explain how to run it and how you would add new rooms."
+},
+{
+"lang": "en",
+"domain": "bash",
+"text": "Write a robust Bash script that backs up a directory into a timestamped tar.gz archive, deletes backups older than thirty days, logs every action, and uses traps for error handling. Walk me through each section."
+},
+{
+"lang": "en",
+"domain": "r",
+"text": "Write a complete R script that simulates 10,000 random walks, computes summary statistics for their final positions, and produces a histogram and a line plot with ggplot2, with comments explaining each step."
+},
+{
+"lang": "en",
+"domain": "sql-tsql",
+"text": "Write a complete T-SQL script for a library database, including table creation, sample data, a stored procedure that checks out a book with proper transaction handling, and a query listing overdue loans by member."
+},
+{
+"lang": "en",
+"domain": "yaml",
+"text": "Write a complete Docker Compose YAML file for a web stack with an nginx reverse proxy, a Node API, a Redis cache, and a Postgres database, with comments explaining the volumes, networks, and environment variables."
+},
+{
+"lang": "en",
+"domain": "csv",
+"text": "Produce a CSV with 30 hourly readings from a fictional mountain weather station, with columns for timestamp, temperature, humidity, wind speed, wind direction, and pressure, then add a short note on any patterns in the data."
+},
+{
+"lang": "en",
+"domain": "xml",
+"text": "Write an XML document for a small collection of four recipes, including ingredients with quantities and units, numbered steps, cooking times, and dietary tags, and then provide a matching XSD schema that validates it."
+},
+{
+"lang": "en",
+"domain": "markdown-tables",
+"text": "Create a study guide in Markdown that uses tables to compare the eight planets of the solar system by size, distance from the Sun, day length, atmosphere, and number of moons, with a short paragraph after each table."
+},
+{
+"lang": "en",
+"domain": "math-algebra",
+"text": "A rectangular garden has a perimeter of 94 meters and an area of 540 square meters. Find its dimensions, showing all the algebra, and then explain how the same method would work for any perimeter and area."
+},
+{
+"lang": "en",
+"domain": "math-proof",
+"text": "Prove that the square root of 2 is irrational, and then prove that there are infinitely many prime numbers. Explain the reasoning behind each step so a curious high school student could follow it."
+},
+{
+"lang": "en",
+"domain": "math-probability",
+"text": "A bag holds 5 red, 4 blue, and 3 green marbles, and I draw three without replacement. Find the probability of getting one of each color, at least two of the same color, and no red marbles, showing the combinatorics."
+},
+{
+"lang": "en",
+"domain": "logic-puzzle",
+"text": "Solve this puzzle step by step: on an island, knights always tell the truth and knaves always lie. A says \"B is a knave,\" B says \"A and C are the same type,\" and C says \"B is a knight.\" Who is what? Then invent a harder four-person variant and solve it."
+}
+]

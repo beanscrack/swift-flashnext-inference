@@ -1,0 +1,62 @@
+[
+{
+"label": "zh_microwave_principle",
+"lang": "zh-Hans",
+"text": "我一直很好奇微波炉到底是怎么把食物加热的。为什么金属餐具放进去会打火花？为什么加热后有的地方很烫、有的地方还是冷的？请详细讲讲微波炉的工作原理，包括磁控管、水分子的作用和转盘的意义。"
+},
+{
+"label": "zh_balcony_gardening_guide",
+"lang": "zh-Hans",
+"text": "我住在北方的一套公寓里，有一个朝南的小阳台，想从零开始种小番茄和几种香草。请写一份详细的新手指南，涵盖选盆、配土、播种、浇水施肥、常见病虫害防治，以及按月份安排的日常管理要点。"
+},
+{
+"label": "zh_tw_song_tea_culture",
+"lang": "zh-Hant",
+"text": "請以繁體中文寫一篇文化散文，談談宋代的點茶與鬥茶風尚，如何反映當時士大夫的審美趣味與生活哲學，並比較它與後世沖泡茶葉方式的差異，以及它對日本茶道形成的影響。"
+},
+{
+"label": "ja_git_internals",
+"lang": "ja",
+"text": "Gitがコミットやブランチを内部でどのように管理しているのか知りたいです。blob、tree、commitといったオブジェクトの仕組みや、.gitディレクトリの構造、ハッシュの役割について、具体例を交えながら詳しく技術的に解説してください。"
+},
+{
+"label": "ko_puppy_adoption",
+"lang": "ko",
+"text": "다음 달에 처음으로 강아지를 입양하려고 해요. 혼자 사는 직장인인데, 입양 전에 준비해야 할 물건, 첫 일주일 적응시키는 방법, 배변 훈련, 출근 시간에 분리불안을 줄이는 방법까지 자세히 알려주세요."
+},
+{
+"label": "ru_mendeleev_periodic_law",
+"lang": "ru",
+"text": "Напишите развёрнутое эссе об открытии периодического закона Менделеевым: какие идеи ему предшествовали, как были предсказаны ещё не открытые элементы и как понимание закона изменилось после появления квантовой механики."
+},
+{
+"label": "ar_tides_explained",
+"lang": "ar",
+"text": "اشرح لي بالتفصيل كيف تحدث ظاهرة المد والجزر، وما دور القمر والشمس فيها، ولماذا يختلف ارتفاع المد من مكان إلى آخر ومن وقت إلى آخر خلال الشهر، مع أمثلة من بعض البحار والمحيطات."
+},
+{
+"label": "de_eigenbedarf_kuendigung",
+"lang": "de",
+"text": "Erklären Sie mir ausführlich, wie das deutsche Mietrecht die Kündigung wegen Eigenbedarfs regelt: Voraussetzungen, Fristen, Formvorschriften, Härtefallklausel und was Mieter tun können, wenn sie die Kündigung für unwirksam halten."
+},
+{
+"label": "fr_bande_dessinee_culture",
+"lang": "fr",
+"text": "Je dois rédiger un long essai sur la place de la bande dessinée franco-belge dans la culture européenne. Peux-tu retracer son histoire, de Tintin à Persepolis, analyser son passage d'art populaire à art reconnu, et discuter son influence sur l'identité culturelle ?"
+},
+{
+"label": "en_harlem_renaissance_essay",
+"lang": "en",
+"text": "Write a long, well-structured essay on the Harlem Renaissance: how jazz, poetry, and visual art together challenged racial stereotypes in 1920s America, who the key figures were, and why the movement's legacy is still debated among historians."
+},
+{
+"label": "en_java_parking_garage",
+"lang": "en",
+"text": "Write a complete, runnable Java 21 program that simulates a multi-level parking garage using records and sealed interfaces, with different vehicle types, tiered hourly fee rules, and a small demo in main. Then explain your design choices section by section."
+},
+{
+"label": "en_sql_steps_windows",
+"lang": "en",
+"text": "I have a SQL table daily_steps(user_id, day, steps). Using window functions, show me step by step how to compute a 7-day rolling average, each user's longest streak of days above 10,000 steps, and monthly rankings, and explain how each query works."
+}
+]

@@ -1,0 +1,10 @@
+vllm==0.31.0
+torch==2.13.0
+transformers==5.17.0
+huggingface-hub==1.33.0
+safetensors==0.8.0
+flashinfer-python==0.7.0.post1
+flashinfer-cubin==0.7.0.post1
+flashinfer-jit-cache==0.7.0.post1+cu130
+triton==3.7.1
+nvidia-cudnn-cu13==9.20.0.48
