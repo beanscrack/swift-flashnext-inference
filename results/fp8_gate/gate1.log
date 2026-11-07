@@ -1,0 +1,550 @@
+device NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition  SMs 188  L2 128 MiB
+
+=== qkvz  [16384 x 2560]  bf16 83.9 MB  (loaded in 1.0s)
+  M=1 torch 55.6 us (1508 GB/s)   plan 51.8 us  [cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560]
+    config w8dot bn=64 bk=256 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=1 w8row   27.3 us (1538 GB/s fp8)  x1.90 vs plan  err max 2.76e-02 rms 2.60e-02 (bf16 torch: max 2.53e-03 rms 1.65e-03)  [w8fma bn=8 bk=512 sk=1 w=4; 221 cfgs, 24 failed]
+    config w8dot bn=128 bk=128 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=128 bk=128 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=1 w8g128  27.7 us (1512 GB/s fp8)  x1.87 vs plan  err max 2.97e-02 rms 2.49e-02 (bf16 torch: max 2.53e-03 rms 1.65e-03)  [w8dot bn=32 bk=128 sk=1 w=4 st=3 bm=16; 135 cfgs, 6 failed]
+  M=5 torch 62.4 us (1345 GB/s)   plan 52.7 us  [cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560]
+    config w8dot bn=64 bk=256 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=5 w8row   27.8 us (1509 GB/s fp8)  x1.90 vs plan  err max 2.55e-02 rms 2.65e-02 (bf16 torch: max 2.41e-03 rms 2.03e-03)  [w8dot bn=32 bk=128 sk=1 w=4 st=4 bm=16; 221 cfgs, 24 failed]
+    config w8dot bn=128 bk=128 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=128 bk=128 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=5 w8g128  28.0 us (1500 GB/s fp8)  x1.89 vs plan  err max 2.56e-02 rms 2.54e-02 (bf16 torch: max 2.41e-03 rms 2.03e-03)  [w8dot bn=32 bk=128 sk=1 w=4 st=3 bm=16; 135 cfgs, 6 failed]
+  M=10 torch 55.7 us (1506 GB/s)   plan 54.1 us  [cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560]
+    config w8dot bn=64 bk=256 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=10 w8row   28.4 us (1478 GB/s fp8)  x1.91 vs plan  err max 2.39e-02 rms 2.67e-02 (bf16 torch: max 2.76e-03 rms 1.66e-03)  [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=16; 180 cfgs, 24 failed]
+    config w8dot bn=128 bk=128 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=128 bk=128 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=10 w8g128  29.7 us (1413 GB/s fp8)  x1.82 vs plan  err max 3.06e-02 rms 2.55e-02 (bf16 torch: max 2.76e-03 rms 1.66e-03)  [w8dot bn=32 bk=128 sk=1 w=4 st=4 bm=16; 120 cfgs, 6 failed]
+  M=20 torch 59.2 us (1416 GB/s)   plan - us  [-]
+    config w8dot bn=16 bk=256 sk=1 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=16 bk=256 sk=1 w=8 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=20 w8row   28.9 us (1452 GB/s fp8)  x2.05 vs torch  err max 2.11e-02 rms 2.61e-02 (bf16 torch: max 1.50e-03 rms 1.66e-03)  [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=32; 180 cfgs, 32 failed]
+    config w8dot bn=128 bk=128 sk=1 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 123392, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=128 bk=128 sk=2 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 123392, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=20 w8g128  29.7 us (1411 GB/s fp8)  x1.99 vs torch  err max 2.59e-02 rms 2.50e-02 (bf16 torch: max 1.50e-03 rms 1.66e-03)  [w8dot bn=128 bk=128 sk=1 w=8 st=4 bm=32; 120 cfgs, 6 failed]
+
+=== o_proj  [2560 x 6144]  bf16 31.5 MB  (loaded in 0.3s)
+  M=1 torch 23.2 us (1354 GB/s)   plan 19.5 us  [cute[sweep] bs=128 opb=2 ku=4 vw=4 sk=6144]
+    config w8dot bn=64 bk=256 sk=4 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=4 w=8 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=1 w8row   11.8 us (1334 GB/s fp8)  x1.66 vs plan  err max 3.92e-02 rms 2.73e-02 (bf16 torch: max 2.89e-03 rms 1.69e-03)  [w8fma bn=32 bk=128 sk=8 w=8; 191 cfgs, 2 failed]
+  M=1 w8g128  11.8 us (1328 GB/s fp8)  x1.65 vs plan  err max 3.33e-02 rms 2.52e-02 (bf16 torch: max 2.89e-03 rms 1.69e-03)  [w8fma bn=32 bk=128 sk=8 w=8; 93 cfgs, 0 failed]
+  M=5 torch 23.5 us (1337 GB/s)   plan 20.5 us  [cute[sweep] bs=128 opb=2 ku=4 vw=4 sk=6144]
+    config w8dot bn=64 bk=256 sk=4 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=4 w=8 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=5 w8row   12.6 us (1253 GB/s fp8)  x1.63 vs plan  err max 2.85e-02 rms 2.67e-02 (bf16 torch: max 2.06e-03 rms 1.67e-03)  [w8dot bn=64 bk=128 sk=4 w=8 st=4 bm=16; 191 cfgs, 2 failed]
+  M=5 w8g128  12.5 us (1255 GB/s fp8)  x1.64 vs plan  err max 2.24e-02 rms 2.50e-02 (bf16 torch: max 2.06e-03 rms 1.67e-03)  [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16; 93 cfgs, 0 failed]
+  M=10 torch 23.7 us (1325 GB/s)   plan 21.7 us  [cute[sweep] bs=32 opb=2 ku=2 vw=8 sk=6144]
+    config w8dot bn=64 bk=256 sk=4 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=4 w=8 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=10 w8row   12.6 us (1244 GB/s fp8)  x1.72 vs plan  err max 3.21e-02 rms 2.63e-02 (bf16 torch: max 2.42e-03 rms 1.65e-03)  [w8dot bn=64 bk=128 sk=4 w=8 st=4 bm=16; 108 cfgs, 2 failed]
+  M=10 w8g128  12.6 us (1252 GB/s fp8)  x1.73 vs plan  err max 2.44e-02 rms 2.46e-02 (bf16 torch: max 2.42e-03 rms 1.65e-03)  [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16; 72 cfgs, 0 failed]
+  M=20 torch 27.0 us (1166 GB/s)   plan - us  [-]
+    config w8dot bn=16 bk=256 sk=1 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=16 bk=256 sk=2 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=20 w8row   13.3 us (1186 GB/s fp8)  x2.03 vs torch  err max 3.02e-02 rms 2.65e-02 (bf16 torch: max 4.35e-03 rms 2.37e-03)  [w8dot bn=64 bk=128 sk=4 w=4 st=4 bm=32; 108 cfgs, 12 failed]
+  M=20 w8g128  13.3 us (1182 GB/s fp8)  x2.03 vs torch  err max 2.70e-02 rms 2.50e-02 (bf16 torch: max 4.35e-03 rms 2.37e-03)  [w8dot bn=64 bk=128 sk=4 w=4 st=3 bm=32; 72 cfgs, 0 failed]
+
+=== qsa_qkv  [13312 x 2560]  bf16 68.2 MB  (loaded in 0.6s)
+  M=1 torch 45.7 us (1490 GB/s)   plan 42.2 us  [cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560]
+    config w8dot bn=64 bk=256 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=1 w8row   22.3 us (1527 GB/s fp8)  x1.89 vs plan  err max 1.82e-02 rms 2.72e-02 (bf16 torch: max 2.22e-03 rms 1.67e-03)  [w8fma bn=8 bk=512 sk=1 w=4; 221 cfgs, 24 failed]
+    config w8dot bn=128 bk=128 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=128 bk=128 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=1 w8g128  23.3 us (1463 GB/s fp8)  x1.81 vs plan  err max 1.54e-02 rms 2.59e-02 (bf16 torch: max 2.22e-03 rms 1.67e-03)  [w8fma bn=32 bk=128 sk=2 w=8; 135 cfgs, 6 failed]
+  M=5 torch 48.8 us (1398 GB/s)   plan 43.3 us  [cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560]
+    config w8dot bn=64 bk=256 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=5 w8row   23.6 us (1442 GB/s fp8)  x1.83 vs plan  err max 1.94e-02 rms 2.50e-02 (bf16 torch: max 2.32e-03 rms 2.03e-03)  [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=16; 221 cfgs, 24 failed]
+    config w8dot bn=128 bk=128 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=128 bk=128 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=5 w8g128  24.5 us (1392 GB/s fp8)  x1.77 vs plan  err max 1.65e-02 rms 2.38e-02 (bf16 torch: max 2.32e-03 rms 2.03e-03)  [w8dot bn=128 bk=128 sk=1 w=8 st=3 bm=16; 135 cfgs, 6 failed]
+  M=10 torch 49.2 us (1385 GB/s)   plan 47.3 us  [cute[sweep] bs=32 opb=4 ku=2 vw=8 sk=2560]
+    config w8dot bn=64 bk=256 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=10 w8row   23.7 us (1438 GB/s fp8)  x1.99 vs plan  err max 2.54e-02 rms 2.64e-02 (bf16 torch: max 3.84e-03 rms 2.03e-03)  [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=16; 180 cfgs, 24 failed]
+    config w8dot bn=128 bk=128 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=128 bk=128 sk=2 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=10 w8g128  24.4 us (1396 GB/s fp8)  x1.94 vs plan  err max 2.90e-02 rms 2.50e-02 (bf16 torch: max 3.84e-03 rms 2.03e-03)  [w8dot bn=128 bk=128 sk=1 w=8 st=3 bm=16; 120 cfgs, 6 failed]
+  M=20 torch 52.6 us (1295 GB/s)   plan - us  [-]
+    config w8dot bn=16 bk=256 sk=1 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=16 bk=256 sk=1 w=8 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=20 w8row   25.4 us (1339 GB/s fp8)  x2.07 vs torch  err max 2.86e-02 rms 2.63e-02 (bf16 torch: max 3.57e-03 rms 2.36e-03)  [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=32; 180 cfgs, 32 failed]
+    config w8dot bn=128 bk=128 sk=1 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 123392, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=128 bk=128 sk=2 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 123392, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=20 w8g128  26.1 us (1308 GB/s fp8)  x2.02 vs torch  err max 2.29e-02 rms 2.51e-02 (bf16 torch: max 3.57e-03 rms 2.36e-03)  [w8dot bn=128 bk=128 sk=1 w=8 st=3 bm=32; 120 cfgs, 6 failed]
+
+=== qsa_o  [2560 x 6144]  bf16 31.5 MB  (loaded in 0.3s)
+  M=1 torch 23.2 us (1353 GB/s)   plan 19.5 us  [cute[sweep] bs=128 opb=2 ku=4 vw=4 sk=6144]
+    config w8dot bn=64 bk=256 sk=4 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=4 w=8 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=1 w8row   11.7 us (1345 GB/s fp8)  x1.67 vs plan  err max 2.20e-02 rms 2.62e-02 (bf16 torch: max 2.59e-03 rms 1.63e-03)  [w8fma bn=8 bk=512 sk=1 w=8; 191 cfgs, 2 failed]
+  M=1 w8g128  11.9 us (1327 GB/s fp8)  x1.65 vs plan  err max 2.58e-02 rms 2.62e-02 (bf16 torch: max 2.59e-03 rms 1.63e-03)  [w8fma bn=32 bk=128 sk=8 w=8; 93 cfgs, 0 failed]
+  M=5 torch 23.6 us (1330 GB/s)   plan 20.4 us  [cute[sweep] bs=128 opb=2 ku=4 vw=4 sk=6144]
+    config w8dot bn=64 bk=256 sk=4 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=4 w=8 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=5 w8row   12.6 us (1247 GB/s fp8)  x1.62 vs plan  err max 2.74e-02 rms 2.63e-02 (bf16 torch: max 2.30e-03 rms 1.68e-03)  [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16; 191 cfgs, 2 failed]
+  M=5 w8g128  12.5 us (1256 GB/s fp8)  x1.63 vs plan  err max 2.33e-02 rms 2.53e-02 (bf16 torch: max 2.30e-03 rms 1.68e-03)  [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16; 93 cfgs, 0 failed]
+  M=10 torch 23.8 us (1322 GB/s)   plan 21.8 us  [cute[sweep] bs=32 opb=2 ku=2 vw=8 sk=6144]
+    config w8dot bn=64 bk=256 sk=4 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=4 w=8 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=10 w8row   12.7 us (1242 GB/s fp8)  x1.72 vs plan  err max 3.12e-02 rms 2.64e-02 (bf16 torch: max 2.57e-03 rms 1.66e-03)  [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16; 108 cfgs, 2 failed]
+  M=10 w8g128  12.6 us (1248 GB/s fp8)  x1.73 vs plan  err max 2.60e-02 rms 2.55e-02 (bf16 torch: max 2.57e-03 rms 1.66e-03)  [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16; 72 cfgs, 0 failed]
+  M=20 torch 27.1 us (1159 GB/s)   plan - us  [-]
+    config w8dot bn=16 bk=256 sk=1 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=16 bk=256 sk=2 w=4 st=6 bm=32 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=20 w8row   13.2 us (1189 GB/s fp8)  x2.05 vs torch  err max 2.41e-02 rms 2.65e-02 (bf16 torch: max 3.02e-03 rms 2.34e-03)  [w8dot bn=64 bk=128 sk=4 w=4 st=4 bm=32; 108 cfgs, 12 failed]
+  M=20 w8g128  13.4 us (1176 GB/s fp8)  x2.03 vs torch  err max 2.37e-02 rms 2.53e-02 (bf16 torch: max 3.02e-03 rms 2.34e-03)  [w8dot bn=64 bk=128 sk=4 w=4 st=3 bm=32; 72 cfgs, 0 failed]
+
+=== lm_head  [248320 x 2560]  bf16 1271.4 MB  (loaded in 0.9s)
+  M=1 torch 902.4 us (1409 GB/s)   plan 772.6 us  [cute[sweep] bs=32 opb=2 ku=1 vw=4 sk=2560]
+    config w8dot bn=64 bk=256 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=1 w=8 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=1 w8row   388.9 us (1635 GB/s fp8)  x1.99 vs plan  err max 2.98e-02 rms 2.79e-02 (bf16 torch: max 2.18e-03 rms 1.66e-03)  [w8fma bn=16 bk=512 sk=1 w=4; 95 cfgs, 8 failed]
+    config w8dot bn=128 bk=128 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102912, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=128 bk=128 sk=1 w=8 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 102400, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=1 w8g128  428.4 us (1484 GB/s fp8)  x1.80 vs plan  err max 2.58e-02 rms 2.71e-02 (bf16 torch: max 2.18e-03 rms 1.66e-03)  [w8fma bn=32 bk=128 sk=1 w=2; 54 cfgs, 2 failed]
+  M=5 torch 872.3 us (1458 GB/s)   plan 784.3 us  [triton dot bn=32 bk=128 sk=1 w=2 st=6]
+    config w8dot bn=64 bk=256 sk=1 w=4 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+    config w8dot bn=64 bk=256 sk=1 w=8 st=6 bm=16 failed:
+site-packages/triton/compiler/compiler.py", line 485, in launch_metadata
+    self._init_handles()
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 459, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+  File "/u701/j692wu/.conda/envs/inference/lib/python3.12/site-packages/triton/compiler/compiler.py", line 451, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 122880, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+  M=5 w8row   427.8 us (1486 GB/s fp8)  x1.83 vs plan  err max 2.96e-02 rms 2.78e-02 (bf16 torch: max 2.22e-03 rms 1.66e-03)  [w8dot bn=128 bk=256 sk=1 w=4 st=3 bm=16; 95 cfgs, 8 failed]

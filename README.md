@@ -11,6 +11,7 @@ to ~256 tok/s with the patches here, with no detectable quality loss in the chec
 | `release/` | The deliverable. Launcher (`serve_final.sh`), env-gated import hooks, draft-vocab presets, skinny-GEMM plan, provenance scripts. **Start with `release/README.md`** (full results) and `release/EXPLAINED.md` (why each piece works). |
 | `baseline/` | The original un-patched deployment (`serve.sh`, eager vs CUDA-graph comparison, context sweep, latency/utilization scripts) with its README. |
 | `docs/FP8_SCOPE.md` | Scoping note for FP8 weight-only dense layers and FP8 KV cache. Nothing implemented. |
+| `docs/FP8_RESULTS.md` | Weight-only FP8 dense layers (`SWIFT_FP8`): what changed, launch line, throughput results and quality status. |
 
 ## Quick start
 
@@ -37,6 +38,6 @@ Widening the CUDA-graph capture sizes alone fixes concurrency (2 requests: 71 ->
 
 - Patches target vLLM 0.31.0 internals; the skinny plan was tuned on this GPU only.
 - Marlin is non-deterministic at temperature 0, and long-context losslessness is unproven (see section 5 of `release/README.md`).
-- The model checkpoint and raw run data (driver logs, Nsight traces, per-request JSON) are not in this repo; they remain on the cluster.
-- Scripts contain hardcoded cluster paths (`/u701/j692wu/...`) that need adjusting elsewhere.
+- The model checkpoint and raw run data (server logs, Nsight traces, per-request JSON) are not in this repo; they remain on the cluster. The FP8 driver logs and status files are in `results/runs/`.
+- Scripts contain hardcoded cluster paths (`/u701/j692wu/...`) that need adjusting elsewhere. This includes the hooks and scripts under `release/` and the FP8 launch line in `docs/FP8_RESULTS.md`.
 - No license has been chosen yet.
