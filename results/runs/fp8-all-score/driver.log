@@ -1,0 +1,8 @@
+2026-11-07T01:24:07Z [fp8-all-score] launched server pid 18884 (serve=/u701/j692wu/swift-opt/release/serve_final.sh preset=final-code)
+2026-11-07T01:42:42Z [fp8-all-score] startup state=ready after 1115 s
+2026-11-07T01:42:42Z [fp8-all-score] hooks: [swift-draft-vocab] ACTIVE [swift-draft-vocab] armed [swift_fp8] converted [swift_l2pf] armed [swift_l2pf] patched [swift_skinny] patched 
+2026-11-07T01:43:31Z [fp8-all-score] rep1: mean_decode_tps=310.26 ttft=0.262
+2026-11-07T01:44:19Z [fp8-all-score] rep2: mean_decode_tps=306.85 ttft=0.230
+2026-11-07T01:45:08Z [fp8-all-score] rep3: mean_decode_tps=304.00 ttft=0.237
+2026-11-07T01:45:08Z [fp8-all-score] extra: /usr/bin/python3 /u701/j692wu/swift-profile/score/score_logprobs.py /u701/j692wu/swift-opt/runs/fp8-all-score/scores.json && curl -s -m 20 http://127.0.0.1:8000/health -o /dev/null -w health=%{http_code}
+2026-11-07T01:45:55Z [fp8-all-score] after stop: gpu_used=0 MiB host_avail=184 GiB

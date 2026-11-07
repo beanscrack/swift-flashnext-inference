@@ -43,6 +43,15 @@ if os.environ.get("SWIFT_L2PF") == "1":
     except Exception as _exc4:  # pragma: no cover
         sys.stderr.write(f"[swift_l2pf] sitecustomize failed to arm the hook: {type(_exc4).__name__}: {_exc4}" + chr(10))
 
+# --- swift-opt: weight-only FP8 dense layers (SWIFT_FP8=1); must come after the skinny hook ---
+if os.environ.get("SWIFT_FP8") == "1":
+    try:
+        import swift_fp8_dense
+
+        swift_fp8_dense.install()
+    except Exception as _exc5:  # pragma: no cover
+        sys.stderr.write(f"[swift_fp8] sitecustomize failed to arm the hook: {type(_exc5).__name__}: {_exc5}" + chr(10))
+
 def _chain_next_sitecustomize():
     """We shadow any other sitecustomize on sys.path (e.g. the conda env's); run the next one, if any."""
     if getattr(sys, "_swift_sitecustomize_chaining", False):  # recursion guard (same dir reached via a symlink)

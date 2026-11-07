@@ -1,0 +1,128 @@
+{
+ "16384x2560": {
+  "1": {
+   "kind": "fma",
+   "block_n": 8,
+   "block_k": 512,
+   "split_k": 1,
+   "num_warps": 4
+  },
+  "5": {
+   "kind": "dot",
+   "block_n": 32,
+   "block_k": 128,
+   "split_k": 1,
+   "num_warps": 4,
+   "num_stages": 4,
+   "block_m": 16
+  },
+  "10": {
+   "kind": "dot",
+   "block_n": 128,
+   "block_k": 256,
+   "split_k": 1,
+   "num_warps": 8,
+   "num_stages": 3,
+   "block_m": 16
+  },
+  "20": {
+   "kind": "dot",
+   "block_n": 128,
+   "block_k": 256,
+   "split_k": 1,
+   "num_warps": 8,
+   "num_stages": 3,
+   "block_m": 32
+  }
+ },
+ "2560x6144": {
+  "1": {
+   "kind": "fma",
+   "block_n": 8,
+   "block_k": 512,
+   "split_k": 1,
+   "num_warps": 8
+  },
+  "5": {
+   "kind": "dot",
+   "block_n": 64,
+   "block_k": 128,
+   "split_k": 4,
+   "num_warps": 8,
+   "num_stages": 3,
+   "block_m": 16
+  },
+  "10": {
+   "kind": "dot",
+   "block_n": 64,
+   "block_k": 128,
+   "split_k": 4,
+   "num_warps": 8,
+   "num_stages": 3,
+   "block_m": 16
+  },
+  "20": {
+   "kind": "dot",
+   "block_n": 64,
+   "block_k": 128,
+   "split_k": 4,
+   "num_warps": 4,
+   "num_stages": 4,
+   "block_m": 32
+  }
+ },
+ "13312x2560": {
+  "1": {
+   "kind": "fma",
+   "block_n": 8,
+   "block_k": 512,
+   "split_k": 1,
+   "num_warps": 4
+  },
+  "5": {
+   "kind": "dot",
+   "block_n": 128,
+   "block_k": 256,
+   "split_k": 1,
+   "num_warps": 8,
+   "num_stages": 3,
+   "block_m": 16
+  },
+  "10": {
+   "kind": "dot",
+   "block_n": 128,
+   "block_k": 256,
+   "split_k": 1,
+   "num_warps": 8,
+   "num_stages": 3,
+   "block_m": 16
+  },
+  "20": {
+   "kind": "dot",
+   "block_n": 128,
+   "block_k": 256,
+   "split_k": 1,
+   "num_warps": 8,
+   "num_stages": 3,
+   "block_m": 32
+  }
+ },
+ "248320x2560": {
+  "1": {
+   "kind": "fma",
+   "block_n": 16,
+   "block_k": 512,
+   "split_k": 1,
+   "num_warps": 4
+  },
+  "5": {
+   "kind": "dot",
+   "block_n": 128,
+   "block_k": 256,
+   "split_k": 1,
+   "num_warps": 4,
+   "num_stages": 3,
+   "block_m": 16
+  }
+ }
+}

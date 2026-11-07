@@ -1,0 +1,7 @@
+2026-11-07T00:01:42Z [fp8-head-mtp] launched server pid 11962 (serve=/u701/j692wu/swift-opt/release/serve_final.sh preset=final-code)
+2026-11-07T00:20:06Z [fp8-head-mtp] startup state=ready after 1104 s
+2026-11-07T00:20:07Z [fp8-head-mtp] hooks: [swift-draft-vocab] ACTIVE [swift-draft-vocab] armed [swift_fp8] converted [swift_l2pf] armed [swift_l2pf] patched [swift_skinny] patched 
+2026-11-07T00:20:57Z [fp8-head-mtp] rep1: mean_decode_tps=298.33 ttft=0.285
+2026-11-07T00:21:46Z [fp8-head-mtp] rep2: mean_decode_tps=298.94 ttft=0.218
+2026-11-07T00:22:35Z [fp8-head-mtp] rep3: mean_decode_tps=298.01 ttft=0.235
+2026-11-07T00:23:14Z [fp8-head-mtp] after stop: gpu_used=0 MiB host_avail=184 GiB

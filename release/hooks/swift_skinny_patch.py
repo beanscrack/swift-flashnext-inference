@@ -255,6 +255,23 @@ def _patch(mod):
     # (e.g. vLLM's model-registry inspection subprocess).
     mod.shape_dynamic_skinny_gemm = _Dispatcher(mod.shape_dynamic_skinny_gemm)
     mod._gemm_plans = plans
+    if os.environ.get("SWIFT_SKINNY_STRIDED", "1") == "1":
+        # HC input_mix_weight_up gets lora = output[:, :rank] of the fused hc_down_silu kernel (row stride 336, not
+        # 320), which stock _runtime_ok rejects -> cuBLAS for 96 of 97 calls.  Our Triton kernels take a row stride,
+        # so accept strided activations when the planned config for this (N, K, M) is a Triton one.
+        orig_ok = mod._runtime_ok
+
+        def _runtime_ok(x, weight, _orig=orig_ok):
+            if _orig(x, weight):
+                return True
+            if not (x.dim() == 2 and x.stride(1) == 1 and x.stride(0) % 8 == 0 and x.dtype == weight.dtype
+                    and weight.dim() == 2 and weight.stride() == (weight.shape[1], 1) and x.shape[1] == weight.shape[1]):
+                return False
+            cfg = plans().get((weight.shape[0], weight.shape[1]), {}).get(x.shape[0])
+            return isinstance(cfg, _Planned)
+
+        mod._runtime_ok = _runtime_ok
+        _log("strided-activation dispatch enabled for Triton plan entries (SWIFT_SKINNY_STRIDED=1)")
     orig_enable = getattr(mod, "enable_qwen4_exp_low_latency_gemm", None)
     if orig_enable is not None:   # model.py / mtp.py bind this name via "from .low_latency_gemm import", after this hook
         @functools.wraps(orig_enable)

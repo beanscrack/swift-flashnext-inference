@@ -201,10 +201,21 @@ class _DraftHead:
         import torch
 
         h = hidden_states
-        if h.dtype != self.w.dtype:
-            h = h.to(self.w.dtype)
-        # same op the stock path ends in (default_unquantized_gemm -> F.linear), just with N = V_sub
-        logits = torch.nn.functional.linear(h, self.w)  # [M, V_sub] bf16
+        if h.dtype != torch.bfloat16:
+            h = h.to(torch.bfloat16)
+        if getattr(self, "w8", None) is not None and h.shape[0] <= 32 and h.stride(1) == 1 and h.stride(0) % 8 == 0:
+            # SWIFT_DRAFT_HEAD_FP8=1: weight-only FP8 copy of W_sub (draft proposals only; target unaffected)
+            import fp8_gemv
+            import swift_fp8_dense
+            n, k = self.w8.shape
+            logits = fp8_gemv.w8_gemm(h, self.w8, self.w8_scale, 0, swift_fp8_dense.conf_for(n, k, h.shape[0]))
+        else:
+            # same op the stock path ends in (default_unquantized_gemm -> F.linear), just with N = V_sub
+            w = self.w
+            if w is None:   # FP8 head, large M: dequantize (never on the CUDA-graph path, M <= 32 there)
+                import fp8_gemv
+                w = fp8_gemv.dequantize_fp8(self.w8, self.w8_scale, 0)
+            logits = torch.nn.functional.linear(h, w)  # [M, V_sub] bf16
         local = logits.argmax(dim=-1)  # [M] int64, first max wins -> lowest id on ties (ids ascending)
         out = self.ids.index_select(0, local)  # [M] int64, contiguous (update_draft_inputs needs stride 1)
         capturing = bool(torch.cuda.is_available() and torch.cuda.is_current_stream_capturing())
@@ -278,6 +289,20 @@ def _build_head(spec, cfg: _Cfg, ids_np, n_real: int, target_model=None):
     if getattr(head, "bias", None) is not None:
         raise RuntimeError("lm_head has a bias")
     w = head.weight
+    w8_scale = getattr(head, "w8_scale", None)
+    if w.dtype == torch.float8_e4m3fn and w8_scale is not None:
+        # swift_fp8_dense converted the shared lm_head to FP8: build the trimmed head from the dequantized rows
+        import fp8_gemv
+        _g = getattr(head.quant_method, "group", 0)
+        _w8, _s = w, w8_scale
+
+        class _Deq:   # minimal view so the checks and index_select below work unchanged
+            pass
+        w = _Deq()
+        w.shape, w.device, w.is_cuda, w.dtype = _w8.shape, _w8.device, _w8.is_cuda, torch.bfloat16
+        w.dim = lambda: 2
+        w.element_size = lambda: 2
+        w.index_select = lambda d, idx: fp8_gemv.dequantize_fp8(_w8.index_select(0, idx), _s.index_select(0, idx), _g)
     if w.dim() != 2 or w.dtype != torch.bfloat16:
         raise RuntimeError(f"lm_head.weight must be 2-D bf16, got {tuple(w.shape)} {w.dtype}")
     if not w.is_cuda and not _ALLOW_CPU_FOR_TESTS:
@@ -328,6 +353,16 @@ def _build_head(spec, cfg: _Cfg, ids_np, n_real: int, target_model=None):
     except Exception:
         pass
     dh = _DraftHead(w_sub, ids_dev, int(w.shape[0]), n_real, cfg.path, digest)
+    dh.w8 = None
+    if os.environ.get("SWIFT_DRAFT_HEAD_FP8") == "1":
+        import fp8_gemv
+        dh.w8, dh.w8_scale = fp8_gemv.quantize_fp8(w_sub, 0)
+        dh.w = None   # free the BF16 copy; the fallback path for M > 32 dequantizes
+        for _m in (1, 2, 3, 4, 5, 8):   # compile outside CUDA-graph capture
+            dh.sample(torch.zeros((_m, w_sub.shape[1]), dtype=torch.bfloat16, device=dh.w8.device))
+        torch.cuda.synchronize()
+        _log().info("%s draft head stored as FP8 e4m3 (%d x %d, %.1f MiB)", TAG, dh.w8.shape[0], dh.w8.shape[1],
+                    dh.w8.numel() / 2**20)
     _log().info(
         "%s ACTIVE pid=%d: draft lm_head trimmed %d -> %d rows (%d kept + %d pad; %.2f%% of vocab), dtype=bf16, "
         "extra GPU memory %.1f MiB, ids sha1=%s, file=%s, draft model=%s, head shared with target=%s "
