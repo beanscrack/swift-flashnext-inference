@@ -1,0 +1,280 @@
+start weights: model-tail mtp.* bitwise equal to mtp_original (31/31)
+train samples 3982 (used 3981; 1 with C<5 have no anchors), heldout 204, steps/epoch 498, total 996
+1/204 1s
+21/204 6s
+41/204 13s
+61/204 19s
+81/204 23s
+101/204 31s
+121/204 38s
+141/204 44s
+161/204 51s
+181/204 58s
+201/204 63s
+OVERALL {"n": 257969, "acc": [0.8565874194186123, 0.7194507867224357, 0.600343452120216, 0.49908322317797876], "tokens_per_cycle": 3.6754648814392428}
+ROUND_END {"n": 75332, "acc": [0.8119258747942442, 0.6549540699835396, 0.5309430255402751, 0.43122444645037966], "tokens_per_cycle": 3.429047416768438}
+EVAL step 0 epoch 0: acc ['0.8119', '0.6550', '0.5309', '0.4312'] tokens/cycle 3.4290 (65s)
+original check: max |acc - 0.812/0.655/0.531/0.431| = 0.00000
+step 10/996 ep 1 loss 0.7675 lr 4.00e-06 gn 3.735 9.95s peakGiB 67.1
+step 20/996 ep 1 loss 0.4522 lr 8.00e-06 gn 2.707 8.19s peakGiB 67.2
+step 30/996 ep 1 loss 0.7834 lr 1.20e-05 gn 2.246 9.88s peakGiB 67.2
+step 40/996 ep 1 loss 0.6733 lr 1.60e-05 gn 2.033 9.97s peakGiB 67.2
+step 50/996 ep 1 loss 0.5561 lr 2.00e-05 gn 1.771 9.65s peakGiB 67.2
+step 60/996 ep 1 loss 0.4454 lr 2.00e-05 gn 2.463 8.16s peakGiB 67.2
+step 70/996 ep 1 loss 0.3826 lr 2.00e-05 gn 2.006 9.53s peakGiB 67.2
+step 80/996 ep 1 loss 0.3812 lr 2.00e-05 gn 1.752 9.26s peakGiB 67.2
+step 90/996 ep 1 loss 0.4612 lr 1.99e-05 gn 2.863 8.47s peakGiB 67.2
+step 100/996 ep 1 loss 0.5720 lr 1.99e-05 gn 1.768 9.93s peakGiB 67.2
+1/204 0s
+21/204 7s
+41/204 14s
+61/204 22s
+81/204 28s
+101/204 35s
+121/204 43s
+141/204 51s
+161/204 58s
+181/204 65s
+201/204 70s
+OVERALL {"n": 257969, "acc": [0.8923165186514659, 0.7680535258112409, 0.6538653869263361, 0.5560319263167279], "tokens_per_cycle": 3.870267357705771}
+ROUND_END {"n": 71050, "acc": [0.8513581984517945, 0.7086840253342717, 0.586530612244898, 0.48954257565095005], "tokens_per_cycle": 3.6361154116819145}
+EVAL step 100 epoch 1: acc ['0.8514', '0.7087', '0.5865', '0.4895'] tokens/cycle 3.6361 (72s)
+  saved best (step 100)
+step 110/996 ep 1 loss 0.3757 lr 1.98e-05 gn 2.245 8.98s peakGiB 67.2
+step 120/996 ep 1 loss 0.3818 lr 1.98e-05 gn 1.975 9.12s peakGiB 67.2
+step 130/996 ep 1 loss 0.5285 lr 1.97e-05 gn 2.052 9.77s peakGiB 67.2
+step 140/996 ep 1 loss 0.4995 lr 1.96e-05 gn 1.757 9.59s peakGiB 67.2
+step 150/996 ep 1 loss 0.4394 lr 1.95e-05 gn 1.711 9.83s peakGiB 67.2
+step 160/996 ep 1 loss 0.4729 lr 1.94e-05 gn 2.780 8.36s peakGiB 67.2
+step 170/996 ep 1 loss 0.3971 lr 1.93e-05 gn 1.405 8.87s peakGiB 67.2
+step 180/996 ep 1 loss 0.4039 lr 1.92e-05 gn 1.814 8.81s peakGiB 67.2
+step 190/996 ep 1 loss 0.4354 lr 1.91e-05 gn 1.683 9.37s peakGiB 67.2
+step 200/996 ep 1 loss 0.5025 lr 1.89e-05 gn 1.591 9.79s peakGiB 67.2
+1/204 0s
+21/204 7s
+41/204 14s
+61/204 21s
+81/204 28s
+101/204 32s
+121/204 38s
+141/204 46s
+161/204 53s
+181/204 60s
+201/204 66s
+OVERALL {"n": 257969, "acc": [0.8941151843826196, 0.7714647884048084, 0.6580131721253328, 0.5606565129918711], "tokens_per_cycle": 3.8842496579046317}
+ROUND_END {"n": 70658, "acc": [0.8556002151207224, 0.7138469812335475, 0.5919782614848991, 0.4945512185456707], "tokens_per_cycle": 3.65597667638484}
+EVAL step 200 epoch 1: acc ['0.8556', '0.7138', '0.5920', '0.4946'] tokens/cycle 3.6560 (68s)
+  saved best (step 200)
+step 210/996 ep 1 loss 0.4517 lr 1.88e-05 gn 1.486 9.61s peakGiB 67.2
+step 220/996 ep 1 loss 0.5571 lr 1.86e-05 gn 1.953 9.59s peakGiB 67.2
+step 230/996 ep 1 loss 0.3920 lr 1.85e-05 gn 1.783 8.88s peakGiB 67.2
+step 240/996 ep 1 loss 0.5702 lr 1.83e-05 gn 1.770 8.76s peakGiB 67.2
+step 250/996 ep 1 loss 0.5414 lr 1.81e-05 gn 2.048 8.68s peakGiB 67.2
+step 260/996 ep 1 loss 0.3998 lr 1.79e-05 gn 1.643 9.17s peakGiB 67.2
+step 270/996 ep 1 loss 0.2837 lr 1.77e-05 gn 1.337 8.12s peakGiB 67.2
+step 280/996 ep 1 loss 0.3082 lr 1.75e-05 gn 1.539 9.12s peakGiB 67.2
+step 290/996 ep 1 loss 0.3210 lr 1.73e-05 gn 1.262 9.36s peakGiB 67.2
+step 300/996 ep 1 loss 0.3897 lr 1.71e-05 gn 1.578 9.18s peakGiB 67.2
+1/204 0s
+21/204 8s
+41/204 15s
+61/204 23s
+81/204 30s
+101/204 36s
+121/204 42s
+141/204 47s
+161/204 55s
+181/204 60s
+201/204 65s
+OVERALL {"n": 257969, "acc": [0.8953595199423187, 0.774720993607759, 0.6632424826238812, 0.5674480267008827], "tokens_per_cycle": 3.9007710228748413}
+ROUND_END {"n": 70156, "acc": [0.8566195336108102, 0.7194110268544387, 0.6009749700667085, 0.505216945093791], "tokens_per_cycle": 3.6822224756257484}
+EVAL step 300 epoch 1: acc ['0.8566', '0.7194', '0.6010', '0.5052'] tokens/cycle 3.6822 (66s)
+  saved best (step 300)
+step 310/996 ep 1 loss 0.6191 lr 1.69e-05 gn 1.868 9.91s peakGiB 67.2
+step 320/996 ep 1 loss 0.4457 lr 1.66e-05 gn 1.821 9.25s peakGiB 67.2
+step 330/996 ep 1 loss 0.4309 lr 1.64e-05 gn 1.560 8.97s peakGiB 67.2
+step 340/996 ep 1 loss 0.2858 lr 1.62e-05 gn 1.280 9.38s peakGiB 67.2
+step 350/996 ep 1 loss 0.5021 lr 1.59e-05 gn 1.677 9.48s peakGiB 67.2
+step 360/996 ep 1 loss 0.5445 lr 1.57e-05 gn 1.572 10.02s peakGiB 67.2
+step 370/996 ep 1 loss 0.4485 lr 1.54e-05 gn 1.423 10.12s peakGiB 67.2
+step 380/996 ep 1 loss 0.4906 lr 1.51e-05 gn 2.323 9.12s peakGiB 67.2
+step 390/996 ep 1 loss 0.4986 lr 1.49e-05 gn 1.640 9.81s peakGiB 67.2
+step 400/996 ep 1 loss 0.3108 lr 1.46e-05 gn 1.584 8.35s peakGiB 67.2
+1/204 0s
+21/204 7s
+41/204 13s
+61/204 20s
+81/204 25s
+101/204 31s
+121/204 38s
+141/204 45s
+161/204 51s
+181/204 59s
+201/204 65s
+OVERALL {"n": 257969, "acc": [0.8968209358488811, 0.7779927045497714, 0.6669406013900895, 0.5713709786834852], "tokens_per_cycle": 3.9131252204722276}
+ROUND_END {"n": 70039, "acc": [0.8588500692471337, 0.7211268007824212, 0.6019217864332729, 0.5063179085937835], "tokens_per_cycle": 3.688216565056611}
+EVAL step 400 epoch 1: acc ['0.8589', '0.7211', '0.6019', '0.5063'] tokens/cycle 3.6882 (68s)
+  saved best (step 400)
+step 410/996 ep 1 loss 0.4276 lr 1.43e-05 gn 1.819 9.42s peakGiB 67.2
+step 420/996 ep 1 loss 0.4836 lr 1.40e-05 gn 1.749 9.25s peakGiB 67.2
+step 430/996 ep 1 loss 0.4176 lr 1.38e-05 gn 1.427 9.79s peakGiB 67.2
+step 440/996 ep 1 loss 0.4318 lr 1.35e-05 gn 1.530 9.32s peakGiB 67.2
+step 450/996 ep 1 loss 0.3864 lr 1.32e-05 gn 1.444 9.71s peakGiB 67.2
+step 460/996 ep 1 loss 0.3885 lr 1.29e-05 gn 1.407 9.34s peakGiB 67.2
+step 470/996 ep 1 loss 0.2854 lr 1.26e-05 gn 1.305 9.23s peakGiB 67.2
+step 480/996 ep 1 loss 0.4314 lr 1.23e-05 gn 1.774 9.26s peakGiB 67.2
+step 490/996 ep 1 loss 0.4304 lr 1.20e-05 gn 1.582 9.41s peakGiB 67.2
+1/204 0s
+21/204 7s
+41/204 13s
+61/204 20s
+81/204 27s
+101/204 34s
+121/204 39s
+141/204 47s
+161/204 55s
+181/204 62s
+201/204 68s
+OVERALL {"n": 257969, "acc": [0.898398644798406, 0.7809930650582046, 0.6717163690210839, 0.5772902945702778], "tokens_per_cycle": 3.9283983734479726}
+ROUND_END {"n": 69604, "acc": [0.8606832940635596, 0.7269553473938279, 0.6087581173495776, 0.5152146428366186], "tokens_per_cycle": 3.7116114016435837}
+EVAL step 498 epoch 1: acc ['0.8607', '0.7270', '0.6088', '0.5152'] tokens/cycle 3.7116 (70s)
+  saved best (step 498)
+step 500/996 ep 2 loss 0.3320 lr 1.17e-05 gn 1.628 8.75s peakGiB 67.2
+1/204 0s
+21/204 6s
+41/204 11s
+61/204 18s
+81/204 25s
+101/204 33s
+121/204 39s
+141/204 47s
+161/204 55s
+181/204 62s
+201/204 69s
+OVERALL {"n": 257969, "acc": [0.8981738115820118, 0.7804697463648733, 0.6711000158933825, 0.5767592230074157], "tokens_per_cycle": 3.9265027968476836}
+ROUND_END {"n": 69721, "acc": [0.8598413677371237, 0.7251043444586279, 0.6069620343942285, 0.5133460506877411], "tokens_per_cycle": 3.705253797277721}
+EVAL step 500 epoch 2: acc ['0.8598', '0.7251', '0.6070', '0.5133'] tokens/cycle 3.7053 (71s)
+step 510/996 ep 2 loss 0.3949 lr 1.14e-05 gn 1.636 7.40s peakGiB 67.2
+step 520/996 ep 2 loss 0.3552 lr 1.11e-05 gn 1.346 7.96s peakGiB 67.2
+step 530/996 ep 2 loss 0.3010 lr 1.08e-05 gn 1.339 9.44s peakGiB 67.2
+step 540/996 ep 2 loss 0.3273 lr 1.05e-05 gn 1.505 8.38s peakGiB 67.2
+step 550/996 ep 2 loss 0.3654 lr 1.02e-05 gn 1.456 9.00s peakGiB 67.2
+step 560/996 ep 2 loss 0.2332 lr 9.93e-06 gn 1.348 7.67s peakGiB 67.2
+step 570/996 ep 2 loss 0.2589 lr 9.63e-06 gn 1.360 8.16s peakGiB 67.2
+step 580/996 ep 2 loss 0.1675 lr 9.34e-06 gn 1.309 7.09s peakGiB 67.2
+step 590/996 ep 2 loss 0.2764 lr 9.04e-06 gn 1.365 8.80s peakGiB 67.2
+step 600/996 ep 2 loss 0.2174 lr 8.75e-06 gn 1.180 9.53s peakGiB 67.2
+1/204 0s
+21/204 6s
+41/204 13s
+61/204 19s
+81/204 25s
+101/204 32s
+121/204 39s
+141/204 46s
+161/204 53s
+181/204 60s
+201/204 66s
+OVERALL {"n": 257969, "acc": [0.8979218433222597, 0.7804736227996387, 0.6718094034554539, 0.5780927165667192], "tokens_per_cycle": 3.9282975861440717}
+ROUND_END {"n": 69632, "acc": [0.8609116498161765, 0.7256290211397058, 0.608642578125, 0.5146771599264706], "tokens_per_cycle": 3.709860409007353}
+EVAL step 600 epoch 2: acc ['0.8609', '0.7256', '0.6086', '0.5147'] tokens/cycle 3.7099 (68s)
+step 610/996 ep 2 loss 0.2414 lr 8.46e-06 gn 1.209 8.74s peakGiB 67.2
+step 620/996 ep 2 loss 0.2856 lr 8.18e-06 gn 1.389 7.62s peakGiB 67.2
+step 630/996 ep 2 loss 0.3046 lr 7.90e-06 gn 1.332 7.63s peakGiB 67.2
+step 640/996 ep 2 loss 0.2514 lr 7.62e-06 gn 3.797 8.92s peakGiB 67.2
+step 650/996 ep 2 loss 0.3241 lr 7.34e-06 gn 1.353 10.24s peakGiB 67.2
+step 660/996 ep 2 loss 0.2222 lr 7.07e-06 gn 1.370 8.52s peakGiB 67.2
+step 670/996 ep 2 loss 0.3635 lr 6.81e-06 gn 1.576 6.82s peakGiB 67.2
+step 680/996 ep 2 loss 0.1752 lr 6.54e-06 gn 1.185 8.58s peakGiB 67.2
+step 690/996 ep 2 loss 0.3812 lr 6.29e-06 gn 1.470 8.21s peakGiB 67.2
+step 700/996 ep 2 loss 0.2985 lr 6.03e-06 gn 1.509 6.84s peakGiB 67.2
+1/204 0s
+21/204 6s
+41/204 12s
+61/204 20s
+81/204 28s
+101/204 36s
+121/204 43s
+141/204 49s
+161/204 54s
+181/204 62s
+201/204 70s
+OVERALL {"n": 257969, "acc": [0.8988211761878365, 0.7820513317491636, 0.6746081893560855, 0.5823761769825057], "tokens_per_cycle": 3.937856874275591}
+ROUND_END {"n": 69424, "acc": [0.8619497580087577, 0.7270828531919797, 0.6120361834524084, 0.5198778520396404], "tokens_per_cycle": 3.7209466466927865}
+EVAL step 700 epoch 2: acc ['0.8619', '0.7271', '0.6120', '0.5199'] tokens/cycle 3.7209 (72s)
+  saved best (step 700)
+step 710/996 ep 2 loss 0.2701 lr 5.79e-06 gn 1.463 9.28s peakGiB 67.2
+step 720/996 ep 2 loss 0.2734 lr 5.55e-06 gn 1.380 8.16s peakGiB 67.2
+step 730/996 ep 2 loss 0.2497 lr 5.31e-06 gn 1.219 7.95s peakGiB 67.2
+step 740/996 ep 2 loss 0.3253 lr 5.08e-06 gn 1.491 10.30s peakGiB 67.2
+step 750/996 ep 2 loss 0.3011 lr 4.86e-06 gn 1.327 7.93s peakGiB 67.2
+step 760/996 ep 2 loss 0.3359 lr 4.65e-06 gn 1.458 9.92s peakGiB 67.2
+step 770/996 ep 2 loss 0.2473 lr 4.44e-06 gn 1.541 8.89s peakGiB 67.2
+step 780/996 ep 2 loss 0.3586 lr 4.24e-06 gn 1.470 10.35s peakGiB 67.2
+step 790/996 ep 2 loss 0.1643 lr 4.04e-06 gn 1.257 7.31s peakGiB 67.2
+step 800/996 ep 2 loss 0.2881 lr 3.86e-06 gn 1.385 10.20s peakGiB 67.2
+1/204 0s
+21/204 7s
+41/204 15s
+61/204 23s
+81/204 28s
+101/204 33s
+121/204 40s
+141/204 47s
+161/204 55s
+181/204 62s
+201/204 68s
+OVERALL {"n": 257969, "acc": [0.8995693280975621, 0.7837918509588362, 0.676294438479042, 0.5844384402777077], "tokens_per_cycle": 3.944094057813148}
+ROUND_END {"n": 69372, "acc": [0.8616732975840397, 0.7276422764227642, 0.6129706509831055, 0.5214351611601222], "tokens_per_cycle": 3.7237213861500313}
+EVAL step 800 epoch 2: acc ['0.8617', '0.7276', '0.6130', '0.5214'] tokens/cycle 3.7237 (70s)
+  saved best (step 800)
+step 810/996 ep 2 loss 0.3263 lr 3.68e-06 gn 1.377 10.20s peakGiB 67.2
+step 820/996 ep 2 loss 0.2675 lr 3.51e-06 gn 1.346 9.18s peakGiB 67.2
+step 830/996 ep 2 loss 0.1957 lr 3.35e-06 gn 1.177 8.58s peakGiB 67.2
+step 840/996 ep 2 loss 0.3701 lr 3.20e-06 gn 1.401 10.21s peakGiB 67.2
+step 850/996 ep 2 loss 0.2827 lr 3.05e-06 gn 1.345 9.07s peakGiB 67.2
+step 860/996 ep 2 loss 0.2942 lr 2.92e-06 gn 1.303 9.82s peakGiB 67.2
+step 870/996 ep 2 loss 0.1769 lr 2.79e-06 gn 1.308 8.21s peakGiB 67.2
+step 880/996 ep 2 loss 0.2173 lr 2.67e-06 gn 1.185 6.72s peakGiB 67.2
+step 890/996 ep 2 loss 0.2558 lr 2.56e-06 gn 1.319 8.82s peakGiB 67.2
+step 900/996 ep 2 loss 0.2452 lr 2.46e-06 gn 1.365 5.51s peakGiB 67.2
+1/204 0s
+21/204 7s
+41/204 14s
+61/204 21s
+81/204 26s
+101/204 31s
+121/204 39s
+141/204 45s
+161/204 51s
+181/204 57s
+201/204 63s
+OVERALL {"n": 257969, "acc": [0.8998794428787955, 0.7844818563470805, 0.6777364722117774, 0.5865859851377491], "tokens_per_cycle": 3.9486837565754027}
+ROUND_END {"n": 69300, "acc": [0.8616883116883117, 0.7286580086580087, 0.6142712842712843, 0.523001443001443], "tokens_per_cycle": 3.7276190476190476}
+EVAL step 900 epoch 2: acc ['0.8617', '0.7287', '0.6143', '0.5230'] tokens/cycle 3.7276 (64s)
+  saved best (step 900)
+step 910/996 ep 2 loss 0.1452 lr 2.37e-06 gn 1.172 7.40s peakGiB 67.2
+step 920/996 ep 2 loss 0.3418 lr 2.29e-06 gn 1.435 9.54s peakGiB 67.2
+step 930/996 ep 2 loss 0.2963 lr 2.22e-06 gn 1.375 9.98s peakGiB 67.2
+step 940/996 ep 2 loss 0.2062 lr 2.16e-06 gn 1.102 7.76s peakGiB 67.2
+step 950/996 ep 2 loss 0.2494 lr 2.11e-06 gn 1.298 9.78s peakGiB 67.2
+step 960/996 ep 2 loss 0.2583 lr 2.07e-06 gn 1.366 9.81s peakGiB 67.2
+step 970/996 ep 2 loss 0.4008 lr 2.04e-06 gn 1.572 9.78s peakGiB 67.2
+step 980/996 ep 2 loss 0.2531 lr 2.01e-06 gn 1.402 8.98s peakGiB 67.2
+step 990/996 ep 2 loss 0.3381 lr 2.00e-06 gn 1.511 9.94s peakGiB 67.2
+1/204 0s
+21/204 8s
+41/204 16s
+61/204 24s
+81/204 30s
+101/204 37s
+121/204 45s
+141/204 53s
+161/204 60s
+181/204 67s
+201/204 74s
+OVERALL {"n": 257969, "acc": [0.9002903449639298, 0.7851098387790781, 0.6783838368176022, 0.5869309878318713], "tokens_per_cycle": 3.950715008392481}
+ROUND_END {"n": 69158, "acc": [0.8621128430550334, 0.7309060412389022, 0.6167037797507158, 0.5255646490644611], "tokens_per_cycle": 3.7352873131091124}
+EVAL step 996 epoch 2: acc ['0.8621', '0.7309', '0.6167', '0.5256'] tokens/cycle 3.7353 (75s)
+  saved best (step 996)
+DONE steps 996 best {'tpc': 3.7352873131091124, 'step': 996, 'acc': [0.8621128430550334, 0.7309060412389022, 0.6167037797507158, 0.5255646490644611], 'epoch': 2} frozen_identical True

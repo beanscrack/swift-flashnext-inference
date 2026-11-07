@@ -1,0 +1,34 @@
+{
+ "ckpt": "ckpt/best.safetensors",
+ "step": 996,
+ "format": {
+  "n_tensors": 31,
+  "names_equal_orig": true,
+  "shapes_equal_orig": true,
+  "dtypes": [
+   "BF16"
+  ],
+  "has_embed_or_lm_head": true
+ },
+ "n_loaded": 31,
+ "reloaded_round_end": {
+  "acc": [
+   0.8621128430550334,
+   0.7309060412389022,
+   0.6167037797507158,
+   0.5255646490644611
+  ],
+  "tokens_per_cycle": 3.7352873131091124
+ },
+ "in_training_eval": {
+  "acc": [
+   0.8621128430550334,
+   0.7309060412389022,
+   0.6167037797507158,
+   0.5255646490644611
+  ],
+  "tokens_per_cycle": 3.7352873131091124
+ },
+ "max_abs_diff": 0.0,
+ "PASS_within_0.002": true
+}

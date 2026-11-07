@@ -1,0 +1,591 @@
+{
+  "runs": {
+    "p4-identity": {
+      "coding_tps_reps": [
+        308.98199740463673,
+        305.2723512782715,
+        306.2675841689842,
+        294.8920876681088,
+        301.5691674121083
+      ],
+      "coding_tps_mean": 303.3966375864219,
+      "coding_tps_min": 294.8920876681088,
+      "coding_tps_max": 308.98199740463673,
+      "ood_tps_reps": [
+        243.47177109624033,
+        247.01139306200582
+      ],
+      "ood_tps_mean": 245.24158207912308,
+      "acc_final_all_phases": {
+        "drafts": 42683.0,
+        "accepted": 96953.0,
+        "tokens_per_cycle": 3.2714663917719,
+        "pos_accept_rate": {
+          "0": 0.7810369467938055,
+          "1": 0.6160766581543003,
+          "2": 0.4897734461026638,
+          "3": 0.3845793407211302
+        }
+      },
+      "acc_coding_phase": {
+        "drafts": 8953.0,
+        "accepted": 21774.0,
+        "tokens_per_cycle": 3.4320339550988495,
+        "pos_accept_rate": {
+          "0": 0.8218474254439853,
+          "1": 0.6606724003127443,
+          "2": 0.5282028370378644,
+          "3": 0.42131129230425557
+        }
+      },
+      "coding_phase_reps": 5,
+      "acc_ood_phase": {
+        "drafts": 6791.0,
+        "accepted": 9608.0,
+        "tokens_per_cycle": 2.414813724046532,
+        "pos_accept_rate": {
+          "0": 0.5636872331026358,
+          "1": 0.37785304078927995,
+          "2": 0.27624797526137534,
+          "3": 0.19702547489324104
+        }
+      },
+      "logprob_mean": -0.2128,
+      "top1_fraction": 0.9727,
+      "conc_aggregate_tps": {
+        "1": [
+          259.5,
+          266.7
+        ],
+        "2": [
+          372.7,
+          382.7
+        ],
+        "4": [
+          494.4,
+          478.4
+        ],
+        "8": [
+          487.9,
+          495.9
+        ]
+      },
+      "conc_expected_vs_done": {
+        "1": [
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "2": [
+          [
+            12,
+            12
+          ],
+          [
+            12,
+            12
+          ]
+        ],
+        "4": [
+          [
+            24,
+            24
+          ],
+          [
+            24,
+            24
+          ]
+        ],
+        "8": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      },
+      "conc_tracebacks": 0,
+      "server": {
+        "tracebacks": 0,
+        "error_lines": 0,
+        "error_samples": [],
+        "engine_model_paths": [
+          "/u701/j692wu/swift-opt/mtp/view-identity"
+        ]
+      },
+      "driver_failures": []
+    },
+    "p4-mtp-v1": {
+      "coding_tps_reps": [
+        319.6080072076078,
+        309.02980958190193,
+        316.19563104339846,
+        314.91334502455373,
+        320.04773302607384
+      ],
+      "coding_tps_mean": 315.95890517670716,
+      "coding_tps_min": 309.02980958190193,
+      "coding_tps_max": 320.04773302607384,
+      "ood_tps_reps": [
+        246.3920256913879,
+        250.06228714276708
+      ],
+      "ood_tps_mean": 248.22715641707748,
+      "acc_final_all_phases": {
+        "drafts": 41389.0,
+        "accepted": 98328.0,
+        "tokens_per_cycle": 3.375703689386069,
+        "pos_accept_rate": {
+          "0": 0.8003092609147358,
+          "1": 0.6463794728067844,
+          "2": 0.5180361931914277,
+          "3": 0.4109787624731209
+        }
+      },
+      "acc_coding_phase": {
+        "drafts": 8584.0,
+        "accepted": 22180.0,
+        "tokens_per_cycle": 3.5838769804287045,
+        "pos_accept_rate": {
+          "0": 0.8456430568499534,
+          "1": 0.706780055917987,
+          "2": 0.5731593662628145,
+          "3": 0.4582945013979497
+        }
+      },
+      "coding_phase_reps": 5,
+      "acc_ood_phase": {
+        "drafts": 6730.0,
+        "accepted": 9667.0,
+        "tokens_per_cycle": 2.436404160475483,
+        "pos_accept_rate": {
+          "0": 0.5734026745913818,
+          "1": 0.38410104011887075,
+          "2": 0.2796433878157504,
+          "3": 0.19925705794947995
+        }
+      },
+      "logprob_mean": -0.2121,
+      "top1_fraction": 0.9746,
+      "conc_aggregate_tps": {
+        "1": [
+          265.1,
+          262.1
+        ],
+        "2": [
+          373.8,
+          397.8
+        ],
+        "4": [
+          514.2,
+          504.4
+        ],
+        "8": [
+          496.4,
+          500.8
+        ]
+      },
+      "conc_expected_vs_done": {
+        "1": [
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "2": [
+          [
+            12,
+            12
+          ],
+          [
+            12,
+            12
+          ]
+        ],
+        "4": [
+          [
+            24,
+            24
+          ],
+          [
+            24,
+            24
+          ]
+        ],
+        "8": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      },
+      "conc_tracebacks": 0,
+      "server": {
+        "tracebacks": 0,
+        "error_lines": 0,
+        "error_samples": [],
+        "engine_model_paths": [
+          "/u701/j692wu/swift-opt/mtp/view-mtp-v1"
+        ]
+      },
+      "driver_failures": []
+    },
+    "p0-identity": {
+      "coding_tps_reps": [
+        304.3033715958825,
+        306.508924887461,
+        303.9338377179124
+      ],
+      "coding_tps_mean": 304.91537806708527,
+      "coding_tps_min": 303.9338377179124,
+      "coding_tps_max": 306.508924887461,
+      "ood_tps_reps": [],
+      "acc_final_all_phases": {
+        "drafts": 5407.0,
+        "accepted": 13157.0,
+        "tokens_per_cycle": 3.4333271684852966,
+        "pos_accept_rate": {
+          "0": 0.8241168855187719,
+          "1": 0.6628444608840393,
+          "2": 0.5300536341779175,
+          "3": 0.41631218790456814
+        }
+      },
+      "acc_coding_phase": {
+        "drafts": 5376.0,
+        "accepted": 13084.0,
+        "tokens_per_cycle": 3.433779761904762,
+        "pos_accept_rate": {
+          "0": 0.82421875,
+          "1": 0.6631324404761905,
+          "2": 0.5299479166666666,
+          "3": 0.41648065476190477
+        }
+      },
+      "coding_phase_reps": 3,
+      "acc_ood_phase": null,
+      "logprob_mean": -0.2115,
+      "top1_fraction": 0.9775,
+      "conc_aggregate_tps": {},
+      "conc_expected_vs_done": {},
+      "conc_tracebacks": 0,
+      "server": {
+        "tracebacks": 0,
+        "error_lines": 0,
+        "error_samples": [],
+        "engine_model_paths": [
+          "/u701/j692wu/swift-opt/mtp/view-identity"
+        ]
+      },
+      "driver_failures": []
+    }
+  },
+  "output_sanity": {
+    "pairs_identity_vs_mtp_same_rep": [
+      {
+        "rep": 1,
+        "identical": 0,
+        "cases": 6,
+        "divergent": [
+          {
+            "case": "agent_plan",
+            "first_div_token": 1,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "python_cache",
+            "first_div_token": 11,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "rust_parser",
+            "first_div_token": 291,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "sql_analysis",
+            "first_div_token": 28,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "systems_explanation",
+            "first_div_token": 17,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "typescript_agent",
+            "first_div_token": 145,
+            "tokens_a": 512,
+            "tokens_b": 512
+          }
+        ]
+      },
+      {
+        "rep": 2,
+        "identical": 0,
+        "cases": 6,
+        "divergent": [
+          {
+            "case": "agent_plan",
+            "first_div_token": 49,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "python_cache",
+            "first_div_token": 11,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "rust_parser",
+            "first_div_token": 292,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "sql_analysis",
+            "first_div_token": 6,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "systems_explanation",
+            "first_div_token": 14,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "typescript_agent",
+            "first_div_token": 117,
+            "tokens_a": 512,
+            "tokens_b": 512
+          }
+        ]
+      },
+      {
+        "rep": 3,
+        "identical": 0,
+        "cases": 6,
+        "divergent": [
+          {
+            "case": "agent_plan",
+            "first_div_token": 3,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "python_cache",
+            "first_div_token": 11,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "rust_parser",
+            "first_div_token": 291,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "sql_analysis",
+            "first_div_token": 338,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "systems_explanation",
+            "first_div_token": 14,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "typescript_agent",
+            "first_div_token": 145,
+            "tokens_a": 512,
+            "tokens_b": 512
+          }
+        ]
+      },
+      {
+        "rep": 4,
+        "identical": 0,
+        "cases": 6,
+        "divergent": [
+          {
+            "case": "agent_plan",
+            "first_div_token": 1,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "python_cache",
+            "first_div_token": 47,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "rust_parser",
+            "first_div_token": 74,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "sql_analysis",
+            "first_div_token": 42,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "systems_explanation",
+            "first_div_token": 17,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "typescript_agent",
+            "first_div_token": 117,
+            "tokens_a": 512,
+            "tokens_b": 512
+          }
+        ]
+      },
+      {
+        "rep": 5,
+        "identical": 1,
+        "cases": 6,
+        "divergent": [
+          {
+            "case": "agent_plan",
+            "first_div_token": 1,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "rust_parser",
+            "first_div_token": 74,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "sql_analysis",
+            "first_div_token": 24,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "systems_explanation",
+            "first_div_token": 14,
+            "tokens_a": 512,
+            "tokens_b": 512
+          },
+          {
+            "case": "typescript_agent",
+            "first_div_token": 117,
+            "tokens_a": 512,
+            "tokens_b": 512
+          }
+        ]
+      }
+    ],
+    "noise_identity_rep1_vs_rep2": {
+      "identical": 0,
+      "cases": 6,
+      "divergent": [
+        {
+          "case": "agent_plan",
+          "first_div_token": 27,
+          "tokens_a": 512,
+          "tokens_b": 512
+        },
+        {
+          "case": "python_cache",
+          "first_div_token": 11,
+          "tokens_a": 512,
+          "tokens_b": 512
+        },
+        {
+          "case": "rust_parser",
+          "first_div_token": 292,
+          "tokens_a": 512,
+          "tokens_b": 512
+        },
+        {
+          "case": "sql_analysis",
+          "first_div_token": 6,
+          "tokens_a": 512,
+          "tokens_b": 512
+        },
+        {
+          "case": "systems_explanation",
+          "first_div_token": 39,
+          "tokens_a": 512,
+          "tokens_b": 512
+        },
+        {
+          "case": "typescript_agent",
+          "first_div_token": 117,
+          "tokens_a": 512,
+          "tokens_b": 512
+        }
+      ]
+    }
+  },
+  "shard": {
+    "VIEW_json_tail_sha256": "56cad0cb4aa13f52835ec4c066aab13941588fa4738baa2b6ba64a8d4ef49786",
+    "file_sha256_now": "56cad0cb4aa13f52835ec4c066aab13941588fa4738baa2b6ba64a8d4ef49786",
+    "match": true
+  },
+  "gates": [
+    {
+      "item": "coding tok/s: mtp-v1 mean > identity mean by > identity spread",
+      "pass": false,
+      "detail": "mtp 315.96 vs id 303.40, diff +12.56, id spread 14.09"
+    },
+    {
+      "item": "tokens/cycle (coding phase) higher for mtp-v1",
+      "pass": true,
+      "detail": "mtp 3.5839 vs id 3.4320"
+    },
+    {
+      "item": "OOD tok/s: mtp-v1 not > 3% below identity",
+      "pass": true,
+      "detail": "mtp 248.23 vs id 245.24, ratio 1.0122"
+    },
+    {
+      "item": "logprob within reference spread (both runs)",
+      "pass": true,
+      "detail": "id -0.2128/97.27%, mtp -0.2121/97.46%; window lp [-0.2138,-0.2101] top1 [97.13,98.15]%"
+    },
+    {
+      "item": "concurrency stress clean (both runs)",
+      "pass": true,
+      "detail": "id done={1: [(6, 6), (6, 6)], 2: [(12, 12), (12, 12)], 4: [(24, 24), (24, 24)], 8: [(48, 48), (48, 48)]} tb=0/0; mtp done={1: [(6, 6), (6, 6)], 2: [(12, 12), (12, 12)], 4: [(24, 24), (24, 24)], 8: [(48, 48), (48, 48)]} tb=0/0"
+    },
+    {
+      "item": "replacement shard loaded (engine path = view-mtp-v1, tail hash = VIEW.json)",
+      "pass": true,
+      "detail": "engine paths ['/u701/j692wu/swift-opt/mtp/view-mtp-v1']; hash match True"
+    }
+  ]
+}

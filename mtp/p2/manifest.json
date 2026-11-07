@@ -1,0 +1,245 @@
+{
+  "phase": "P2a self-distillation prompts: target greedy outputs",
+  "target_model": "ukisai/Swift-1.5-Qwen3.8-Flash-Next-NVFP4 (served as 'swift'; --dtype bfloat16, NVFP4 weights)",
+  "server_preset": "PRESET=final-code MAX_SEQS=8 CAPTURE_SIZES=1,2,3,4,5,10,15,20,25,30,35,40 (no FP8 hooks)",
+  "sampling": {
+    "temperature": 0,
+    "nothink_max_tokens": 1536,
+    "think_max_tokens": "2048 - prompt_tokens",
+    "total_cap": 2048,
+    "max_prompt_tokens": 400,
+    "nothink_chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "think_chat_template_kwargs": null,
+    "mode_rule": "think iff int(sha256('mode|'+prompt_sha),16) % 5 == 0",
+    "heldout_rule": "heldout iff int(sha256(prompt),16) % 100 < 5"
+  },
+  "token_id_source": "prompt_token_ids and completion_token_ids returned by /v1/chat/completions (return_token_ids=true); prompt ids cross-checked against POST /tokenize (chat) for every record",
+  "records": 4186,
+  "records_by_source_mode_split": {
+    "taskpack|nothink|train": 149,
+    "taskpack|think|train": 26,
+    "taskpack|nothink|heldout": 9,
+    "taskpack|think|heldout": 2,
+    "code_reasoning|nothink|heldout": 105,
+    "code_reasoning|nothink|train": 2184,
+    "code_reasoning|think|train": 456,
+    "opencode|nothink|train": 956,
+    "opencode|think|train": 211,
+    "code_reasoning|think|heldout": 30,
+    "opencode|nothink|heldout": 48,
+    "opencode|think|heldout": 10
+  },
+  "records_by_source": {
+    "taskpack": 186,
+    "code_reasoning": 2775,
+    "opencode": 1225
+  },
+  "records_by_mode": {
+    "nothink": 3451,
+    "think": 735
+  },
+  "records_by_split": {
+    "train": 3982,
+    "heldout": 204
+  },
+  "tokens_by_source_mode_split": {
+    "taskpack|nothink|train": {
+      "prompt_tokens": 48801,
+      "completion_tokens": 175442,
+      "total_tokens": 224243
+    },
+    "taskpack|think|train": {
+      "prompt_tokens": 8480,
+      "completion_tokens": 34765,
+      "total_tokens": 43245
+    },
+    "taskpack|nothink|heldout": {
+      "prompt_tokens": 2355,
+      "completion_tokens": 7176,
+      "total_tokens": 9531
+    },
+    "taskpack|think|heldout": {
+      "prompt_tokens": 737,
+      "completion_tokens": 2012,
+      "total_tokens": 2749
+    },
+    "code_reasoning|nothink|heldout": {
+      "prompt_tokens": 28002,
+      "completion_tokens": 120620,
+      "total_tokens": 148622
+    },
+    "code_reasoning|nothink|train": {
+      "prompt_tokens": 609910,
+      "completion_tokens": 2576426,
+      "total_tokens": 3186336
+    },
+    "code_reasoning|think|train": {
+      "prompt_tokens": 134218,
+      "completion_tokens": 659717,
+      "total_tokens": 793935
+    },
+    "opencode|nothink|train": {
+      "prompt_tokens": 142684,
+      "completion_tokens": 1267534,
+      "total_tokens": 1410218
+    },
+    "opencode|think|train": {
+      "prompt_tokens": 40941,
+      "completion_tokens": 386768,
+      "total_tokens": 427709
+    },
+    "code_reasoning|think|heldout": {
+      "prompt_tokens": 8990,
+      "completion_tokens": 46581,
+      "total_tokens": 55571
+    },
+    "opencode|nothink|heldout": {
+      "prompt_tokens": 7259,
+      "completion_tokens": 63822,
+      "total_tokens": 71081
+    },
+    "opencode|think|heldout": {
+      "prompt_tokens": 1906,
+      "completion_tokens": 18574,
+      "total_tokens": 20480
+    }
+  },
+  "tokens_total": {
+    "prompt_tokens": 1034283,
+    "completion_tokens": 5359437,
+    "total_tokens": 6393720
+  },
+  "finish_reasons_by_source_mode": {
+    "taskpack|nothink": {
+      "stop": 101,
+      "length": 57
+    },
+    "taskpack|think": {
+      "stop": 15,
+      "length": 13
+    },
+    "code_reasoning|nothink": {
+      "stop": 1080,
+      "length": 1209
+    },
+    "code_reasoning|think": {
+      "stop": 174,
+      "length": 312
+    },
+    "opencode|nothink": {
+      "length": 519,
+      "stop": 485
+    },
+    "opencode|think": {
+      "length": 213,
+      "stop": 8
+    }
+  },
+  "finish_reasons_by_mode": {
+    "nothink": {
+      "stop": 1666,
+      "length": 1785
+    },
+    "think": {
+      "stop": 197,
+      "length": 538
+    }
+  },
+  "think_mode_empty_final_content": 440,
+  "think_mode_empty_final_content_by_finish": {
+    "length": 440
+  },
+  "tokens_finish_stop_only": {
+    "records": 1863,
+    "prompt_tokens": 441174,
+    "completion_tokens": 1655767,
+    "total_tokens": 2096941,
+    "by_mode": {
+      "nothink": {
+        "records": 1666,
+        "total_tokens": 1855076
+      },
+      "think": {
+        "records": 197,
+        "total_tokens": 241865
+      }
+    }
+  },
+  "licenses_by_source": {
+    "taskpack": [
+      "CC BY 4.0 (deepmind/code_contests, Codeforces subset; taskpack/pack-manifest.json)"
+    ],
+    "code_reasoning": [
+      "CC BY 4.0 (nvidia/OpenCodeReasoning rev 20a1ca19c0d050fe9057fc08339d6b370ec1c67a; row tag cc-by-4.0, dataset=code_contests; qwen/DATA_ATTRIBUTION.md)"
+    ],
+    "opencode": [
+      "CC BY 4.0 (nvidia/Nemotron-SFT-OpenCode-v1 rev 556d5237acff203f3e1a0be49428634c3606cda2; dataset card; qwen/DATA_ATTRIBUTION.md)"
+    ]
+  },
+  "dropped": {
+    "build_time_eval_and_duplicate_rules": {
+      "taskpack": {
+        "input_rows": 1824,
+        "kept": 897,
+        "duplicate_text": 792,
+        "eval_exact_hash": 135
+      },
+      "code_reasoning": {
+        "input_rows": 8300,
+        "kept": 7488,
+        "duplicate_text": 690,
+        "eval_prefix200_hash": 9,
+        "eval_exact_hash": 113
+      },
+      "opencode": {
+        "input_rows": 2100,
+        "not_single_user_turn": 440,
+        "kept": 1372,
+        "duplicate_text": 288
+      }
+    },
+    "build_time_eval_sets": {
+      "locked_rows": 135,
+      "evalplus_rows": 542,
+      "eval_cf_ids": 135,
+      "rule1_hashes": 677,
+      "rule2_hashes": 677,
+      "rule3_prefixes": 677
+    },
+    "generation_time_prompt_gt_400_tokens": {
+      "taskpack|nothink": 563,
+      "taskpack|think": 148,
+      "code_reasoning|nothink": 3216,
+      "code_reasoning|think": 916,
+      "opencode|nothink": 29,
+      "opencode|think": 13
+    },
+    "pool_candidates_not_attempted": {
+      "code_reasoning": 581,
+      "opencode": 105
+    }
+  },
+  "prepared_cap": 4000,
+  "throughput_summary": {
+    "at": "2026-11-07T08:04:06+00:00",
+    "done": true,
+    "elapsed_s": 7415.0,
+    "submitted_this_run": 4186,
+    "completion_tokens_this_run": 5359437,
+    "prompt_tokens_this_run": 1034283,
+    "completion_tok_per_s": 722.79,
+    "stats": {
+      "drop_prompt_gt400_taskpack": 711,
+      "ok": 4186,
+      "ok_nothink": 3451,
+      "finish_stop": 1863,
+      "finish_length": 2323,
+      "ok_think": 735,
+      "drop_prompt_gt400_code_reasoning": 4132,
+      "drop_prompt_gt400_opencode": 42
+    },
+    "prepared_accepted_total": 4000
+  }
+}
