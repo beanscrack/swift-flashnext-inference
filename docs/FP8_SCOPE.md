@@ -1,5 +1,7 @@
 # Scope: FP8 weight-only dense layers (and FP8 KV cache) for Swift-1.5 on vLLM 0.31 / one RTX PRO 6000
 
+> **Update 2026-11-07:** weight-only FP8 was implemented; see `docs/FP8_RESULTS.md`. The text below is the original pre-implementation scope.
+
 Written 2026-10-23. Status: **scoped, nothing implemented, no GPU time used.** Inputs: safetensors headers of the checkpoint, the final-stack Nsight profile
 (`nsys/final-mtp4/final.sqlite`, 169 cycles), vLLM 0.31 source, and the public repo aiueo52/flash-next-rtxpro6000 (SGLang; Apache-2.0).
 

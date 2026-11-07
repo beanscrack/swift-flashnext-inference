@@ -1,0 +1,23 @@
+scored 3072 tokens; mean logprob -0.2124; top1 fraction 0.9753
+health=200
+base-score-a scored 3072 tokens; mean logprob -0.2082; top1 fraction 0.9889
+draftonly-mtp4-score scored 3072 tokens; mean logprob -0.2083; top1 fraction 0.9876
+final-mtp6 scored 3072 tokens; mean logprob -0.2075; top1 fraction 0.9873
+l2pf-mtp4 scored 3072 tokens; mean logprob -0.2081; top1 fraction 0.9889
+m-base scored 3072 tokens; mean logprob -0.2078; top1 fraction 0.9893
+m-final-code scored 3072 tokens; mean logprob -0.2082; top1 fraction 0.9873
+m-final-multiD scored 3072 tokens; mean logprob -0.2085; top1 fraction 0.9863
+n-base-wide scored 3072 tokens; mean logprob -0.2076; top1 fraction 0.9893
+n-final-wide-code scored 3072 tokens; mean logprob -0.2087; top1 fraction 0.9896
+n-final-wide-multiD scored 3072 tokens; mean logprob -0.2084; top1 fraction 0.9883
+ood-base scored 3072 tokens; mean logprob -0.2086; top1 fraction 0.9873
+ood-final scored 3072 tokens; mean logprob -0.2087; top1 fraction 0.9883
+p-base scored 3072 tokens; mean logprob -0.2085; top1 fraction 0.9889
+p-final-code scored 3072 tokens; mean logprob -0.2081; top1 fraction 0.9880
+p-final-multi scored 3072 tokens; mean logprob -0.2089; top1 fraction 0.9876
+q-cutlass-base scored 3072 tokens; mean logprob -0.2162; top1 fraction 0.9697
+q-cutlass-draft scored 3072 tokens; mean logprob -0.2162; top1 fraction 0.9697
+q-cutlass-draftl2pf scored 3072 tokens; mean logprob -0.2162; top1 fraction 0.9697
+q-cutlass-final scored 3072 tokens; mean logprob -0.2162; top1 fraction 0.9697
+skinny-l2pf-mtp4 scored 3072 tokens; mean logprob -0.2085; top1 fraction 0.9883
+skinny-mtp4 scored 3072 tokens; mean logprob -0.2084; top1 fraction 0.9896

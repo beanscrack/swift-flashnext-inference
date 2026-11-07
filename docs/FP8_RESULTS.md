@@ -62,9 +62,14 @@ error was 2.8e-2, against 2.5e-3 for BF16 torch.
 - FP8 (full configuration, `fp8-all-score` run): mean logprob -0.2124, rank-1 (top-1) agreement 97.53%.
 - BF16 Marlin runs: mean logprob -0.2075 to -0.2089, top-1 98.6% to 99.0%.
 
-These figures come from the scoring output of the `fp8-all-score` run (`scores.json`, which stays on the cluster
-and is not in this repository), so they cannot be re-derived from the logs committed here. A task-level comparison
-(HumanEval+, MBPP+, CodeContests) is in progress and is not reported here.
+Source: `results/quality/logprob_scores.txt` (the scorer's summary line for the FP8 run, followed by the same line
+for every earlier BF16/CUTLASS run in `~/swift-profile/runs`). The scored sequences are the BF16 model's own greedy
+outputs, so any change in numerics lowers these scores somewhat; for scale, switching only the MoE kernel to CUTLASS
+gave -0.2162 / 96.97%. A task-level comparison (HumanEval+, MBPP+, CodeContests) is in progress and is not reported here.
+
+The first scoring attempt crashed the engine with a CUDA OOM: the large-M fallback dequantized the whole lm_head
+(2.4 GB fp32 temporary) for prompt logprobs. The fallback now dequantizes in chunks of `SWIFT_FP8_DEQ_CHUNK_ROWS`
+(default 8192) rows; the committed `fp8-all-score` run used the fixed code and the server stayed healthy.
 
 ## Notes
 

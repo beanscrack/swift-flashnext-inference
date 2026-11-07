@@ -10,7 +10,7 @@ to ~256 tok/s with the patches here, with no detectable quality loss in the chec
 |---|---|
 | `release/` | The deliverable. Launcher (`serve_final.sh`), env-gated import hooks, draft-vocab presets, skinny-GEMM plan, provenance scripts. **Start with `release/README.md`** (full results) and `release/EXPLAINED.md` (why each piece works). |
 | `baseline/` | The original un-patched deployment (`serve.sh`, eager vs CUDA-graph comparison, context sweep, latency/utilization scripts) with its README. |
-| `docs/FP8_SCOPE.md` | Scoping note for FP8 weight-only dense layers and FP8 KV cache. Nothing implemented. |
+| `docs/FP8_SCOPE.md` | Original scoping note for FP8 (written before implementation; the implemented version and results are in `docs/FP8_RESULTS.md`). |
 | `docs/FP8_RESULTS.md` | Weight-only FP8 dense layers (`SWIFT_FP8`): what changed, launch line, throughput results and quality status. |
 
 ## Quick start
