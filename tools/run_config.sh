@@ -17,7 +17,7 @@ status() { printf '{"label":"%s","preset":"%s","status":"%s","valid":%s,"detail"
 # ---- preflight ----
 [ "$(hostname)" = gpu-1-vm ] || { log "ABORT: not on gpu-1-vm"; exit 3; }
 grep -q "session swift-opt" /u701/j692wu/qwen/rft/locks/gpu-1-vm.lock 2>/dev/null || { log "ABORT: our lock is missing"; exit 3; }
-[ "$(gpu_used)" -lt 500 ] || { log "ABORT: GPU busy ($(gpu_used) MiB)"; exit 3; }
+[ "$(gpu_used)" -lt ${GPU_FREE_MIB:-500} ] || { log "ABORT: GPU busy ($(gpu_used) MiB)"; exit 3; }
 ss -ltn | grep -q ':8000 ' && { log "ABORT: port 8000 busy"; exit 3; }
 [ "$(avail_gb)" -gt 150 ] || { log "ABORT: host RAM available only $(avail_gb) GiB"; exit 3; }
 
@@ -39,10 +39,10 @@ stop_server() {
   else
     log "server pid $SPID not a group leader (pgid=$pgid); killing pid only"; kill -TERM "$SPID" 2>/dev/null; sleep 10
   fi
-  for i in $(seq 1 60); do [ "$(gpu_used)" -lt 500 ] && break; sleep 3; done
+  for i in $(seq 1 60); do [ "$(gpu_used)" -lt ${GPU_FREE_MIB:-500} ] && break; sleep 3; done
   for i in $(seq 1 60); do [ "$(avail_gb)" -gt 150 ] && break; sleep 3; done
   log "after stop: gpu_used=$(gpu_used) MiB host_avail=$(avail_gb) GiB"
-  if [ "$(gpu_used)" -ge 500 ] || [ "$(avail_gb)" -le 150 ]; then log "CLEANUP PROBLEM: GPU/RAM not released"; return 3; fi
+  if [ "$(gpu_used)" -ge ${GPU_FREE_MIB:-500} ] || [ "$(avail_gb)" -le 150 ]; then log "CLEANUP PROBLEM: GPU/RAM not released"; return 3; fi
   return 0
 }
 

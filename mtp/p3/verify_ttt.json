@@ -1,0 +1,122 @@
+{
+  "n_seqs": 3,
+  "anchors_per_seq": 20,
+  "n_pairs": 240,
+  "max_rel_err_sample_hidden": 3.283674595877528e-05,
+  "median_rel_err": 1.4016379282111302e-05,
+  "argmax_identical_fraction": 1.0,
+  "criteria": {
+    "max_rel<2e-2": true,
+    "argmax>=0.99": true
+  },
+  "PASS": true,
+  "per_seq": [
+    {
+      "id": "pp-f42d4572611ef0a8",
+      "mode": "think",
+      "T": 2048,
+      "P": 372,
+      "anchors": [
+        70,
+        132,
+        146,
+        153,
+        306,
+        308,
+        436,
+        445,
+        499,
+        579,
+        637,
+        639,
+        820,
+        904,
+        1141,
+        1245,
+        1409,
+        1498,
+        1654,
+        2021
+      ],
+      "max_rel": 3.283674595877528e-05,
+      "median_rel": 1.6651581972837448e-05,
+      "argmax_match": 1.0,
+      "n_pairs": 80
+    },
+    {
+      "id": "pp-7a23df9849f86342",
+      "mode": "nothink",
+      "T": 1649,
+      "P": 113,
+      "anchors": [
+        54,
+        154,
+        342,
+        357,
+        382,
+        483,
+        590,
+        678,
+        872,
+        1052,
+        1127,
+        1232,
+        1288,
+        1337,
+        1341,
+        1404,
+        1572,
+        1602,
+        1612,
+        1631
+      ],
+      "max_rel": 3.068883597734384e-05,
+      "median_rel": 1.2251357929926598e-05,
+      "argmax_match": 1.0,
+      "n_pairs": 80
+    },
+    {
+      "id": "pp-cbf50ed3ea229aa5",
+      "mode": "nothink",
+      "T": 882,
+      "P": 27,
+      "anchors": [
+        49,
+        63,
+        74,
+        133,
+        139,
+        156,
+        237,
+        242,
+        436,
+        457,
+        470,
+        528,
+        530,
+        531,
+        630,
+        639,
+        641,
+        668,
+        761,
+        858
+      ],
+      "max_rel": 2.9800507036270574e-05,
+      "median_rel": 1.3080755252303788e-05,
+      "argmax_match": 1.0,
+      "n_pairs": 80
+    }
+  ],
+  "ttt_seconds_per_seq": [
+    0.7252941131591797,
+    0.5697331428527832,
+    0.1733710765838623
+  ],
+  "reference_seconds_per_seq": [
+    2.388843059539795,
+    3.6948907375335693,
+    2.085481882095337
+  ],
+  "note": "both paths teacher-forced with ground-truth tokens; bf16 weights, fp32 attention math"
+}

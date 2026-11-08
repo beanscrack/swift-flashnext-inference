@@ -1,0 +1,9 @@
+{
+ "T": 2048,
+ "weights_bytes": 6737752064,
+ "median_seconds": 0.20214009284973145,
+ "tokens_per_s": 10131.587312183829,
+ "peak_mem_bytes_above_weights": 4311507968,
+ "peak_mem_bytes_total": 11049260032,
+ "anchors_per_s": 10106.851991597441
+}

@@ -1,0 +1,174 @@
+{
+ "phase": "P2b",
+ "source": "/u701/j692wu/swift-opt/mtp/p2/gen.jsonl",
+ "records_in_source": 4186,
+ "captured_samples": 4186,
+ "failures_logged": 0,
+ "rows_total": 6393720,
+ "prompt_tokens_total": 1034283,
+ "completion_tokens_total": 5359437,
+ "hidden_files": 4186,
+ "hidden_bytes_total": 65560223342,
+ "labels_missing_or_mismatch": 0,
+ "per_split_mode": {
+  "train/nothink": {
+   "positions": 4019402,
+   "match": 3991214,
+   "samples": 3289,
+   "completion_tokens": 4019402,
+   "prompt_tokens": 801395
+  },
+  "train/think": {
+   "positions": 1081250,
+   "match": 1063427,
+   "samples": 693,
+   "completion_tokens": 1081250,
+   "prompt_tokens": 183639
+  },
+  "heldout/think": {
+   "positions": 67167,
+   "match": 66236,
+   "samples": 42,
+   "completion_tokens": 67167,
+   "prompt_tokens": 11633
+  },
+  "heldout/nothink": {
+   "positions": 191618,
+   "match": 190220,
+   "samples": 162,
+   "completion_tokens": 191618,
+   "prompt_tokens": 37616
+  }
+ },
+ "token_totals_by_split_mode": {
+  "train/nothink": {
+   "samples": 3289,
+   "prompt_tokens": 801395,
+   "completion_tokens": 4019402,
+   "rows": 4820797
+  },
+  "train/think": {
+   "samples": 693,
+   "prompt_tokens": 183639,
+   "completion_tokens": 1081250,
+   "rows": 1264889
+  },
+  "heldout/think": {
+   "samples": 42,
+   "prompt_tokens": 11633,
+   "completion_tokens": 67167,
+   "rows": 78800
+  },
+  "heldout/nothink": {
+   "samples": 162,
+   "prompt_tokens": 37616,
+   "completion_tokens": 191618,
+   "rows": 229234
+  }
+ },
+ "labels": {
+  "argmax_agreement_completion_positions": {
+   "train/nothink": {
+    "positions": 4019402,
+    "match": 3991214,
+    "rate": 0.9929870164765804,
+    "samples": 3289,
+    "prompt_tokens": 801395,
+    "completion_tokens": 4019402
+   },
+   "train/think": {
+    "positions": 1081250,
+    "match": 1063427,
+    "rate": 0.9835163005780346,
+    "samples": 693,
+    "prompt_tokens": 183639,
+    "completion_tokens": 1081250
+   },
+   "heldout/think": {
+    "positions": 67167,
+    "match": 66236,
+    "rate": 0.986139026605327,
+    "samples": 42,
+    "prompt_tokens": 11633,
+    "completion_tokens": 67167
+   },
+   "heldout/nothink": {
+    "positions": 191618,
+    "match": 190220,
+    "rate": 0.9927042344664906,
+    "samples": 162,
+    "prompt_tokens": 37616,
+    "completion_tokens": 191618
+   }
+  },
+  "argmax_agreement_overall": {
+   "positions": 5359437,
+   "match": 5311097,
+   "rate": 0.990980395888598
+  },
+  "actual_token_absent_from_prompt_logprobs": 0,
+  "every_position_exactly_one_rank1_entry": true
+ },
+ "hook_isolation": {
+  "requests_in_status_log": 4186,
+  "saves_to_capture_dir_logged": 4188,
+  "distinct_samples_saved": 4186,
+  "max_saves_per_sample": 2,
+  "hook_errors": 0,
+  "server_log": {
+   "tracebacks": 0,
+   "draft_vocab_active": true,
+   "skinny_patched": true,
+   "hidden_capture_patched": false
+  }
+ },
+ "rerun_verification": {
+  "n_samples": 20,
+  "n_rows": 32357,
+  "cos_median": 0.9988698959350586,
+  "cos_min": 0.3661286234855652,
+  "frac_cos_lt_0_999": 0.5820687950057175,
+  "fp8_bytes_identical_rows_mean": 0.001168820378370583,
+  "labels_identical_samples": 0,
+  "bf16_samples": [
+   "pp-c6febb8996165e41",
+   "pp-e6bbddaa08fcf794",
+   "pp-11c0917104b248da",
+   "pp-4fc0b62ea6fa68d5",
+   "pp-a4698def39be3af1"
+  ],
+  "fp8_vs_bf16_rel_err_row_median": 0.026265867054462433,
+  "fp8_vs_bf16_rel_err_row_max": 0.028683122247457504,
+  "fp8_vs_bf16_per_sample": [
+   {
+    "id": "pp-c6febb8996165e41",
+    "median": 0.026259159669280052,
+    "max": 0.02798384428024292
+   },
+   {
+    "id": "pp-e6bbddaa08fcf794",
+    "median": 0.026314817368984222,
+    "max": 0.028093233704566956
+   },
+   {
+    "id": "pp-11c0917104b248da",
+    "median": 0.02626577578485012,
+    "max": 0.02806706354022026
+   },
+   {
+    "id": "pp-4fc0b62ea6fa68d5",
+    "median": 0.026265399530529976,
+    "max": 0.02786305733025074
+   },
+   {
+    "id": "pp-a4698def39be3af1",
+    "median": 0.026207244023680687,
+    "max": 0.028683122247457504
+   }
+  ]
+ },
+ "disk": {
+  "hidden_dir": "/tmp/mtp_hidden",
+  "free_GB_after": 53.4
+ }
+}

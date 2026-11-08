@@ -1,0 +1,46 @@
+{
+ "n_requests": 204,
+ "ok": 204,
+ "errors": 0,
+ "prompt_mismatch_vs_gen": 0,
+ "requests_with_completion_identical_to_gen": 6,
+ "drafts": 75917.0,
+ "accepted_per_pos": [
+  61375.0,
+  49244.0,
+  39720.0,
+  32326.0
+ ],
+ "acc": [
+  0.808448700554553,
+  0.648655768800137,
+  0.5232029716664252,
+  0.4258071314725292
+ ],
+ "tokens_per_cycle": 3.406114572493644,
+ "emitted_delta": 0,
+ "accepted_total_delta": 182665.0,
+ "wall_seconds": 1108.3700852394104,
+ "before": {
+  "drafts": 0.0,
+  "accepted_per_pos": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "accepted_total": 0.0,
+  "emitted_total": 0
+ },
+ "after": {
+  "drafts": 75917.0,
+  "accepted_per_pos": [
+   61375.0,
+   49244.0,
+   39720.0,
+   32326.0
+  ],
+  "accepted_total": 182665.0,
+  "emitted_total": 0
+ }
+}

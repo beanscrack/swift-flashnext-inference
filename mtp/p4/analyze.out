@@ -1,0 +1,40 @@
+== p0-identity
+  coding tok/s reps [304.3, 306.51, 303.93] mean 304.92 min 303.93 max 306.51
+  acc_final_all_phases: drafts=5407 accepted=13157 tok/cycle=3.4333 pos[p0=0.824 p1=0.663 p2=0.530 p3=0.416]
+  acc_coding_phase: drafts=5376 accepted=13084 tok/cycle=3.4338 pos[p0=0.824 p1=0.663 p2=0.530 p3=0.416]
+  logprob -0.2115 top1 0.9775
+  conc aggregate tok/s by level {} done {}
+  server tracebacks 0 error_lines 0 engine paths ['/u701/j692wu/swift-opt/mtp/view-identity']
+== p4-identity
+  coding tok/s reps [308.98, 305.27, 306.27, 294.89, 301.57] mean 303.40 min 294.89 max 308.98
+  ood tok/s reps [243.47, 247.01] mean 245.24
+  acc_final_all_phases: drafts=42683 accepted=96953 tok/cycle=3.2715 pos[p0=0.781 p1=0.616 p2=0.490 p3=0.385]
+  acc_coding_phase: drafts=8953 accepted=21774 tok/cycle=3.4320 pos[p0=0.822 p1=0.661 p2=0.528 p3=0.421]
+  acc_ood_phase: drafts=6791 accepted=9608 tok/cycle=2.4148 pos[p0=0.564 p1=0.378 p2=0.276 p3=0.197]
+  logprob -0.2128 top1 0.9727
+  conc aggregate tok/s by level {1: [259.5, 266.7], 2: [372.7, 382.7], 4: [494.4, 478.4], 8: [487.9, 495.9]} done {1: [(6, 6), (6, 6)], 2: [(12, 12), (12, 12)], 4: [(24, 24), (24, 24)], 8: [(48, 48), (48, 48)]}
+  server tracebacks 0 error_lines 0 engine paths ['/u701/j692wu/swift-opt/mtp/view-identity']
+== p4-mtp-v1
+  coding tok/s reps [319.61, 309.03, 316.2, 314.91, 320.05] mean 315.96 min 309.03 max 320.05
+  ood tok/s reps [246.39, 250.06] mean 248.23
+  acc_final_all_phases: drafts=41389 accepted=98328 tok/cycle=3.3757 pos[p0=0.800 p1=0.646 p2=0.518 p3=0.411]
+  acc_coding_phase: drafts=8584 accepted=22180 tok/cycle=3.5839 pos[p0=0.846 p1=0.707 p2=0.573 p3=0.458]
+  acc_ood_phase: drafts=6730 accepted=9667 tok/cycle=2.4364 pos[p0=0.573 p1=0.384 p2=0.280 p3=0.199]
+  logprob -0.2121 top1 0.9746
+  conc aggregate tok/s by level {1: [265.1, 262.1], 2: [373.8, 397.8], 4: [514.2, 504.4], 8: [496.4, 500.8]} done {1: [(6, 6), (6, 6)], 2: [(12, 12), (12, 12)], 4: [(24, 24), (24, 24)], 8: [(48, 48), (48, 48)]}
+  server tracebacks 0 error_lines 0 engine paths ['/u701/j692wu/swift-opt/mtp/view-mtp-v1']
+== output sanity
+  identity vs mtp-v1 rep1: identical 0/6; divergent [('agent_plan', 1), ('python_cache', 11), ('rust_parser', 291), ('sql_analysis', 28), ('systems_explanation', 17), ('typescript_agent', 145)]
+  identity vs mtp-v1 rep2: identical 0/6; divergent [('agent_plan', 49), ('python_cache', 11), ('rust_parser', 292), ('sql_analysis', 6), ('systems_explanation', 14), ('typescript_agent', 117)]
+  identity vs mtp-v1 rep3: identical 0/6; divergent [('agent_plan', 3), ('python_cache', 11), ('rust_parser', 291), ('sql_analysis', 338), ('systems_explanation', 14), ('typescript_agent', 145)]
+  identity vs mtp-v1 rep4: identical 0/6; divergent [('agent_plan', 1), ('python_cache', 47), ('rust_parser', 74), ('sql_analysis', 42), ('systems_explanation', 17), ('typescript_agent', 117)]
+  identity vs mtp-v1 rep5: identical 1/6; divergent [('agent_plan', 1), ('rust_parser', 74), ('sql_analysis', 24), ('systems_explanation', 14), ('typescript_agent', 117)]
+  noise identity rep1 vs rep2: identical 0/6; divergent [('agent_plan', 27), ('python_cache', 11), ('rust_parser', 292), ('sql_analysis', 6), ('systems_explanation', 39), ('typescript_agent', 117)]
+== shard {'VIEW_json_tail_sha256': '56cad0cb4aa13f52835ec4c066aab13941588fa4738baa2b6ba64a8d4ef49786', 'file_sha256_now': '56cad0cb4aa13f52835ec4c066aab13941588fa4738baa2b6ba64a8d4ef49786', 'match': True}
+== GATES
+  FAIL  coding tok/s: mtp-v1 mean > identity mean by > identity spread  [mtp 315.96 vs id 303.40, diff +12.56, id spread 14.09]
+  PASS  tokens/cycle (coding phase) higher for mtp-v1  [mtp 3.5839 vs id 3.4320]
+  PASS  OOD tok/s: mtp-v1 not > 3% below identity  [mtp 248.23 vs id 245.24, ratio 1.0122]
+  PASS  logprob within reference spread (both runs)  [id -0.2128/97.27%, mtp -0.2121/97.46%; window lp [-0.2138,-0.2101] top1 [97.13,98.15]%]
+  PASS  concurrency stress clean (both runs)  [id done={1: [(6, 6), (6, 6)], 2: [(12, 12), (12, 12)], 4: [(24, 24), (24, 24)], 8: [(48, 48), (48, 48)]} tb=0/0; mtp done={1: [(6, 6), (6, 6)], 2: [(12, 12), (12, 12)], 4: [(24, 24), (24, 24)], 8: [(48, 48), (48, 48)]} tb=0/0]
+  PASS  replacement shard loaded (engine path = view-mtp-v1, tail hash = VIEW.json)  [engine paths ['/u701/j692wu/swift-opt/mtp/view-mtp-v1']; hash match True]

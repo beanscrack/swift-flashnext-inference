@@ -1,0 +1,13 @@
+2026-11-07T20:23:05Z [p4-mtp-v1] launched server pid 203735 (serve=/u701/j692wu/swift-opt/release/serve_final.sh preset=final-code)
+2026-11-07T20:40:39Z [p4-mtp-v1] startup state=ready after 1054 s
+2026-11-07T20:40:39Z [p4-mtp-v1] hooks: [swift-draft-vocab] ACTIVE [swift-draft-vocab] armed [swift_fp8] converted [swift_l2pf] armed [swift_l2pf] patched [swift_skinny] patched 
+2026-11-07T20:41:28Z [p4-mtp-v1] rep1: mean_decode_tps=319.61 ttft=0.295
+2026-11-07T20:42:17Z [p4-mtp-v1] rep2: mean_decode_tps=309.03 ttft=0.284
+2026-11-07T20:43:05Z [p4-mtp-v1] rep3: mean_decode_tps=316.20 ttft=0.242
+2026-11-07T20:43:53Z [p4-mtp-v1] rep4: mean_decode_tps=314.91 ttft=0.242
+2026-11-07T20:44:40Z [p4-mtp-v1] rep5: mean_decode_tps=320.05 ttft=0.252
+2026-11-07T20:45:49Z [p4-mtp-v1] ood rep1 done
+2026-11-07T20:46:57Z [p4-mtp-v1] ood rep2 done
+2026-11-07T20:50:19Z [p4-mtp-v1] conc: C=1 rep0: aggregate 265.1 tok/s, mean per-request decode 313.7 tok/s C=1 rep1: aggregate 262.1 tok/s, mean per-request decode 305.8 tok/s C=2 rep0: aggregate 373.8 tok/s, mean per-request decode 218.1 tok/s C=2 rep1: aggregate 397.8 tok/s, mean per-request decode 225.8 tok/s C=4 rep0: aggregate 514.
+2026-11-07T20:50:20Z [p4-mtp-v1] extra: /usr/bin/python3 /u701/j692wu/swift-profile/score/score_logprobs.py /u701/j692wu/swift-opt/runs/p4-mtp-v1/scores.json
+2026-11-07T20:51:03Z [p4-mtp-v1] after stop: gpu_used=1315 MiB host_avail=180 GiB

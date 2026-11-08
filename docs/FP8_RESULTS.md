@@ -1,7 +1,10 @@
 # FP8 weight-only dense layers: changes, launch, results
 
-Status: experimental. FP8 changes the numerics of the model and is **not lossless**. Quality has been checked only
-with a teacher-forced logprob comparison so far; a task-level comparison (HumanEval+, MBPP+, CodeContests) is in progress.
+Status: experimental. FP8 changes the numerics of the model and is **not lossless**. Quality was checked with a
+teacher-forced logprob comparison and a paired task-level comparison (HumanEval+, MBPP+, CodeContests, tool calls);
+see "Task-level quality" below. Recommendation: do not deploy full FP8 to production yet (CodeContests -2.1 pp,
+not significant but the CI reaches -5 pp). FP8 restricted to the MTP draft (`SWIFT_FP8_TARGETS=mtp`) only touches
+the draft model and so cannot change outputs; see `docs/SERVING.md`.
 
 Tested on gpu-1-vm (RTX PRO 6000 Blackwell Max-Q, 96 GB), vLLM 0.31.0, preset `final-code`, thinking mode off.
 
@@ -65,7 +68,26 @@ error was 2.8e-2, against 2.5e-3 for BF16 torch.
 Source: `results/quality/logprob_scores.txt` (the scorer's summary line for the FP8 run, followed by the same line
 for every earlier BF16/CUTLASS run in `~/swift-profile/runs`). The scored sequences are the BF16 model's own greedy
 outputs, so any change in numerics lowers these scores somewhat; for scale, switching only the MoE kernel to CUTLASS
-gave -0.2162 / 96.97%. A task-level comparison (HumanEval+, MBPP+, CodeContests) is in progress and is not reported here.
+gave -0.2162 / 96.97%.
+
+### Task-level quality (paired against the BF16 release, `base-wide`)
+
+Run `q-fp8-code` (full FP8 config, `final-code`), driven by `tools/quality_session.sh` on gpu-1-vm, 2026-11-07:
+0 request errors, 0 tracebacks. Thinking off. Summaries and score logs are in `results/quality/task_level/`.
+
+| suite | sampling | base (BF16) | FP8 | paired diff, 95 % CI, p |
+|---|---|---:|---:|---|
+| CodeContests ("locked", 135 tasks x 6 samples) | T 0.7, top_p 0.8, top_k 20, 4096 max tokens | 75.9 % | 73.8 % | -2.10 pp [-5.06, +0.99], p 0.21 |
+| HumanEval+ / MBPP+ ("guard", 542 tasks x 1) | greedy, 2048 max tokens | 84.1 % | 84.9 % | +0.74 pp [-0.18, +1.85], p 0.29 |
+| HumanEval+ plus-pass | | 154/164 | 156/164 | |
+| MBPP+ plus-pass | | 302/378 | 304/378 | |
+| tool-call probe | | - | 95/96 | one "wrong set of calls" |
+
+On CodeContests FP8 also truncated more often (15.9 % vs 14.8 %) and wrote longer answers (2,086 vs 2,006 mean
+completion tokens). For scale, the BF16 `final-multi` preset (draft-only changes, target untouched) measured
++0.86 pp [-2.10, +3.83] against the same base, so per-run noise on the locked suite is a few points. Neither
+difference is significant; the CodeContests direction plus the logprob drop are the reason for not recommending
+full FP8 for production yet.
 
 The first scoring attempt crashed the engine with a CUDA OOM: the large-M fallback dequantized the whole lm_head
 (2.4 GB fp32 temporary) for prompt logprobs. The fallback now dequantizes in chunks of `SWIFT_FP8_DEQ_CHUNK_ROWS`

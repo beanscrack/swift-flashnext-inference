@@ -1,0 +1,8 @@
+C=1 rep0: aggregate 259.5 tok/s, mean per-request decode 305.7 tok/s
+C=1 rep1: aggregate 266.7 tok/s, mean per-request decode 300.1 tok/s
+C=2 rep0: aggregate 372.7 tok/s, mean per-request decode 222.2 tok/s
+C=2 rep1: aggregate 382.7 tok/s, mean per-request decode 226.0 tok/s
+C=4 rep0: aggregate 494.4 tok/s, mean per-request decode 141.8 tok/s
+C=4 rep1: aggregate 478.4 tok/s, mean per-request decode 137.9 tok/s
+C=8 rep0: aggregate 487.9 tok/s, mean per-request decode 137.2 tok/s
+C=8 rep1: aggregate 495.9 tok/s, mean per-request decode 137.7 tok/s

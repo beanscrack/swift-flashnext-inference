@@ -1,0 +1,45 @@
+{
+  "eval_sets_excluded": {
+    "locked_rows": 135,
+    "evalplus_rows": 542,
+    "eval_cf_ids": 135,
+    "rule1_hashes": 677,
+    "rule2_hashes": 677,
+    "rule3_prefixes": 677
+  },
+  "drops_and_keeps_by_source": {
+    "taskpack": {
+      "input_rows": 1824,
+      "kept": 897,
+      "duplicate_text": 792,
+      "eval_exact_hash": 135
+    },
+    "code_reasoning": {
+      "input_rows": 8300,
+      "kept": 7488,
+      "duplicate_text": 690,
+      "eval_prefix200_hash": 9,
+      "eval_exact_hash": 113
+    },
+    "opencode": {
+      "input_rows": 2100,
+      "not_single_user_turn": 440,
+      "kept": 1372,
+      "duplicate_text": 288
+    }
+  },
+  "pool_size_before_token_filter": 9757,
+  "pool_by_source": {
+    "taskpack": 897,
+    "code_reasoning": 7488,
+    "opencode": 1372
+  },
+  "pool_by_split": {
+    "train": 9257,
+    "heldout": 500
+  },
+  "pool_by_mode": {
+    "nothink": 7807,
+    "think": 1950
+  }
+}

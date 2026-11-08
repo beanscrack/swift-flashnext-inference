@@ -1,0 +1,1 @@
+{"at": "2026-11-07T05:59:02+00:00", "done": true, "elapsed_s": 11.7, "submitted_this_run": 5, "completion_tokens_this_run": 6469, "prompt_tokens_this_run": 1515, "completion_tok_per_s": 553.87, "stats": {"drop_prompt_gt400_taskpack": 1, "ok": 5, "ok_nothink": 3, "finish_stop": 3, "ok_think": 2, "finish_length": 2}, "prepared_accepted_total": 3}

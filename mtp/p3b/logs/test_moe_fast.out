@@ -1,0 +1,4 @@
+/u701/j692wu/swift-opt/mtp/p3b/test_moe_fast.py:47: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
+  return float(loss), time.time() - t0, T
+TEST {"T": 1291, "loss_ref": 0.32929301261901855, "loss_fast": 0.32929301261901855, "loss_fast_repeat": 0.32929301261901855, "sec_ref": 21.974605083465576, "sec_fast": 6.385364294052124, "sec_fast_repeat": 6.408399343490601, "max_rel_grad_diff": 0.04023239389061928, "n_params_compared": 28, "n_params_with_grad": 28, "worst": [["layers.0.self_attn.k_norm.weight", 0.04023239389061928], ["pre_fc_norm_embedding.weight", 0.0027498325798660517], ["layers.0.attn_hyper_connection.input_mix_weight_up.weight", 0.0026236765552312136]], "peak_GiB": 35.982545375823975}

@@ -1,0 +1,106 @@
+[swift_skinny] patched vllm.models.qwen4_exp.nvidia.low_latency_gemm: plan keys (N x K -> M list): {'16384x2560': [1, 2, 3, 4, 5, 10, 15], '2560x6144': [1, 2, 3, 4, 5, 10, 15], '13312x2560': [1, 2, 3, 4, 5, 10, 15], '12800x2560': [1, 2, 3, 4, 5, 10, 15], '10240x320': [1, 2, 3, 4, 5, 10, 15], '336x10240': [1, 2, 3, 4, 5, 10, 15], '320x10240': [1, 2, 3, 4, 5, 10, 15], '1280x2560': [1, 2, 3, 4, 5, 10, 15], '2560x640': [1, 2, 3, 4, 5, 10, 15], '512x2560': [1, 2, 3, 4, 5, 10, 15], '640x2560': [1, 2, 
+[swift_skinny] strided-activation dispatch enabled for Triton plan entries (SWIFT_SKINNY_STRIDED=1)
+[swift_skinny] hooked vllm.models.qwen4_exp.nvidia.low_latency_gemm (plan: /u701/j692wu/swift-opt/release/plan/skinny_plan_wide.json, strict=True)
+[swift_fp8] hooked vllm.models.qwen4_exp.nvidia.low_latency_gemm (targets=qkvz,gdn_out,qsa_qkv,qsa_o,lm_head,mtp, group=0, plan=/u701/j692wu/swift-opt/release/plan/fp8_plan_row.json, strict=True)
+[swift_l2pf] patched vllm.models.qwen4_exp.nvidia.model.Qwen4ExpModel.forward (targets=['o_proj', 'mlp_hc', 'router'] budget=48.0MB mode=touch_el ctas=48 block=1024 rate=0.00TB/s delay=0ns fork=inproj layers=all types=['GDN', 'QSA'] max_tokens=24 eager=False phase2=False next_inproj=16.0MB)
+(EngineCore pid=215500) INFO 11-07 21:24:19 [swift_draft_vocab.py:469] [swift-draft-vocab] armed in pid=215500: patched MTPSpeculator.__init__/.load_model/.sample_draft (file=/u701/j692wu/swift-opt/release/vocab/swift_draft_vocab_code49152.npy, dtype=bf16, strict=1)
+[swift_skinny] patched vllm.models.qwen4_exp.nvidia.low_latency_gemm: plan keys (N x K -> M list): {'16384x2560': [1, 2, 3, 4, 5, 10, 15], '2560x6144': [1, 2, 3, 4, 5, 10, 15], '13312x2560': [1, 2, 3, 4, 5, 10, 15], '12800x2560': [1, 2, 3, 4, 5, 10, 15], '10240x320': [1, 2, 3, 4, 5, 10, 15], '336x10240': [1, 2, 3, 4, 5, 10, 15], '320x10240': [1, 2, 3, 4, 5, 10, 15], '1280x2560': [1, 2, 3, 4, 5, 10, 15], '2560x640': [1, 2, 3, 4, 5, 10, 15], '512x2560': [1, 2, 3, 4, 5, 10, 15], '640x2560': [1, 2, 
+[swift_skinny] strided-activation dispatch enabled for Triton plan entries (SWIFT_SKINNY_STRIDED=1)
+[swift_skinny] hooked vllm.models.qwen4_exp.nvidia.low_latency_gemm (plan: /u701/j692wu/swift-opt/release/plan/skinny_plan_wide.json, strict=True)
+[swift_fp8] hooked vllm.models.qwen4_exp.nvidia.low_latency_gemm (targets=qkvz,gdn_out,qsa_qkv,qsa_o,lm_head,mtp, group=0, plan=/u701/j692wu/swift-opt/release/plan/fp8_plan_row.json, strict=True)
+[swift_l2pf] patched vllm.models.qwen4_exp.nvidia.model.Qwen4ExpModel.forward (targets=['o_proj', 'mlp_hc', 'router'] budget=48.0MB mode=touch_el ctas=48 block=1024 rate=0.00TB/s delay=0ns fork=inproj layers=all types=['GDN', 'QSA'] max_tokens=24 eager=False phase2=False next_inproj=16.0MB)
+(EngineCore pid=215500) INFO 11-07 21:24:20 [swift_draft_vocab.py:418] [swift-draft-vocab] pre-load checks passed pid=215500: 49152 kept ids (+0 pad) of vocab 248320 from /u701/j692wu/swift-opt/release/vocab/swift_draft_vocab_code49152.npy
+[swift_skinny] enable_qwen4_exp_low_latency_gemm(Qwen4ExpForCausalLM): layers routed to the skinny op by weight shape: {'16384x2560': 36, '96x2560': 36, '2560x6144': 48, '512x2560': 48, '1x2560': 48, '1280x2560': 48, '2560x640': 48, '336x10240': 96, '10240x320': 97, '12800x2560': 1, '13312x2560': 12, '640x2560': 12, '320x10240': 1, '248320x2560': 1} ; plan keys without a matching layer in this model: []
+[swift_fp8] Qwen4ExpForCausalLM: selected for FP8 {'lm_head': 1, 'qkvz': 36, 'gdn_out': 36, 'qsa_qkv': 12, 'qsa_o': 12} (categories ['gdn_out', 'lm_head', 'qkvz', 'qsa_o', 'qsa_qkv'])
+[swift_fp8] check 16384x2560 M=1 [w8fma bn=8 bk=512 sk=1 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 4.63e-03
+[swift_fp8] check 16384x2560 M=2 [w8fma bn=8 bk=512 sk=1 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.47e-03
+[swift_fp8] check 16384x2560 M=3 [w8fma bn=8 bk=512 sk=1 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.11e-03
+[swift_fp8] check 16384x2560 M=4 [w8dot bn=32 bk=128 sk=1 w=4 st=4 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 3.60e-03
+[swift_fp8] check 16384x2560 M=5 [w8dot bn=32 bk=128 sk=1 w=4 st=4 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.10e-03
+[swift_fp8] check 16384x2560 M=10 [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 2.92e-03
+[swift_fp8] check 16384x2560 M=15 [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.12e-03
+[swift_fp8] check 16384x2560 M=20 [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=32]: max|err|/max|ref| vs dequant+cuBLAS = 3.45e-03
+[swift_fp8] check 2560x6144 M=1 [w8fma bn=8 bk=512 sk=1 w=8]: max|err|/max|ref| vs dequant+cuBLAS = 2.59e-03
+[swift_fp8] check 2560x6144 M=2 [w8fma bn=8 bk=512 sk=1 w=8]: max|err|/max|ref| vs dequant+cuBLAS = 5.62e-03
+[swift_fp8] check 2560x6144 M=3 [w8fma bn=8 bk=512 sk=1 w=8]: max|err|/max|ref| vs dequant+cuBLAS = 5.18e-03
+[swift_fp8] check 2560x6144 M=4 [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 5.26e-03
+[swift_fp8] check 2560x6144 M=5 [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 5.15e-03
+[swift_fp8] check 2560x6144 M=10 [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.48e-03
+[swift_fp8] check 2560x6144 M=15 [w8dot bn=64 bk=128 sk=4 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.48e-03
+[swift_fp8] check 2560x6144 M=20 [w8dot bn=64 bk=128 sk=4 w=4 st=4 bm=32]: max|err|/max|ref| vs dequant+cuBLAS = 3.79e-03
+[swift_fp8] check 13312x2560 M=1 [w8fma bn=8 bk=512 sk=1 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.70e-03
+[swift_fp8] check 13312x2560 M=2 [w8fma bn=8 bk=512 sk=1 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.50e-03
+[swift_fp8] check 13312x2560 M=3 [w8fma bn=8 bk=512 sk=1 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.23e-03
+[swift_fp8] check 13312x2560 M=4 [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.39e-03
+[swift_fp8] check 13312x2560 M=5 [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 5.62e-03
+[swift_fp8] check 13312x2560 M=10 [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.50e-03
+[swift_fp8] check 13312x2560 M=15 [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.98e-03
+[swift_fp8] check 13312x2560 M=20 [w8dot bn=128 bk=256 sk=1 w=8 st=3 bm=32]: max|err|/max|ref| vs dequant+cuBLAS = 4.13e-03
+[swift_fp8] check 248320x2560 M=1 [w8fma bn=16 bk=512 sk=1 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 5.08e-03
+[swift_fp8] check 248320x2560 M=2 [w8fma bn=16 bk=512 sk=1 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 4.42e-03
+[swift_fp8] check 248320x2560 M=3 [w8fma bn=16 bk=512 sk=1 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 4.26e-03
+[swift_fp8] check 248320x2560 M=4 [w8dot bn=128 bk=256 sk=1 w=4 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.44e-03
+[swift_fp8] check 248320x2560 M=5 [w8dot bn=128 bk=256 sk=1 w=4 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 3.95e-03
+[swift_fp8] check 248320x2560 M=10 [w8dot bn=128 bk=256 sk=1 w=4 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.03e-03
+[swift_fp8] check 248320x2560 M=15 [w8dot bn=128 bk=256 sk=1 w=4 st=3 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 4.07e-03
+[swift_fp8] check 248320x2560 M=20 [w8dot bn=64 bk=128 sk=1 w=4 st=4 bm=32]: max|err|/max|ref| vs dequant+cuBLAS = 7.75e-03
+[swift_fp8] converted 97 modules, saved 3.08 GiB (6.16 -> 3.09 GiB), group=0, plan=/u701/j692wu/swift-opt/release/plan/fp8_plan_row.json
+[swift_skinny] enable_qwen4_exp_low_latency_gemm(Qwen4ExpMTP): layers routed to the skinny op by weight shape: {'13312x2560': 1, '2560x6144': 1, '640x2560': 1, '512x2560': 1, '1x2560': 1, '1280x2560': 1, '2560x640': 1, '336x10240': 2, '10240x320': 3, '320x10240': 1, '248320x2560': 1} ; plan keys without a matching layer in this model: ['12800x2560', '16384x2560', '96x2560']
+[swift_fp8] Qwen4ExpMTP: selected for FP8 {'qsa_qkv': 1, 'qsa_o': 1, 'shared_gu': 1, 'shared_down': 1} (categories ['gdn_out', 'qkvz', 'qsa_o', 'qsa_qkv', 'shared_down', 'shared_gu'])
+[swift_fp8] check 1280x2560 M=1 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.14e-03
+[swift_fp8] check 1280x2560 M=2 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.70e-03
+[swift_fp8] check 1280x2560 M=3 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.50e-03
+[swift_fp8] check 1280x2560 M=4 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 2.75e-03
+[swift_fp8] check 1280x2560 M=5 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 2.25e-03
+[swift_fp8] check 1280x2560 M=10 [w8dot bn=64 bk=128 sk=2 w=4 st=4 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 2.20e-03
+[swift_fp8] check 1280x2560 M=15 [w8dot bn=64 bk=128 sk=2 w=4 st=4 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 6.41e-03
+[swift_fp8] check 1280x2560 M=20 [w8dot bn=64 bk=128 sk=2 w=4 st=4 bm=32]: max|err|/max|ref| vs dequant+cuBLAS = 5.08e-03
+[swift_fp8] check 2560x640 M=1 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.82e-03
+[swift_fp8] check 2560x640 M=2 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 3.36e-03
+[swift_fp8] check 2560x640 M=3 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 5.81e-03
+[swift_fp8] check 2560x640 M=4 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 6.33e-03
+[swift_fp8] check 2560x640 M=5 [w8fma bn=8 bk=256 sk=2 w=4]: max|err|/max|ref| vs dequant+cuBLAS = 5.68e-03
+[swift_fp8] check 2560x640 M=10 [w8dot bn=64 bk=128 sk=2 w=4 st=4 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 5.99e-03
+[swift_fp8] check 2560x640 M=15 [w8dot bn=64 bk=128 sk=2 w=4 st=4 bm=16]: max|err|/max|ref| vs dequant+cuBLAS = 5.99e-03
+[swift_fp8] check 2560x640 M=20 [w8dot bn=64 bk=128 sk=2 w=4 st=4 bm=32]: max|err|/max|ref| vs dequant+cuBLAS = 5.32e-03
+[swift_fp8] converted 101 modules, saved 3.13 GiB (6.27 -> 3.14 GiB), group=0, plan=/u701/j692wu/swift-opt/release/plan/fp8_plan_row.json
+(EngineCore pid=215500) INFO 11-07 21:39:19 [swift_draft_vocab.py:224] [swift-draft-vocab] sample_draft call #1 (cuda-graph capture=False): hidden (1, 2560) bfloat16 -> logits [1, 49152] -> argmax -> id table -> int64 (1,)
+(EngineCore pid=215500) INFO 11-07 21:39:19 [swift_draft_vocab.py:224] [swift-draft-vocab] sample_draft call #2 (cuda-graph capture=False): hidden (2, 2560) bfloat16 -> logits [2, 49152] -> argmax -> id table -> int64 (2,)
+(EngineCore pid=215500) INFO 11-07 21:39:20 [swift_draft_vocab.py:364] [swift-draft-vocab] draft head stored as FP8 e4m3 (49152 x 2560, 120.0 MiB)
+(EngineCore pid=215500) INFO 11-07 21:39:20 [swift_draft_vocab.py:366] [swift-draft-vocab] ACTIVE pid=215500: draft lm_head trimmed 248320 -> 49152 rows (49152 kept + 0 pad; 19.79% of vocab), dtype=bf16, extra GPU memory 240.4 MiB, ids sha1=4de04c05ffac, file=/u701/j692wu/swift-opt/release/vocab/swift_draft_vocab_code49152.npy, draft model=Qwen4ExpMTP, head shared with target=True (built before CUDA-graph capture)
+[swift_l2pf] armed 48 layers (GDN 36, QSA 12); fork-A bytes per forward 1525.7 MB; targets=['o_proj', 'mlp_hc', 'router'] budget=48.0MB mode=touch_el ctas=48 block=1024 rate=0.00TB/s delay=0ns fork=inproj layers=all types=['GDN', 'QSA'] max_tokens=24 eager=False phase2=False next_inproj=16.0MB
+[swift_skinny] self-check 10240x320 M=4 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 3.19e-03 (cuBLAS bf16 3.19e-03, max|ref| 32.1)
+[swift_skinny] self-check 10240x320 M=4 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 2.49e-03 (cuBLAS bf16 2.49e-03, max|ref| 10.4)
+Capturing CUDA graphs (FULL):   0%|          | 0/2 [00:00<?, ?it/s][swift_l2pf] warm-up done: 48 launches compiled/issued eagerly
+Capturing CUDA graphs (FULL):  50%|█████     | 1/2 [00:02<00:02,  2.25s/it][swift_skinny] self-check 10240x320 M=15 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 1.16e-03 (cuBLAS bf16 1.16e-03, max|ref| 57.4)
+[swift_skinny] self-check 96x2560 M=15 [dot bn=16 bk=64 sk=10 w=2 st=4]: max|err|/max|ref| = 1.56e-03 (cuBLAS bf16 1.56e-03, max|ref| 8.5)
+[swift_skinny] self-check 10240x320 M=15 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 1.53e-03 (cuBLAS bf16 1.53e-03, max|ref| 81.6)
+[swift_skinny] self-check 1280x2560 M=15 [dot bn=32 bk=64 sk=8 w=4 st=5]: max|err|/max|ref| = 2.51e-03 (cuBLAS bf16 2.51e-03, max|ref| 6.07)
+[swift_skinny] self-check 2560x640 M=15 [dot bn=32 bk=64 sk=1 w=4 st=4]: max|err|/max|ref| = 1.17e-03 (cuBLAS bf16 1.17e-03, max|ref| 0.983)
+[swift_skinny] self-check 512x2560 M=15 [dot bn=16 bk=128 sk=3 w=2 st=5]: max|err|/max|ref| = 3.27e-03 (cuBLAS bf16 3.27e-03, max|ref| 8.91)
+[swift_skinny] self-check 12800x2560 M=15 [dot bn=32 bk=64 sk=1 w=8 st=3]: max|err|/max|ref| = 1.40e-03 (cuBLAS bf16 1.40e-03, max|ref| 0.575)
+[swift_skinny] self-check 96x2560 M=15 [dot bn=16 bk=64 sk=10 w=2 st=4]: max|err|/max|ref| = 3.06e-03 (cuBLAS bf16 3.98e-03, max|ref| 2.28)
+[swift_skinny] self-check 1280x2560 M=15 [dot bn=32 bk=64 sk=8 w=4 st=5]: max|err|/max|ref| = 2.01e-03 (cuBLAS bf16 2.01e-03, max|ref| 1.93)
+[swift_skinny] self-check 2560x640 M=15 [dot bn=32 bk=64 sk=1 w=4 st=4]: max|err|/max|ref| = 2.32e-03 (cuBLAS bf16 2.32e-03, max|ref| 0.0983)
+[swift_skinny] self-check 512x2560 M=15 [dot bn=16 bk=128 sk=3 w=2 st=5]: max|err|/max|ref| = 2.12e-03 (cuBLAS bf16 2.12e-03, max|ref| 1.84)
+[swift_skinny] self-check 640x2560 M=15 [dot bn=16 bk=128 sk=3 w=2 st=5]: max|err|/max|ref| = 2.61e-03 (cuBLAS bf16 2.61e-03, max|ref| 1.49)
+[swift_skinny] self-check 640x2560 M=15 [dot bn=16 bk=128 sk=3 w=2 st=5]: max|err|/max|ref| = 3.32e-03 (cuBLAS bf16 3.32e-03, max|ref| 2.33)
+[swift_skinny] self-check 320x10240 M=15 [dot bn=32 bk=64 sk=12 w=2 st=6]: max|err|/max|ref| = 3.22e-03 (cuBLAS bf16 4.64e-03, max|ref| 71.5)
+Capturing prefill CUDA graphs (FULL):   0%|          | 0/4 [00:00<?, ?it/s](EngineCore pid=215500) INFO 11-07 21:39:57 [swift_draft_vocab.py:224] [swift-draft-vocab] sample_draft call #1 (cuda-graph capture=True): hidden (4, 2560) bfloat16 -> logits [4, 49152] -> argmax -> id table -> int64 (4,)
+[swift_skinny] self-check 320x10240 M=15 [dot bn=32 bk=64 sk=12 w=2 st=6]: max|err|/max|ref| = 2.63e-03 (cuBLAS bf16 2.63e-03, max|ref| 181)
+(EngineCore pid=215500) INFO 11-07 21:39:57 [swift_draft_vocab.py:224] [swift-draft-vocab] sample_draft call #2 (cuda-graph capture=True): hidden (3, 2560) bfloat16 -> logits [3, 49152] -> argmax -> id table -> int64 (3,)
+[swift_skinny] self-check 10240x320 M=10 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 2.72e-03 (cuBLAS bf16 2.72e-03, max|ref| 44)
+[swift_skinny] self-check 10240x320 M=10 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 1.84e-03 (cuBLAS bf16 1.84e-03, max|ref| 16.9)
+[swift_skinny] self-check 320x10240 M=10 [dot bn=32 bk=64 sk=12 w=2 st=6]: max|err|/max|ref| = 2.74e-03 (cuBLAS bf16 2.74e-03, max|ref| 181)
+Capturing prefill CUDA graphs (FULL):  75%|███████▌  | 3/4 [00:02<00:00,  1.43it/s][swift_skinny] self-check 10240x320 M=5 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 2.68e-03 (cuBLAS bf16 2.68e-03, max|ref| 46.4)
+[swift_skinny] self-check 10240x320 M=5 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 1.75e-03 (cuBLAS bf16 1.75e-03, max|ref| 17.9)
+Capturing decode CUDA graphs (FULL):   0%|          | 0/4 [00:00<?, ?it/s][swift_skinny] self-check 10240x320 M=3 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 3.38e-03 (cuBLAS bf16 3.38e-03, max|ref| 32.8)
+[swift_skinny] self-check 10240x320 M=3 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 2.91e-03 (cuBLAS bf16 2.91e-03, max|ref| 20.4)
+Capturing decode CUDA graphs (FULL):  50%|█████     | 2/4 [00:02<00:02,  1.45s/it][swift_skinny] self-check 10240x320 M=2 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 3.38e-03 (cuBLAS bf16 3.38e-03, max|ref| 32.8)
+[swift_skinny] self-check 10240x320 M=2 [dot bn=16 bk=64 sk=1 w=2 st=4]: max|err|/max|ref| = 2.72e-03 (cuBLAS bf16 2.72e-03, max|ref| 20.4)
+Capturing decode CUDA graphs (FULL):  75%|███████▌  | 3/4 [00:04<00:01,  1.54s/it][swift_skinny] self-check 10240x320 M=1 [fma bn=8 bk=128 sk=1 w=1]: max|err|/max|ref| = 2.95e-03 (cuBLAS bf16 2.95e-03, max|ref| 32.8)
+[swift_skinny] self-check 10240x320 M=1 [fma bn=8 bk=128 sk=1 w=1]: max|err|/max|ref| = 2.72e-03 (cuBLAS bf16 2.72e-03, max|ref| 20.4)
+Capturing CUDA graphs (FULL):   0%|          | 0/4 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  25%|██▌       | 1/4 [00:00<00:01,  2.62it/s][swift_skinny] self-check 12800x2560 M=15 [dot bn=32 bk=64 sk=1 w=8 st=3]: max|err|/max|ref| = 1.40e-03 (cuBLAS bf16 1.40e-03, max|ref| 0.575)
+Capturing CUDA graphs (FULL):  50%|█████     | 2/4 [00:00<00:00,  2.45it/s][swift_skinny] self-check 2560x640 M=10 [dot bn=32 bk=64 sk=1 w=4 st=4]: max|err|/max|ref| = 1.17e-03 (cuBLAS bf16 1.17e-03, max|ref| 0.983)
+[swift_skinny] self-check 2560x640 M=10 [dot bn=32 bk=64 sk=1 w=4 st=4]: max|err|/max|ref| = 2.19e-03 (cuBLAS bf16 2.19e-03, max|ref| 0.104)
+[swift_skinny] self-check 320x10240 M=10 [dot bn=32 bk=64 sk=12 w=2 st=6]: max|err|/max|ref| = 2.05e-03 (cuBLAS bf16 2.52e-03, max|ref| 121)

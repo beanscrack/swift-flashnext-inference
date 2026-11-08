@@ -1,0 +1,15 @@
+format {'n_tensors': 31, 'names_equal_orig': True, 'shapes_equal_orig': True, 'dtypes': ['BF16'], 'has_embed_or_lm_head': True}
+1/204 1s
+21/204 6s
+41/204 12s
+61/204 19s
+81/204 24s
+101/204 31s
+121/204 37s
+141/204 44s
+161/204 50s
+181/204 57s
+201/204 63s
+OVERALL {"n": 257969, "acc": [0.9002903449639298, 0.7851098387790781, 0.6783838368176022, 0.5869348642666367], "tokens_per_cycle": 3.9507188848272468}
+ROUND_END {"n": 69158, "acc": [0.8621128430550334, 0.7309060412389022, 0.6167037797507158, 0.5255646490644611], "tokens_per_cycle": 3.7352873131091124}
+EXPORT_CHECK {"ckpt": "ckpt/best.safetensors", "step": 996, "format": {"n_tensors": 31, "names_equal_orig": true, "shapes_equal_orig": true, "dtypes": ["BF16"], "has_embed_or_lm_head": true}, "n_loaded": 31, "reloaded_round_end": {"acc": [0.8621128430550334, 0.7309060412389022, 0.6167037797507158, 0.5255646490644611], "tokens_per_cycle": 3.7352873131091124}, "in_training_eval": {"acc": [0.8621128430550334, 0.7309060412389022, 0.6167037797507158, 0.5255646490644611], "tokens_per_cycle": 3.7352873131091124}, "max_abs_diff": 0.0, "PASS_within_0.002": true}
