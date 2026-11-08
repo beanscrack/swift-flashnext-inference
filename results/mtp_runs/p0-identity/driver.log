@@ -1,0 +1,8 @@
+2026-11-07T04:08:52Z [p0-identity] launched server pid 26368 (serve=/u701/j692wu/swift-opt/release/serve_final.sh preset=final-code)
+2026-11-07T04:27:56Z [p0-identity] startup state=ready after 1144 s
+2026-11-07T04:27:57Z [p0-identity] hooks: [swift-draft-vocab] ACTIVE [swift-draft-vocab] armed [swift_fp8] converted [swift_l2pf] armed [swift_l2pf] patched [swift_skinny] patched 
+2026-11-07T04:28:47Z [p0-identity] rep1: mean_decode_tps=304.30 ttft=0.291
+2026-11-07T04:29:35Z [p0-identity] rep2: mean_decode_tps=306.51 ttft=0.233
+2026-11-07T04:30:24Z [p0-identity] rep3: mean_decode_tps=303.93 ttft=0.279
+2026-11-07T04:30:24Z [p0-identity] extra: /usr/bin/python3 /u701/j692wu/swift-profile/score/score_logprobs.py /u701/j692wu/swift-opt/runs/p0-identity/scores.json
+2026-11-07T04:31:08Z [p0-identity] after stop: gpu_used=0 MiB host_avail=184 GiB

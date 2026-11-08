@@ -1,0 +1,2 @@
+2026-11-07T05:40:10Z env: PRESET=final-code CAPTURE_SIZES=1,2,3,4,5,10,15,20,25,30,35,40 MAX_SEQS=8 CKPT=/u701/j692wu/.cache/huggingface/hub/models--ukisai--Swift-1.5-Qwen3.8-Flash-Next-NVFP4/snapshots/3ff0520224f264a2d0ac4ab56ece8f2f13aadb38
+2026-11-07T05:40:11Z launched server pid=34121 pgid=34121

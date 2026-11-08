@@ -1,0 +1,1 @@
+{"seed": 20261107, "n": 10, "identical": 0, "mismatch": 10, "mismatch_fraction": 1.0, "prompt_mismatch": 0, "by_mode": {"nothink": {"n": 5, "mismatch": 5}, "think": {"n": 5, "mismatch": 5}}}

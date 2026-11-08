@@ -1,0 +1,7 @@
+2026-11-07T02:51:59Z [quality q-fp8-code] server pid 21429
+2026-11-07T03:11:33Z [quality q-fp8-code] startup ready after 1174 s
+2026-11-07T03:59:27Z [quality q-fp8-code] locked sampling rc=0 in 2873 s: finished 810 requests in 47.8 min; 0 errors; 129 truncated; 1689419 completion tokens
+2026-11-07T04:03:54Z [quality q-fp8-code] guard sampling rc=0 in 267 s: finished 542 requests in 4.4 min; 0 errors; 1 truncated; 107490 completion tokens
+2026-11-07T04:04:32Z [quality q-fp8-code] tool probe rc=0 in 38 s: base   95/96 = 99.0% base first failures: [(9, 'wrong set of calls')] 
+2026-11-07T04:04:32Z [quality q-fp8-code] tracebacks in server log: 0; ERROR lines: 0
+2026-11-07T04:05:14Z [quality q-fp8-code] after stop: gpu_used=0 MiB host_avail=184 GiB

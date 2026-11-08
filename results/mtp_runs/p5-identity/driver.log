@@ -1,0 +1,14 @@
+2026-11-07T21:21:42Z [p5-identity] launched server pid 214569 (serve=/u701/j692wu/swift-opt/release/serve_final.sh preset=final-code)
+2026-11-07T21:21:44Z [p5-identity] launched server pid 214669 (serve=/u701/j692wu/swift-opt/release/serve_final.sh preset=final-code)
+2026-11-07T21:41:37Z [p5-identity] startup state=ready after 1195 s
+2026-11-07T21:41:37Z [p5-identity] hooks: [swift-draft-vocab] ACTIVE [swift-draft-vocab] armed [swift_fp8] converted [swift_l2pf] armed [swift_l2pf] patched [swift_skinny] patched 
+2026-11-07T21:42:28Z [p5-identity] rep1: mean_decode_tps=301.91 ttft=0.327
+2026-11-07T21:43:16Z [p5-identity] rep2: mean_decode_tps=306.72 ttft=0.230
+2026-11-07T21:44:05Z [p5-identity] rep3: mean_decode_tps=309.19 ttft=0.255
+2026-11-07T21:44:54Z [p5-identity] rep4: mean_decode_tps=306.61 ttft=0.296
+2026-11-07T21:45:43Z [p5-identity] rep5: mean_decode_tps=295.06 ttft=0.221
+2026-11-07T21:46:31Z [p5-identity] rep6: mean_decode_tps=313.26 ttft=0.242
+2026-11-07T21:47:20Z [p5-identity] rep7: mean_decode_tps=299.69 ttft=0.258
+2026-11-07T21:48:09Z [p5-identity] rep8: mean_decode_tps=295.70 ttft=0.235
+2026-11-07T21:48:09Z [p5-identity] extra: /usr/bin/python3 /u701/j692wu/swift-profile/score/score_logprobs.py /u701/j692wu/swift-opt/runs/p5-identity/scores.json
+2026-11-07T21:48:53Z [p5-identity] after stop: gpu_used=1315 MiB host_avail=180 GiB

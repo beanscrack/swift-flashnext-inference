@@ -1,0 +1,7 @@
+2026-11-07T19:52:00Z [p4-chain] gpu free after 3 min
+2026-11-07T19:52:00Z [p4-chain] start p4-identity
+2026-11-07T20:23:04Z [p4-chain] p4-identity rc=0 status={"label":"p4-identity","preset":"final-code","status":"done","valid":true,"detail":""}
+2026-11-07T20:23:04Z [p4-chain] start p4-mtp-v1
+2026-11-07T20:51:04Z [p4-chain] p4-mtp-v1 rc=0 status={"label":"p4-mtp-v1","preset":"final-code","status":"done","valid":true,"detail":""}
+2026-11-07T20:51:17Z [p4-chain] analyze rc=0
+2026-11-07T20:51:17Z [p4-chain] done
